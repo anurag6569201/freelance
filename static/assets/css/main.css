@@ -1,22 +1,19 @@
 .main-page{
     width: 100%;
-    height: 100vh;
 }
-.dsc-file-form form .custom-file{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+.custom-file .input-group,
 #uploadedFileName,
 .custom-file-input{
     border: 2px solid var(--accent);
-    max-width: 70vw;
     width: 100%;
     border-radius: 10px;
     color: var(--foreground-primary);
     cursor: pointer;
 }
+.custom-file .input-group-text,
 .custom-file input::-webkit-file-upload-button{
+    text-align: left;
     max-width: 15em;
     cursor: pointer;
     width: 100%;
@@ -24,14 +21,13 @@
     background-color: var(--action-primary);
     border: none;
     color: var(--foreground-primary);
+    padding-left: 2em;
 }
 .custom-file input::-webkit-input-placeholder{
     color: var(--foreground-primary);
 }
 .dsc-form-btns{
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 1em;
 }
 .uploaded-files{
@@ -42,10 +38,40 @@
 #uploadedFileName{
     border: none;
 }
+.custom-file select option,
 #uploadedFileName ul li{
     background-color: var(--action-primary);
     color: var(--foreground-primary);
 }
+#uploadedFileName ul{
+    max-height: 10em;
+    overflow-y: scroll;
+}
+#uploadedFileName ul::-webkit-scrollbar{
+    width: 5px;
+}
 #uploadedFileName .list-group-item{
     border:  1px solid var(--accent);
+}
+.custom-file select{
+    padding-left: 3px;
+    background-color: transparent;
+    color: var(--foreground-primary);
+    border: none;
+}
+.custom-file .form-check-input{
+    cursor: pointer;
+}
+.custom-file .form-check-label{
+    color: var(--foreground-primary);
+}
+.uploaded-files-output-table table th{
+    background-color: var(--action-primary);
+    color: var(--foreground-primary);
+    border: 1px solid var(--foreground-secondary);
+}
+.uploaded-files-output-table table td{
+    background-color: var(--action-primary);
+    color: var(--foreground-primary);
+    border: 1px solid var(--foreground-secondary);
 }
