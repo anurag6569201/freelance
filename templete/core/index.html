@@ -1,0 +1,53 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block index %}
+
+<div class="main-page">
+    <br>
+    <h2 class="dsc-heading text-center" style="font-weight: 700;">Welcome to Digital Signature App</h2>
+    <p class="lead text-center">Securely sign your PDF, XML, JSON, and Text files</p>
+    {% if user.is_authenticated %}
+    <div class="col-md-12 dsc-file-form">
+        <form method="post" enctype="multipart/form-data" action="{% url 'core:upload_file' %}">
+            {% csrf_token %}
+            <div class="custom-file">
+                <input required type="file" class="custom-file-input" id="customFile" name="file" multiple>
+            </div>
+            <br>
+            <div class="uploaded-files">
+                <p id="uploadedFileName"></p>
+            </div>
+            <div class="dsc-form-btns">
+                <button type="submit" class="btn btn-primary">Upload</button>
+                <button type="reset" class="btn btn-secondary" id="clearButton">Clear</button>
+            </div>
+        </form>
+    </div>
+    {% endif %}
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#customFile').on('change', function () {
+        var fileNames = '';
+        for (var i = 0; i < this.files.length; i++) {
+            fileNames += '<li class="list-group-item d-flex justify-content-between align-items-center">' + this.files[i].name + '<span class="badge text-bg-success rounded-pill"><i class="fa-solid fa-check"></i></span>' + '</li>';
+        }
+        $('#uploadedFileName').html('<ul class="list-group">' + fileNames + '</ul>');
+    });
+
+    $('#clearButton').on('click', function () {
+        $('#uploadedFileName').empty();
+        $('#customFile').val('');
+        $('.custom-file-label').text('Choose files');
+    });
+
+    $('.custom-file-input').on('change', function () {
+        var fileName = $(this).val().split('\\').pop();
+        $(this).siblings('.custom-file-label').addClass('selected').html(fileName);
+    });
+});
+</script>
+
+{% endblock index %}

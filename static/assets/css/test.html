@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .file-upload-wrapper {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .uploaded-files {
+            margin-top: 20px;
+        }
+        .link-upload {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container file-upload-wrapper">
+    <form method="post" enctype="multipart/form-data" action="{% url 'upload_file' %}">
+        {% csrf_token %}
+        <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="customFile" name="file" multiple>
+            <label class="custom-file-label" for="customFile">Choose files</label>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="linkCheckbox">
+            <label class="form-check-label" for="linkCheckbox">
+                Upload from Link
+            </label>
+        </div>
+        <div class="form-group link-upload" id="linkUpload">
+            <label for="fileLink">File Link:</label>
+            <input type="url" class="form-control" id="fileLink" name="fileLink">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload and Sign Files</button>
+    </form>
+
+    <div class="uploaded-files">
+        <p id="uploadedFileName"></p>
+    </div>
+    <button class="btn btn-secondary" id="clearButton">Clear</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#linkCheckbox').on('change', function () {
+            if ($(this).is(':checked')) {
+                $('#linkUpload').show();
+                $('.custom-file').hide();
+            } else {
+                $('#linkUpload').hide();
+                $('.custom-file').show();
+            }
+        });
+
+        $('#customFile').on('change', function () {
+            var fileNames = [];
+            for (var i = 0; i < this.files.length; i++) {
+                fileNames.push(this.files[i].name);
+            }
+            $('#uploadedFileName').text(fileNames.join(', '));
+        });
+
+        $('#clearButton').on('click', function () {
+            $('#uploadedFileName').text('');
+            $('#customFile').val('');
+            $('.custom-file-label').text('Choose files');
+            $('#fileLink').val('');
+        });
+
+        $('.custom-file-input').on('change', function () {
+            var fileName = $(this).val().split('\\').pop();
+            $(this).siblings('.custom-file-label').addClass('selected').html(fileName);
+        });
+    });
+</script>
+
+</body>
+</html>

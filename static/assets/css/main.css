@@ -1,0 +1,51 @@
+.main-page{
+    width: 100%;
+    height: 100vh;
+}
+.dsc-file-form form .custom-file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#uploadedFileName,
+.custom-file-input{
+    border: 2px solid var(--accent);
+    max-width: 70vw;
+    width: 100%;
+    border-radius: 10px;
+    color: var(--foreground-primary);
+    cursor: pointer;
+}
+.custom-file input::-webkit-file-upload-button{
+    max-width: 15em;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--action-primary);
+    border: none;
+    color: var(--foreground-primary);
+}
+.custom-file input::-webkit-input-placeholder{
+    color: var(--foreground-primary);
+}
+.dsc-form-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.uploaded-files{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#uploadedFileName{
+    border: none;
+}
+#uploadedFileName ul li{
+    background-color: var(--action-primary);
+    color: var(--foreground-primary);
+}
+#uploadedFileName .list-group-item{
+    border:  1px solid var(--accent);
+}
