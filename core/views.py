@@ -98,3 +98,50 @@ def upload_file(request):
     else:
         form = DocumentForm()
     return render(request, 'signer/upload.html', {'form': form})
+
+
+import os
+import zipfile
+from django.http import JsonResponse, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.core.files.storage import default_storage
+from django.conf import settings
+import json
+
+@csrf_exempt
+def download_all(request):
+    if request.method == 'POST':
+        file_names = json.loads(request.POST['files'])
+        save_option = request.POST['save_option']
+        save_location = request.POST['save_path']
+        zip_subdir = "download"
+        zip_filename = "%s.zip" % zip_subdir
+
+        # Create a temporary zip file
+        temp_zip_path = os.path.join(settings.MEDIA_ROOT, zip_filename)
+        with zipfile.ZipFile(temp_zip_path, "w") as zipf:
+            for filename in file_names:
+                file_path = os.path.join(settings.MEDIA_ROOT, filename)
+                if os.path.exists(file_path):
+                    zipf.write(file_path, os.path.basename(file_path))
+
+        # Save the zip file based on the user's choice
+        if save_option == 'local':
+            final_zip_path = os.path.join(save_location, zip_filename)
+            os.rename(temp_zip_path, final_zip_path)
+        elif save_option == 'workspace':
+            # Save to workspace or cloud storage
+            # Implementation depends on your specific setup (e.g., AWS S3, Google Cloud Storage)
+            pass
+
+        # Return the zip file for download
+        if save_option == 'local':
+            with open(final_zip_path, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="application/zip")
+                response['Content-Disposition'] = f'attachment; filename={zip_filename}'
+                return response
+        elif save_option == 'workspace':
+            # Return a success message or redirect to the workspace page
+            return JsonResponse({'message': 'Files saved to workspace'})
+
+    return JsonResponse({'error': 'Invalid request'}, status=400)

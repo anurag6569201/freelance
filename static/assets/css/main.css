@@ -53,6 +53,11 @@
 #uploadedFileName .list-group-item{
     border:  1px solid var(--accent);
 }
+#downloadAllForm select{
+    padding-left: 3px;
+    background-color: transparent;
+    color: var(--foreground-primary);
+}
 .custom-file select{
     padding-left: 3px;
     background-color: transparent;
@@ -74,4 +79,28 @@
     background-color: var(--action-primary);
     color: var(--foreground-primary);
     border: 1px solid var(--foreground-secondary);
+}
+.input-group-append select{
+    height: 100%;
+}
+.input-group-append select:focus{
+    border-color: #dee2e6;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem transparent;
+}
+#downloadAllForm{
+    border: 2px solid var(--accent);
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+.form-control{
+    background-color: transparent;
+    color: var(--foreground-primary);
+    border: none;
+}
+.dsc-file-form{
+    color: var(--action-primary);
+}
+.form-control::placeholder{
+    color: var(--foreground-primary);
 }

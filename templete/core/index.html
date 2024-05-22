@@ -17,15 +17,15 @@
                 </div>
                 <div class="col-md-12 text-center my-3">
                     <div class="d-flex align-items-center">
-                        <hr class="flex-grow-1" style="border-top: 1px solid #000;">
-                        <span class="mx-2">Or</span>
-                        <hr class="flex-grow-1" style="border-top: 1px solid #000;">
+                        <hr class="flex-grow-1" style="border-top: 1px solid var(--accent);">
+                        <span style="color: var(--accent);" class="mx-2">Or</span>
+                        <hr class="flex-grow-1" style="border-top: 1px solid var(--accent);">
                     </div>
                 </div>
                 <div class="custom-file mb-3">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon3">Input Link</span>
-                        <input type="text" class="form-control" id="basic-url"
+                        <input style="padding-left: 3px;" placeholder="https://example.com" type="text" class="form-control" id="basic-url"
                             aria-describedby="basic-addon3 basic-addon4" name="url">
                     </div>
                     <div class="form-text" id="basic-addon4">Link should be accessible</div>
@@ -100,7 +100,19 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="btn btn-primary" id="downloadAllButton">Download All</button>
+                    <form id="downloadAllForm" method="post" action="{% url 'core:download_all' %}">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="save_path" placeholder="Enter save path or URL">
+                            <div class="input-group-append">
+                                <select class="form-select" name="save_option">
+                                    <option value="local">Local System</option>
+                                    <option value="workspace">Workspace</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Download All</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -155,23 +167,15 @@
             $('.file-checkbox').prop('checked', this.checked);
         });
 
-        $('#downloadAllButton').on('click', function() {
+        $('#downloadAllForm').on('submit', function(event) {
+            event.preventDefault();
             var selectedFiles = [];
             $('.file-checkbox:checked').each(function() {
                 selectedFiles.push($(this).closest('tr').find('td:last-child').text().trim());
             });
             if (selectedFiles.length > 0) {
-                $.ajax({
-                    url: '#', // Replace with your download all URL
-                    method: 'POST',
-                    data: {
-                        files: selectedFiles,
-                        csrfmiddlewaretoken: '{{ csrf_token }}'
-                    },
-                    success: function(response) {
-                        window.location.href = response.download_url;
-                    }
-                });
+                $('#selectedFilesInput').val(JSON.stringify(selectedFiles));
+                this.submit();
             } else {
                 alert('No files selected');
             }

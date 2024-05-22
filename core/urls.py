@@ -12,4 +12,5 @@ urlpatterns=[
 
     # functionality urls
     path('upload/', views.upload_file, name='upload_file'),
+    path('download_all/', views.download_all, name='download_all'),
 ]
