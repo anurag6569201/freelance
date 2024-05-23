@@ -7,9 +7,9 @@ class ContactForm(forms.Form):
     content = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Your Message'}))
 
 from django import forms
-from .models import Document
+from .models import UploadBatch
 
-class DocumentForm(forms.ModelForm):
+class UploadBatchForm(forms.ModelForm):
     class Meta:
-        model = Document
-        fields = ['file']
+        model = UploadBatch
+        fields = ['url', 'signing_reason', 'visible_signature', 'split_large_files']

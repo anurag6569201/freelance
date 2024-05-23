@@ -90,9 +90,17 @@
 }
 #downloadAllForm{
     border: 2px solid var(--accent);
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
+    border-radius: 2em;
+    color: var(--foreground-primary);
 }
+#downloadAllForm input:focus{
+    background-color: transparent;
+    box-shadow: 0 0 0 .25rem transparent;
+    border: none;
+}
+
+#id_url,
+#id_signing_reason,
 .form-control{
     background-color: transparent;
     color: var(--foreground-primary);
@@ -101,6 +109,19 @@
 .dsc-file-form{
     color: var(--action-primary);
 }
+#basic-addon4,
 .form-control::placeholder{
     color: var(--foreground-primary);
+}
+#id_signing_reason,
+#id_url{
+    display: inline-block;
+    border: none;
+    padding-left: 3px;
+    width: 50%;
+}
+#id_signing_reason,
+#id_url:focus-visible{
+    border: none;
+    outline: none;
 }

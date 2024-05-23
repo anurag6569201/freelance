@@ -10,11 +10,13 @@
     {% if user.is_authenticated %}
     <div class="col-md-12 dsc-file-form">
         <div class="container">
-            <form method="post" enctype="multipart/form-data" action="{% url 'core:upload_file' %}">
+            <form method="post" enctype="multipart/form-data" >
                 {% csrf_token %}
+                
                 <div class="custom-file mb-3">
                     <input required type="file" class="custom-file-input" id="customFile" name="file" multiple>
                 </div>
+                
                 <div class="col-md-12 text-center my-3">
                     <div class="d-flex align-items-center">
                         <hr class="flex-grow-1" style="border-top: 1px solid var(--accent);">
@@ -22,99 +24,44 @@
                         <hr class="flex-grow-1" style="border-top: 1px solid var(--accent);">
                     </div>
                 </div>
+                
                 <div class="custom-file mb-3">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon3">Input Link</span>
-                        <input style="padding-left: 3px;" placeholder="https://example.com" type="text" class="form-control" id="basic-url"
-                            aria-describedby="basic-addon3 basic-addon4" name="url">
+                        {{ form.url }}
                     </div>
                     <div class="form-text" id="basic-addon4">Link should be accessible</div>
                 </div>
+                
                 <div class="uploaded-files">
                     <p id="uploadedFileName"></p>
                 </div>
+                
                 <div class="custom-file">
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Signing Reason</label>
-                        <select required class="form-select" id="inputGroupSelect01" name="signing_reason">
-                            <option selected value="1">Secure Document</option>
-                            <option value="2">Crime Document</option>
-                            <option value="3">Service Document</option>
-                        </select>
+                        {{ form.signing_reason }}
                     </div>
                 </div>
+                
                 <div class="custom-file">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Visible Signature" name="visible_signature">
+                        {{ form.visible_signature }}
                         <label class="form-check-label" for="inlineCheckbox1">Visible Signature</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Split large files" name="split_large_files">
+                        {{ form.split_large_files }}
                         <label class="form-check-label" for="inlineCheckbox2">Split large files</label>
                     </div>
                 </div>
                 <br>
-
+                
                 <div class="dsc-form-btns">
                     <button type="submit" class="btn btn-primary">Upload</button>
                     <button type="reset" class="btn btn-secondary" id="clearButton">Clear</button>
                 </div>
             </form>
-            <div class="col-md-12 mt-4">
-                <div class="uploaded-files-output-table">
-                    <table class="table table-bordered" id="uploadedFilesTable">
-                        <thead>
-                            <tr>
-                                <th scope="col"><input type="checkbox" id="selectAll"></th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Size</th>
-                                <th scope="col">Signed Date</th>
-                                <th scope="col">Full File Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="checkbox" class="file-checkbox"></td>
-                                <td>Pending</td>
-                                <td>01/01/2024</td>
-                                <td>15.5 KB</td>
-                                <td>N/A</td>
-                                <td>sample_file.txt</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" class="file-checkbox"></td>
-                                <td>Pending</td>
-                                <td>01/01/2024</td>
-                                <td>15.5 KB</td>
-                                <td>N/A</td>
-                                <td>sample_file.txt</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" class="file-checkbox"></td>
-                                <td>Pending</td>
-                                <td>01/01/2024</td>
-                                <td>15.5 KB</td>
-                                <td>N/A</td>
-                                <td>sample_file.txt</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <form id="downloadAllForm" method="post" action="{% url 'core:download_all' %}">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="save_path" placeholder="Enter save path or URL">
-                            <div class="input-group-append">
-                                <select class="form-select" name="save_option">
-                                    <option value="local">Local System</option>
-                                    <option value="workspace">Workspace</option>
-                                </select>
-                            </div>
-                            <button class="btn btn-primary" type="submit">Download All</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+
         </div>
     </div>
     {% endif %}
@@ -160,24 +107,6 @@
                 fileInput.disabled = true;
             } else {
                 fileInput.disabled = false;
-            }
-        });
-
-        $('#selectAll').on('change', function() {
-            $('.file-checkbox').prop('checked', this.checked);
-        });
-
-        $('#downloadAllForm').on('submit', function(event) {
-            event.preventDefault();
-            var selectedFiles = [];
-            $('.file-checkbox:checked').each(function() {
-                selectedFiles.push($(this).closest('tr').find('td:last-child').text().trim());
-            });
-            if (selectedFiles.length > 0) {
-                $('#selectedFilesInput').val(JSON.stringify(selectedFiles));
-                this.submit();
-            } else {
-                alert('No files selected');
             }
         });
     });

@@ -1,0 +1,80 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block index %}
+<div class="container">
+    <div class="col-md-12 mt-4">
+        <div class="uploaded-files-output-table" style="min-height: 60vh;">
+            <table class="table table-bordered" id="uploadedFilesTable">
+                <thead>
+                    <tr>
+                        <th scope="col"><input type="checkbox" id="selectAll"></th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Signed Date</th>
+                        <th scope="col">Full File Name</th>
+                        <th scope="col">Download Signed File</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for batch in batches %}
+                        {% for file in batch.files.all %}
+                            <tr>
+                                <td><input type="checkbox" class="file-checkbox"></td>
+                                <td>Pending</td>
+                                <td>{{ file.uploaded_at }}</td>
+                                <td>{{ file.file.size }} bytes</td>
+                                <td>{% if file.signed_file %}{{ file.uploaded_at }}{% else %}N/A{% endif %}</td>
+                                <td>{{ file.file.name }}</td>
+                                <td>
+                                    {% if file.signed_file %}
+                                        <a href="{{ file.signed_file.url }}" download>Download Signed</a>
+                                    {% else %}
+                                        Not signed
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            <form id="downloadAllForm" method="post" action="#">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="text" class="form-control" name="save_path" placeholder="Enter save path or URL">
+                    <div class="input-group-append">
+                        <select class="form-select" name="save_option">
+                            <option value="local">Local System</option>
+                            <option value="workspace">Workspace</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Download All</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    $('#selectAll').on('change', function () {
+        $('.file-checkbox').prop('checked', this.checked);
+    });
+
+    $('#downloadAllForm').on('submit', function (event) {
+        event.preventDefault();
+        var selectedFiles = [];
+        $('.file-checkbox:checked').each(function () {
+            selectedFiles.push($(this).closest('tr').find('td:last-child').text().trim());
+        });
+        if (selectedFiles.length > 0) {
+            $('#selectedFilesInput').val(JSON.stringify(selectedFiles));
+            this.submit();
+        } else {
+            alert('No files selected');
+        }
+    });
+</script>
+
+{% endblock index %}

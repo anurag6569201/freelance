@@ -11,6 +11,5 @@ urlpatterns=[
     path('privacy/',views.privacy,name='privacy'),
 
     # functionality urls
-    path('upload/', views.upload_file, name='upload_file'),
-    path('download_all/', views.download_all, name='download_all'),
+    path('upload_success/', views.upload_success, name='upload_success'),
 ]
