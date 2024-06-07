@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .table-container {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container, .table-container th, .table-container td {
+            border: 1px solid black;
+        }
+        .table-container th, .table-container td {
+            padding: 8px;
+            text-align: left;
+        }
+        .table-container th {
+            background-color: #f2f2f2;
+        }
+        .details, .bank-details {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .details td, .bank-details td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+        .heading_name{
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .table-container .wide10 {
+            width: 10%;
+        }
+        .table-container .wide15 {
+            width: 15%;
+        }
+        .table-container .wide20 {
+            width: 20%;
+        }
+        .table-container .wide30 {
+            width: 30%;
+        }
+        .table-container .wide40 {
+            width: 40%;
+        }
+        .table-container .wide50 {
+            width: 50%;
+        }
+        .table-container .lb {
+            border-left: none;
+        }
+
+        .table-container .rb {
+            border-right: none;
+        }
+
+        .table-container .ub {
+            border-top: none;
+        }
+
+        .table-container .bb {
+            border-bottom: none;
+        }
+        .table-container li{
+            list-style-type: none;
+            line-height: 23px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table-container">
+            <tr>
+                <td>
+                    <div class="header">
+                        <div class="company_logo">
+                            <img src="logo.jpg" alt="">
+                        </div>
+                        <div class="company_detail">
+                            <h2>ESYASOFT TECHNOLOGIES PVT LTD</h2>
+                            <p>Regd. Office: No 135, 3rd Floor,Opp. <br>The Hindu, Infantry Road,<br>Bangalore - 560001 <br>Phone No. 080-6708-7002 <br>Email Id : accounts@gmail.com</p>
+                            <span>Website : www.esyasoft.com</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td style="text-align: center;width: 100%;font-weight: 600;font-size: 2em;">PROFOMA INVOICE</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td class="wide50">Date :</td>
+                <td class="wide50">Invoice No. :</td>
+            </tr>
+            <tr>
+                <td>Due Date :</td>
+                <td>PO & Date :</td>
+            </tr>
+            <tr>
+                <td>Payment Terms : </td>
+                <td>Project:</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">Customer Details</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td class="wide15">Bill To :</td>
+                <td class="wide30"></td>
+                <td class="wide15">Ship To :</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rb" rowspan="3" style="vertical-align: top;">Address :</td>
+                <td class="bb">`</td>
+                <td class="lb rb" rowspan="3" style="vertical-align: top;">Address :</td>
+                <td class="bb">`</td>
+            </tr>
+            <tr>
+                <td class="ub">`</td>
+                <td class="ub">`</td>
+            </tr>
+            <tr>
+                <td class="lb rb">`</td>
+                <td class="lb rb">`</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td class="wide10">Sl. No.</td>
+                <td>Description</td>
+                <td class="wide20">Amount</td>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td rowspan="3" class="wide10 rb"></td>
+                <td rowspan="3" class="wide40 lb"></td>
+                <td style="text-align: right;">Total Amount</td>
+                <td style="text-align: right;" class="wide20">-</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">IGST @18%</td>
+                <td style="text-align: right;">-</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">Grand Total</td>
+                <td style="text-align: right;">-</td>
+            </tr>
+            <tr>
+                <td>In Words :</td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+        <div class="footer">
+            <table class="bank-details table-container">
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Please Pay the Cheque/DD/Wire transfer in favour of "ESYASOFT TECHNOLOGIES PVT LTD"</td>
+                </tr>
+                <tr>
+                    <td class="wide15">Bank Details:</td>
+                </tr>
+                <tr>
+                    <td>Bank Name: <b>HDFC Bank</b></td>
+                </tr>
+                <tr>
+                    <td>Account No. : <b>502000009106607</b></td>
+                </tr>
+                <tr>
+                    <td>Branch : <b>Banashankari Branch, Bangalore</b></td>
+                </tr>
+                <tr>
+                    <td>IFSC Code : <b>HDFC0000157</b></td>
+                </tr>
+                <tr>
+                    <td>PAN No. : <b>AADCE6527G</b></td>
+                </tr>
+                <tr>
+                    <td>GST No. : <b>29AADCE6527G1ZJ</b></td>
+                </tr>
+            </table>
+        </div>
+        <table class="table-container" style="border-bottom: none;">
+            <td style="vertical-align: top;border-bottom: none;">
+                <span>Terms:</span><br>
+                <li>1. Please pay by a/c payee cheque/draft only payable at Bangalore favoring ESYASOFT TECHNOLOGIES PRIVATE LIMITED</li>
+                <li>2. The above material has been supplied according to your order reference.</li>
+                <li>3. Goods once sold will not be exchanged or returned.</li>
+                <li>4. We declare that this invoice shows the actual price of goods described and all particulars are true and correct.</li>
+                <li>5. INCASE OF ANY DISCREPANCIES, THE SAME IS TO BE REPORTED WITHIN 7 DAYS FROM THE DATE OF THIS INVOICE.</li>
+                <li>6. Subject to Bangalore jurisdiction only.</li>
+            </td>
+        </table>
+        <style>
+            .details td, .bank-details td {
+                padding: 8px;
+                border: none;
+            }
+            .amount_text{
+                display: flex;
+                align-items: center;
+                justify-content: left;
+            }
+            </style>
+            <div class="footer">
+                <table class="bank-details table-container" style="border-top: none;">
+                    <tr>
+                        <td rowspan="6" class="wide15 amount_text ub"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: right;">For Esyasoft Technologies Private Limited</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>E & OE</td>
+                        <td style="text-align: right;">Authorised Signature</td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+</body>
+</html>
