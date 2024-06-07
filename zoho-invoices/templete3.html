@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header,
+        .footer {
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-container,
+        .table-container th,
+        .table-container td {
+            border: 1px solid black;
+        }
+
+        .table-container th,
+        .table-container td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table-container th {
+            background-color: #f2f2f2;
+        }
+
+        .details,
+        .bank-details {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .details td,
+        .bank-details td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        .heading_name {
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .table-container .wide10 {
+            width: 10%;
+        }
+
+        .table-container .wide15 {
+            width: 15%;
+        }
+
+        .table-container .wide20 {
+            width: 20%;
+        }
+
+        .table-container .wide30 {
+            width: 30%;
+        }
+
+        .table-container .wide40 {
+            width: 40%;
+        }
+
+        .table-container .wide50 {
+            width: 50%;
+        }
+
+        .logo {
+            margin: auto;
+        }
+
+        .table-container .lb {
+            border-left: none;
+        }
+
+        .table-container .rb {
+            border-right: none;
+        }
+
+        .table-container .ub {
+            border-top: none;
+        }
+
+        .table-container .bb {
+            border-bottom: none;
+        }
+        li{
+            list-style:none;
+            margin-bottom: 8px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <table class="table-container" style="margin: 0;">
+            <tr>
+                <td style="text-align: center;">PURCHASE ORDER</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td rowspan="11" class="wide40 logo"><img src="logo.jpg" alt=""></td>
+                <td class="wide15">PO No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Revision</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Payment Terms</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Commencement</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Payment Ref. No.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Freight Terms</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Buyer</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Currency</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Project Name</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ref</td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td class="wide40" style="height: 150px;vertical-align: top;">Vendor:</td>
+                <td style="height: 150px;"></td>
+            </tr>
+            <tr>
+                <td>Bill To:</td>
+                <td>Delivery To</td>
+            </tr>
+            <tr>
+                <td class="wide40" style="height: 150px;"></td>
+                <td style="height: 150px;"></td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td><a href="http://www.esyasoft.com/">http://www.esyasoft.com/</a></td>
+            </tr>
+            <tr>
+                <td>Contact:</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td>Sl No</td>
+                <td>HSN/SAC Code</td>
+                <td>Item/Description</td>
+                <td>QTY (nos)</td>
+                <td>Unit Price</td>
+                <td>Amount</td>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="text-align: right;">0.00</td>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bb">TIN No. 29611220761 w.e.f. 18.08.2014</td>
+                <td colspan="2" class="bb ub">Schedule Total</td>
+                <td style="text-align: right;">0.00</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bb ub">SER. TAX. AADCE6527GSD002</td>
+                <td class="bb ub rb" colspan="1"></td>
+                <td class="bb ub lb">Taxes</td>
+                <td style="text-align: right;">0.00</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bb ub">GST No. 29AADCE6527G1ZJ</td>
+                <td class="bb ub rb" colspan="1"></td>
+                <td class="bb ub lb">SGST</td>
+                <td style="text-align: right;">0.00</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bb ub">PAN No. AADCE6527G</td>
+                <td class="bb ub rb" colspan="1"></td>
+                <td class="bb ub lb">CGST</td>
+                <td style="text-align: right;">0.00</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bb ub">REG No. U72200KA2014PTC074366</td>
+                <td class="bb ub rb" colspan="1"></td>
+                <td class="bb ub lb">IGST</td>
+                <td style="text-align: right;">0.00</td>
+            </tr>
+            <tr>
+                <td class="rb" colspan="3"></td>
+                <td class="lb rb" colspan="1"></td>
+                <td class="bb lb">Total</td>
+                <td style="text-align: right;">0.00</td>
+            </tr>
+        </table>
+        <style>
+            .details td,
+            .bank-details td {
+                padding: 8px;
+                border: none;
+            }
+
+            .amount_text {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+            }
+        </style>
+        <div class="footer">
+            <table class="bank-details table-container">
+                <tr>
+                    <td rowspan="6" class="wide15 amount_text">Amouts in Words :</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Authorised Signature</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">....Bipin Chandra....</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <h3>1. DEFINITIONS</h3>
+    <li>1.1 Goods means any goods as specified in the Purchase Order (including any part or parts thereof).</li>
+    <li>1.2 Esya means the Esya entity specified in the Purchase Order.</li>
+    <li>1.3 Party means either Esya or Supplier and Parties means Esya and Supplier.</li>
+    <li>1.4 PO Price means the charge to Esya for the Goods or Services.</li>
+    <li>1.5 Purchase Order means the order submitted by Esya which contains these terms and conditions.</li>
+    <li>1.6 Services means the services as specified in the Purchase Order (including any portion thereof).</li>
+    <li>1.7 Supplier means the entity whose name appears as the addressee in the Purchase Order.</li>
+    <li>1.8 Supplier Resources means Suppliers employees and any subcontractors or agents of Supplier.</li>
+
+    <h3>2. APPLICATION OF TERMS</h3>
+    <li>2.1 These terms and conditions, together with the provisions specified in the Purchase Order, constitute the entire agreement between the Parties for the provision of the Goods and/or Services specified and replaces all previous discussions, negotiations, understandings and representations between the Parties, whether oral or written.</li>
+    <li>2.2 Acceptance of the Purchase Order means acceptance of all its terms.</li>
+    <li>2.3 Incase no queries are raised within 2 days of the receipt of this purchase order, it is considered that the purchase order has been accepted with all terms and conditions</li>
+    <li>2.4 The Purchase Order may not be modified unless agreed to in writing by an authorized representative of both parties</li>
+    <li>2.5 These terms and conditions are the only terms and conditions applicable to the Purchase Order, unless a specific agreement (which has been executed by an authorized representative of both Parties) is referenced in the Purchase Order, in which event the terms and conditions of such agreement will control. No terms or conditions in any Supplier quote, order acknowledgement or invoice will apply unless accepted in writing by an authorized representative of Esya.</li>
+
+    <h3>3. PROVISION OF GOODS</h3>
+    <li>3.1 Goods to be provided under the Purchase Order will be of the best available design, quality, material and workmanship; will be without defect or fault; and will conform in all material respects with specifications set out in the Purchase Order.</li>
+    <li>3.2 Goods will be delivered to the Ship To location specified in the Purchase Order by the Due Date specified in the Purch Order. Unless otherwise stipulated in the Purchase Order, deliveries will only be accepted during normal business hours. All shipments of Goods must be accompanied by a bill of lading that references the Purchase Order number, the number of items in the shipment and, in the case of a partial delivery, the outstanding balance remaining to be delivered</li>
+    <li>3.3 Without prejudice to any other rights which Esya may have, if the Goods are not delivered by the Due Date,Esya reserves the rights to: (a) cancel the Purchase Order in whole or in part; (b) refuse to accept any delivery of the Goods which Supplier attempts to make; (c) recover from Supplier any expenditure reasonably incurred by Esya in obtaining the Goods from another supplier; and (d) damages for any additional costs, loss or expenses incurred by Esya which are in any way attributable to Supplier s failure to deliver the Goods on the  Due Date </li>
+    <li>3.4 Supplier will bear risk of loss to all Goods in transit and will pay any related insurance costs. Esya will not pay for shipping/delivery charges unless otherwise specified in the Purchase Order.</li>
+    <li>3.5 Without prejudice to any other right or remedy which Esya may have, if any Goods are not supplied in accordance with, or Supplier fails to comply with, any of the terms and conditions of the Purchase Order, Esya will be entitled to one or more of the following remedies at Esya s sole discretion: (a) cancel the Purchase Order; (b) reject the Goods (in whole or in part) and return them to Supplier for a full refund, with such return at the risk and cost of Supplier; (c) request Supplier to remedy any defect in the Goods or replace defective Goods at Supplier's expense; (d) refuse to accept any further deliveries of the Goods without any liability to Supplier; (e) require Supplier to take necessary action at Supplier s expense to make the Goods comply with the Purchase Order; and (f) claim any damages sustained as a consequence of Supplier s breach of the Purchase Order.</li>
+
+    <h3>4. PROVISION OF SERVICES</h3>
+    <li>4.1 Suppler will provide the Services as set out in the Purchase Order. Supplier will perform the Services using reasonable skill and care and in accordance with any timeframe and service levels set out in the Purchase Order. Services will be performed only by Supplier Resources who have appropriate skills, qualifications and experience. Supplier Resources will comply with (a) all applicable laws relating to the provision of Services (including any health and safety regulations) and (b) all policies made available by Esya. Unless otherwise specified in the Purchase Order, Supplier will provide (at its own cost) all materials and/or equipment necessary for the performance of the Services.</li>
+    <li>4.2 Esya may, at any time, reject any Services in whole or in part or any deliverables from the Services which, in Esya s reasonable opinion, do not comply with the Purchase Order. Unless otherwise specified to Supplier by Esya,Supplier will have five (5) business days to remedy the acts or omissions which caused a rejection of Services, at Supplier s cost and expense.</li>
+    <li>4.3 Without prejudice to any other rights or remedies Esya may have, if Supplier fails to remedy the acts or omissions which caused a rejection of the Services, Esya will be entitled to terminate the Purchase Order immediately with written notice to Supplier. Acceptance of Services will not be deemed a waiver of any rights or claims by Esya with respect to any act or omission of Supplier.</li>
+
+    <h3>5. PO PRICE & PAYMENT TERMS</h3>
+    <li>5.1 In consideration of the supply of the Goods and/or Services by Supplier under the Purchase Order, Esya will pay Supplier the PO Price stipulated in the Purchase Order. No deposits, prepayments or restocking fees will be authorized.</li>
+    <li>5.2 Unless otherwise specified in the Purchase Order, the PO Price will be inclusive of any applicable sales or use tax,and inclusive of all other charges. Esya will not be responsible for taxes based on Supplier's net income. </li>
+    <li>5.3 As soon as reasonably practicable after the supply of the Goods and/or Services, and in any event within thirty (30) days, Supplier will submit an invoice to the  Invoice To  address for Goods and/or Services provided under the Purchase Order. All invoices must contain a description of the Goods and/or Services, the PO Price; a delineation of any applicable expenses and/or taxes; and the Purchase Order number. Esya will be entitled to withhold payment of any invoice which does not contain the Purchase Order number; is not mailed to the  Invoice To  address, and/or is for Goods and/or Services that do not meet the requirements of the Purchase Order.</li>
+    <li>5.4 Esya will pay  undisputed invoices as per the agreed and mentioned payment terms above. Interest charges and late payment penalties will not be accepted.</li>
+    
+    <h3>6. CONFIDENTIALITY/DATA PRIVACY</h3>
+    <li>6.1 Supplier will hold in strict confidence and not disclose any non-public information or materials relating to Esya, Esya s business, current or prospective Esya s clients, employees of Esya or Esya s clients, and/or participants in Esya and/or Esya s clients benefit plans which may be provided to Supplier orally or in writing ( Confidential Information ). Supplier will ensure all Confidential Information will be kept confidential using the same degree of care used by Supplier for Supplier s own confidential information and such Confidential Information will be used only for the provisions of Goods and/or Services under the Purchase Order. Supplier will notify Esya immediately in the event that Supplier learns of any unauthorized access to any such Confidential Information.</li>
+    <li>6.2 Supplier will restrict disclosure of any Confidential Information to Supplier Resources who have a need to know the same for the purpose of discharging Supplier s obligations to Esya under the Purchase Order. All such Supplier Resources must agree to obligations of confidentiality substantially similar to those herein.</li>
+    <li>6.3 Supplier will return or destroy any Confidential Information on the request of Esya.</li>
+
+    <h3>7. INDEMNITY</h3>
+    <li>7.1 Supplier will indemnify, defend and hold Esya harmless against all claims, liability, loss, damage, injury, cost or expense, including legal and other professional fees and expenses ( Claims ) awarded against or incurred by Esya, Esya s employees, any Esya client or any other third party, to the extent that such Claim is caused by, relates to intellectual property rights; (c) any injury to persons, including death, or damage to tangible, personal or real property due to Supplier and/or any Supplier Resources while at any Esya location, (d) a breach of the obligations for confidentiality as specified in Section 6 herein by the Supplier and/or any Supplier Resources; (e) negligent acts or omissions or willful misconduct of Supplier or Supplier Resources; or (f) any failure to perform or delay in performance by Supplier or Supplier Resources.</li>
+    <li>7.2 Except with respect to Claims for (a) bodily injury, including death, or damage to tangible, personal or real property; (b) intellectual property infringement; (c) gross negligence or willful misconduct, or (d) a breach of the confidentiality obligations specified in Section 6 herein, neither Party will be liable to the other Party for consequential, special or incidental damages related to the provision of Goods and/or Services under the Purchase Order.</li>
+
+    <h3>8. TERMINATION</h3>
+    <li>8.1 Esya will have the right, at any time and for any reason, to terminate the Purchase Order in whole or in part with written notice to Supplier. Esya will pay Supplier for Goods and/or Services supplied till the date of termination, unless the termination is due to non-delivery or non-performance by the Supplier or Supplier Resources.</li>
+    <li>8.2 Either Party may terminate the Purchase Order with notice to the other Party if:
+        (a) the other Party commits a material breach of the Purchase Order which Is incapable of remedy, or (if such breach is capable of being remedied) fails to remedy such breach within ten (10) days of receipt of written notice from the Party not in default; (b) becomes the subject of a bankruptcy or reorganization proceeding (except where such reorganization is being done for the purpose of solvent amalgamation or reconstruction) and such proceeding, if involuntary is not dismissed within sixty (60) days; (c) becomes insolvent; (d) ceases doing business as a going concern; or (e) assigns its rights and obligations without the other Party s written consent.</li>
+    <li>8.3 Termination of the Purchase Order, however arising, will be without prejudice to the rights and duties of the Parties accrued prior to termination. Obligations of a continuing nature will survive expiry or termination of the Purchase Order.</li>
+
+    <h3>9. GENERAL</h3>
+    <li>9.1 Notices: All notice or other communications in connection with the Purchase Order will be sent to the Party's address specified in the Purchase Order and will be deemed to be given on the day it is received if sent by facsimile or hand delivered, in one (1) business day if sent by overnight delivery service, or within four (4) business days if sent by regular mail.</li>
+    <li>9.2 Supplier Assignment/Sub-contracting: Supplier will not assign or subcontract any of its obligations under the Purchase Order without Esya's prior written consent. No permitted subcontracting will in any way relieve Supplier ofSupplier s obligations under the Purchase Order. Supplier will be liable for the acts or omissions resulting from any permitted assignment or subcontracting, as if they were Supplier s own acts or omissions.</li>
+    <li>9.3 Esya Assignment: Esya will be entitled to assign the Purchase Order to any entity controlling, controlled by or under common control with Esya.</li>
+    <li>9.4 Ownership: Supplier will not acquire any proprietary rights or ownership in any materials provided by Esya for the provision of Goods and/or Services under the Purchase Order. The intellectual property rights (including copyright) for deliverable provided to Esya under the Purchase Order are hereby assigned to Esya. Supplier warrants that none of the deliverables in connection with the provision of Services will infringe any patent, trade mark, copyright or any other intellectual property right of any third party. Supplier will indemnify Esya against all Losses which Esya may incur as a result of or in connection with any breach this Section 9.4 by Supplier or any Supplier Resource.</li>
+    <li>9.5 Severance and Waiver: If any part of these terms and conditions are held to be unenforceable, the validity of the remaining terms and conditions will not be affected. No delay or omission by either Party to exercise any rights or remedies under these terms and conditions will be deemed to be a waiver thereof. Waiver of any right under these terms and conditions will not be deemed to be a waiver of any other rights contained in these terms and conditions.</li>
+    <li>9.6 Insurance. In the event Supplier will be onsite at any Esya location for the provision of Goods and/or Services, Supplier must have insurance as specified in the attached insurance requirements and must provide Esya with a current Certificate of Insurance prior to entering any Esya location.</li>
+    <li>9.7 Jurisdiction & Governing Law: The Purchase Order will be governed by and construed in accordance with the laws of India, without regard to conflict of law principles except the matters concerning PII and IIHI which shall be exclusively construed in accordance with terms of HIPPA.</li>
+    <li>9.8 Esya is not responsible to pay ESI and other statutory related to the labour and installation services.</li>
+    <li>9.9 Managed services would be at our discretion and it can be discontinued whenever we want</li>
+
+    </body>
+</html>
