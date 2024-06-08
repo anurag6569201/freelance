@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .table-container {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container, .table-container th, .table-container td {
+            border: 1px solid black;
+        }
+        .table-container th, .table-container td {
+            padding: 8px;
+            text-align: left;
+        }
+        .table-container th {
+            background-color: #f2f2f2;
+        }
+        .details, .bank-details {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .details td, .bank-details td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+        .heading_name{
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .table-container .wide10 {
+            width: 10%;
+        }
+        .table-container .wide15 {
+            width: 15%;
+        }
+        .table-container .wide20 {
+            width: 20%;
+        }
+        .table-container .wide30 {
+            width: 30%;
+        }
+        .table-container .wide40 {
+            width: 40%;
+        }
+        .table-container .wide50 {
+            width: 50%;
+        }
+        .table-container .lb {
+            border-left: none;
+        }
+
+        .table-container .rb {
+            border-right: none;
+        }
+
+        .table-container .ub {
+            border-top: none;
+        }
+
+        .table-container .bb {
+            border-bottom: none;
+        }
+        .table-container li{
+            list-style-type: none;
+            line-height: 23px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table-container">
+            <tr>
+                <td style="text-align: center;width: 100%;font-weight: 600;font-size: 2em;">TAX INVOICE</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td>
+                    <div class="header">
+                        <div class="company_logo">
+                            <img src="logo.jpg" alt="">
+                        </div>
+                        <div class="company_detail">
+                            <h2>ESYASOFT TECHNOLOGIES PVT LTD</h2>
+                            <p>Regd. Office: PROMS, 3rd Floor, 3H, 7th 'C' Main Road,<br>
+                                7th 'C' Main Road, Koramangala 3rd Block,<br>
+                                Bangalore - 560034, Karnataka, India.</p>
+                            <span>Email ID: accounts@esyasoft.com</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td class="wide50">Invoice Date : 11-Sep-2023</td>
+                <td class="wide50">Invoice No. : ESYA/23-24/00018</td>
+            </tr>
+            <tr>
+                <td>Due Date : As per PO</td>
+                <td>PO & Date : 1870000016/11.01.2023</td>
+            </tr>
+            <tr>
+                <td>Payment Terms : As per PO</td>
+                <td>Project : ABC Power and Distribution</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">Customer Details</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td class="wide15">Bill To :</td>
+                <td class="wide30">XYZ (P) Ltd</td>
+                <td class="wide15">Ship To :</td>
+                <td>XYZ (P) Ltd</td>
+            </tr>
+            <tr>
+                <td class="rb" rowspan="3" style="vertical-align: top;">Address : <br><br>GST No:</td>
+                <td class="bb">1, 45th Main Road, 3rd Cross, Koramangala,
+                    Bangalore- 560034
+                    </td>
+                <td class="lb rb" rowspan="3" style="vertical-align: top;">Address :</td>
+                <td class="bb">1, 45th Main Road, 3rd Cross, Koramangala,
+                    Bangalore- 560034
+                    </td>
+            </tr>
+            <tr>
+                <td class="ub bb">29AADCE6527G1ZJ</td>
+                <td class="ub bb">29AADCE6527G1ZJ</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td class="wide10">SR. No.</td>
+                <td>HSN / SAC Code</td>
+                <td>Description</td>
+                <td>Qty</td>
+                <td class="wide20">Amount</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">1</td>
+                <td style="text-align: right;">998314</td>
+                <td>AMC For MDM: Payable in equal monthly installments from the end of 7th month ie, after the Go-Live including the implementation period when the meters Go-Live as and when installed and connected to the billing system for the billing through Esyasoft MDMS through the project
+                    contract period.</td>
+                <td style="text-align: right;">NA</td>
+                <td style="text-align: right;">10,00,000.00</td>
+            </tr>
+        </table>
+        <table class="table-container">
+            <tr>
+                <td rowspan="3" class="wide10 rb"></td>
+                <td rowspan="3" class="wide40 lb"></td>
+                <td style="text-align: right;">Total Amount</td>
+                <td style="text-align: right;" class="wide20">10,00,000.00</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">IGST @18%</td>
+                <td style="text-align: right;">1,80,000.00</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">Grand Total</td>
+                <td style="text-align: right;">11,80,000.00</td>
+            </tr>
+            <tr>
+                <td>In Words :</td>
+                <td colspan="3">Rupees Eleven Lakhs and Eighty Thousand Only</td>
+            </tr>
+        </table>
+        <div class="footer">
+            <table class="bank-details table-container">
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Please Pay the Cheque/DD/Wire transfer in favour of  " ESYASOFT TECHNOLOGIES PVT LTD.,"</td>
+                </tr>
+                <tr>
+                    <td class="wide15">Bank Details:</td>
+                </tr>
+                <tr>
+                    <td>Bank Name: <b>HDFC Bank</b></td>
+                </tr>
+                <tr>
+                    <td>Account No. : <b>502000009106607</b></td>
+                </tr>
+                <tr>
+                    <td>Branch : <b>Banashankari Branch, Bangalore</b></td>
+                </tr>
+                <tr>
+                    <td>IFSC Code : <b>HDFC0000157</b></td>
+                </tr>
+                <tr>
+                    <td>PAN No. : <b>AADCE6527G</b></td>
+                </tr>
+                <tr>
+                    <td>GST No. : <b>29AADCE6527G1ZJ</b></td>
+                </tr>
+            </table>
+        </div>
+        <table class="table-container" style="border-bottom: none;">
+            <td style="vertical-align: top;border-bottom: none;">
+                <span>Terms:</span><br>
+                <li>1. The above material/services have been supplied according to your order reference.</li>
+                <li>2. Goods and services once sold will not be exchanged or returned.</li>
+                <li>3. We declare that this invoice shows the actual price of goods/services described and all particulars are true and correct.</li>
+                <li>4. INCASE OF ANY DISCREPANCIES, THE SAME IS TO BE REPORTED WITHIN 7 DAYS FROM THE DATE OF THIS INVOICE.</li>
+                <li>5. We Esyasoft Technologies Pvt Ltd., is registered under the MSME Act.</li>
+                <li>6. Subject to Bangalore jurisdiction only.</li>
+            </td>
+        </table>
+        <style>
+            .details td, .bank-details td {
+                padding: 8px;
+                border: none;
+            }
+            .amount_text{
+                display: flex;
+                align-items: center;
+                justify-content: left;
+            }
+            </style>
+            <div class="footer">
+                <table class="bank-details table-container" style="border-top: none;">
+                    <tr>
+                        <td rowspan="6" class="wide15 amount_text ub"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: right;">For ESYASOFT TECHNOLOGIES PVT LTD</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+</body>
+</html>
