@@ -18,7 +18,6 @@
         .table-container {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
         }
         .table-container, .table-container th, .table-container td {
             border: 1px solid black;
@@ -66,6 +65,19 @@
         .table-container .wide50 {
             width: 50%;
         }
+        .company_logo{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+        .company_logo img{
+            max-width: 200px;
+        }
+        .table-container td,
+        .table-container tr { 	
+            page-break-inside: avoid; 	
+            page-break-after:auto; 
+        }
     </style>
 </head>
 <body>
@@ -81,7 +93,7 @@
                             Bangalore - 560034, Karnataka, India.</p>
                         </div>
                         <div class="company_logo">
-                            <img src="logo.jpg" alt="">
+                            <img src="https://i.ibb.co/5F7yN1Y/Picture1.png" alt="">
                         </div>
                     </div>
                     <h3 class="heading_name">CREDIT NOTE</h3>
