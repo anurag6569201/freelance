@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .pc-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 10px 20px;
+        }
+
+        .pc-nav .logo img {
+            height: 40px;
+        }
+
+        .pc-nav .navlinks {
+            display: flex;
+            gap: 1em;
+        }
+
+        .btn-group button,
+        .pc-nav .navlinks a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .btn-group button:hover,
+        .pc-nav .navlinks a:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .pc-nav .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .mobile-navlinks {
+            display: none;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .pc-nav {
+                flex-direction: row;
+                align-items: flex-start;
+                position: relative;
+            }
+
+            .pc-nav .navlinks {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .pc-nav .mobile-navlinks.active {
+                display: flex;
+                flex-direction: column;
+                padding: 5px 10px;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: black;
+                color: white;
+            }
+
+            .pc-nav .mobile-navlinks.active a {
+                margin-top: 5px;
+                color: white;
+                cursor: pointer;
+            }
+
+            .pc-nav .menu-icon {
+                display: block;
+            }
+
+            .pc-nav .navlinks a {
+                padding: 15px;
+                border-top: 1px solid #444;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 25px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 40px;
+        }
+
+        header {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1em 9em;
+            background-color: black;
+        }
+
+        header h1 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            color: white;
+        }
+
+        header p {
+            color: white;
+            padding: 0 10px;
+        }
+
+        .btn-group {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 10px;
+        }
+
+        .btn-group button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* section styling */
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em 9em;
+            padding-bottom: 0;
+        }
+
+        section .content {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 1em;
+            vertical-align: top;
+        }
+
+        .content-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .content,
+        .content-image {
+            width: 50%;
+        }
+
+        /* border design */
+        .border {
+            border-top: 2px dotted rgb(38, 107, 197);
+            padding-bottom: 1em;
+            margin: 0 9em;
+        }
+
+        .another-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 9em;
+            text-align: center;
+        }
+
+        .another-section p {
+            color: grey;
+        }
+
+        .border1 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .section-container {
+            background-color: #f2f3f5;
+        }
+
+        .content p {
+            opacity: .75;
+        }
+
+        /* cards styling */
+        .cards {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 1em 3em;
+        }
+
+        .card {
+            width: 23%;
+            text-align: center;
+            background-color: white;
+            padding: 1em;
+        }
+
+        .card img {
+            width: 200px;
+        }
+
+        .card p {
+            color: grey;
+        }
+
+
+        /* last section */
+        .border2 {
+            margin-top: 5px;
+        }
+
+        /* footer */
+        footer {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-evenly;
+            padding: 1em 3em;
+        }
+
+        .foot4,
+        .foot1 {
+            width: 25%;
+        }
+
+        .foot2,
+        .foot3 {
+            width: 19%;
+        }
+
+        .foot4 p,
+        .foot1 p {
+            color: grey;
+        }
+
+        .foot li {
+            color: grey;
+            list-style: none;
+        }
+
+        .foot h3 {
+            color: #0594a9;
+        }
+
+        .foot1 span b {
+            color: grey;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            padding: 1em 1em;
+        }
+
+        @media (max-width:600px) {
+            header {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            header p {
+                padding: 0;
+            }
+
+            .btn-group button {
+                font-size: 12px;
+            }
+
+            section {
+                padding: 10px;
+                font-size: 12px;
+                flex-direction: column;
+            }
+
+            .content,
+            .content-image {
+                width: 100%;
+            }
+
+            .content h4 {
+                padding: 0;
+                margin: 5px;
+            }
+
+            .content h1 {
+                margin: 0px 5px;
+            }
+
+            .border {
+                margin: 0 10px;
+            }
+
+            .another-section {
+                padding: 0 10px;
+            }
+
+            .cards {
+                padding: 5px 10px;
+                flex-direction: column;
+                gap: 1em;
+            }
+
+            .card {
+                width: auto;
+            }
+
+            .border2 {
+                margin-top: .3em;
+            }
+
+            footer {
+                padding: 5px 10px;
+                flex-direction: column;
+                gap: 1em;
+            }
+
+            .foot {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="pc-nav">
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/R.89ea81e1906d12b4390b0b70f39aa471?rik=vo5XhGN1MP7QFg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-logo-design-design-png-hd-1250.png&ehk=PTSp6EHLbcJ%2fFkzlJhFcSV%2bI5RPa9H2nw8A4XjQ3ulA%3d&risl=&pid=ImgRaw&r=0"
+                alt="Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="navlinks">
+            <a href="#link1">link1</a>
+            <a href="#link2">link2</a>
+            <a href="#link3">link3</a>
+            <a href="#link4">link4</a>
+        </div>
+        <div class="mobile-navlinks">
+            <a href="#link1">link1</a>
+            <a href="#link2">link2</a>
+            <a href="#link3">link3</a>
+            <a href="#link4">link4</a>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.mobile-navlinks');
+            var menuIcon = document.querySelector('.menu-icon');
+            navLinks.classList.toggle('active');
+            if (navLinks.classList.contains('active')) {
+                menuIcon.innerHTML = '&#10005;';
+            } else {
+                menuIcon.innerHTML = '&#9776;';
+            }
+        }
+    </script>
+    <header>
+        <h1>Website Traffic with SEO by ranking website keywords</h1>
+        <p>Rank your website by using SEO Strategy. With our Strategy we will increase your website ranking, Website
+            Domain Authority or Rating by using SEO strategy.</p>
+        <div class="btn-group">
+            <button>Buy Seo Backlinks</button>
+            <button>Local Seo Plans</button>
+            <button>Post Seo Packages</button>
+        </div>
+    </header>
+    <section>
+        <div class="content">
+            <h2 style="margin-bottom: 0;">SEO Services</h2>
+            <h1 style="margin-top: 0;">Welcome to BuySEO.in</h1>
+            <p>We are a professional SEO service provider in India.</p>
+            <p>SEO have twom main parts that you should know before applying SEO to your website. On page SEO and
+                Offpage SEO. In Onpage SEO, We always recommend Faster website, well optimized content in website, a
+                good content structure. In Offpage SEO, Link building strategy is most important part. In Link building,
+                content should be relavant and engaging and hyperlink should be focused to your website. The authentic
+                you will the more better results you will get in Search engines liek Google, Microsoft etc.</p>
+        </div>
+        <div class="content-image">
+            <img src="https://buyseo.in/images/seo1.webp" alt="">
+        </div>
+    </section>
+
+    <div class="border"></div>
+
+    <div class="another-section">
+        <h3>Why should you buy our SEO services?</h3>
+        <p>We are SEO frofessional since year 2015. During these years we learned so many things and applied in many
+            projects that became successful. So, you will get experienced hands on your website SEO.</p>
+    </div>
+    <section>
+        <div class="content-image">
+            <img src="https://buyseo.in/images/seo2.webp" alt="">
+        </div>
+        <div class="content">
+            <h3 style="margin-top: 0;">What we Do in OffPage SEO and Onpage SEO?</h3>
+            <p>First of all you should know that SEO full Form is Search Engine Optimization. It has two segments -
+                Onpage SEO and Offpage SEO. Onpage SEO is most important part of the SEO. Onpage SEO means the
+                operations performed on website such as content optimization meta details optimization according to the
+                keyword research. Then next step is Offpage SEO. In Offpage SEO, There are many strategies used such as
+                Link building strategies, content marketing and many more.</p>
+            <p>We can simple say, both strategies are very important. If any one strategy will missed then it would be
+                hard to rank any website. So, we always focus to work according to the rules.</p>
+        </div>
+    </section>
+    <br>
+    <div class="border border1"></div>
+
+    <div class="section-container">
+        <div class="another-section">
+            <h1>Our SEO Services Goals</h1>
+            <p>We are SEO frofessional since year 2015. During these years we learned so many things and applied in many
+                projects that became successful. So, you will get experienced hands on your website SEO.</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://buyseo.in/images/seogoal.webp" alt="">
+                <h3>Local Website Ranking</h3>
+                <p>Gain Local Traffic organically by using SEO strategies. Earn Local Business Leads or Sales.</p>
+            </div>
+            <div class="card">
+                <img src="https://buyseo.in/images/seogoal.webp" alt="">
+                <h3>Local Website Ranking</h3>
+                <p>Gain Local Traffic organically by using SEO strategies. Earn Local Business Leads or Sales.</p>
+            </div>
+            <div class="card">
+                <img src="https://buyseo.in/images/seogoal.webp" alt="">
+                <h3>Local Website Ranking</h3>
+                <p>Gain Local Traffic organically by using SEO strategies. Earn Local Business Leads or Sales.</p>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+
+    <div class="border border1 border2"></div>
+    <div class="border border1 border2"></div>
+    <div class="border border1 border2"></div>
+
+    <footer>
+        <div class="foot1 foot">
+            <span><b>BuySEO.in</b></span>
+            <p>As 10 Year+ Experienced in SEO we are willing to rank your website by using SEO strategies and grow your
+                traffic. From Onpage SEO to Offpage SEO, we are highly dedicated in SEO Services.</p>
+        </div>
+        <div class="foot2 foot">
+            <h3>Information</h3>
+            <li>Buy SEO Services</li>
+            <li>Buy SEO Services</li>
+            <li>Buy SEO Services</li>
+            <li>Buy SEO Services</li>
+        </div>
+        <div class="foot3 foot">
+            <h3>Extra Services</h3>
+            <li>Buy SEO Services</li>
+            <li>Buy SEO Services</li>
+            <li>Buy SEO Services</li>
+            <li>Buy SEO Services</li>
+        </div>
+        <div class="foot3 foot">
+            <h3>Contact Details</h3>
+            <p>futuremarketingpro@gmail.com <br>
+                www.buyseo.in</p>
+        </div>
+    </footer>
+    <div class="bottom">
+        <span>All Rights Reserved. © 2024 BuySEO.in</span>
+    </div>
+
+</body>
+
+</html>
