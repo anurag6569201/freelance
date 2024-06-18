@@ -134,11 +134,11 @@
             <tr>
                 <td rowspan="11" class="wide40 logo"><img src="https://i.ibb.co/5F7yN1Y/Picture1.png" alt=""></td>
                 <td class="wide15">PO No</td>
-                <td></td>
+                <td>${invoice.cf_po_no}</td>
             </tr>
             <tr>
                 <td>Date</td>
-                <td></td>
+                <td>%InvoiceDate%</td>
             </tr>
             <tr>
                 <td>Revision</td>
@@ -146,7 +146,7 @@
             </tr>
             <tr>
                 <td>Payment Terms</td>
-                <td></td>
+                <td>%PaymentTerms%</td>
             </tr>
             <tr>
                 <td>Commencement</td>
@@ -154,7 +154,7 @@
             </tr>
             <tr>
                 <td>Payment Ref. No.</td>
-                <td></td>
+                <td>%PaymentLink%</td>
             </tr>
             <tr>
                 <td>Freight Terms</td>
@@ -166,7 +166,7 @@
             </tr>
             <tr>
                 <td>Currency</td>
-                <td></td>
+                <td>%CurrencySymbol%</td>
             </tr>
             <tr>
                 <td>Project Name</td>
@@ -174,17 +174,17 @@
             </tr>
             <tr>
                 <td>Ref</td>
-                <td></td>
+                <td>%ReferenceInvoiceNumber%</td>
             </tr>
         </table>
         <table class="table-container">
             <tr>
                 <td class="wide40" style="height: 150px;vertical-align: top;">Vendor:</td>
-                <td style="height: 150px;"></td>
+                <td style="height: 150px;vertical-align: top;">%CompanyName%</td>
             </tr>
             <tr>
-                <td>Bill To:</td>
-                <td>Delivery To</td>
+                <td>Bill To:%ContactCompanyName%</td>
+                <td>Delivery To:%ContactCompanyName%</td>
             </tr>
             <tr>
                 <td class="wide40" style="height: 150px;"></td>
@@ -193,10 +193,10 @@
         </table>
         <table class="table-container">
             <tr>
-                <td><a href="http://www.esyasoft.com/">http://www.esyasoft.com/</a></td>
+                <td><a href="%ContactWebsite%">%ContactWebsite%</a></td>
             </tr>
             <tr>
-                <td>Contact:</td>
+                <td>Contact:${contact.cf_contact}</td>
             </tr>
         </table>
         <table class="table-container">
@@ -210,27 +210,27 @@
             </tr>
             <tr>
                 <td>1.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACValue%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemQty%</td>
+                <td>%ItemRate%</td>
+                <td style="text-align: right;">%ItemTaxAmount%</td>
             </tr>
             <tr>
                 <td>2.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACValue%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemQty%</td>
+                <td>%ItemRate%</td>
+                <td style="text-align: right;">%ItemTaxAmount%</td>
             </tr>
             <tr>
                 <td>3.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td style="text-align: right;">0.00</td>
+                <td>%HSNOrSACValue%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemQty%</td>
+                <td>%ItemRate%</td>
+                <td style="text-align: right;">%ItemTaxAmount%</td>
             </tr>
             <tr>
                 <td>.</td>
@@ -243,81 +243,83 @@
             <tr>
                 <td colspan="3" class="bb">TIN No. 29611220761 w.e.f. 18.08.2014</td>
                 <td colspan="2" class="bb ub">Schedule Total</td>
-                <td style="text-align: right;">0.00</td>
+                <td style="text-align: right;">%AmountWithTax%</td>
             </tr>
             <tr>
                 <td colspan="3" class="bb ub">SER. TAX. AADCE6527GSD002</td>
                 <td class="bb ub rb" colspan="1"></td>
                 <td class="bb ub lb">Taxes</td>
-                <td style="text-align: right;">0.00</td>
+                <td style="text-align: right;">%TaxableAmount%</td>
             </tr>
             <tr>
-                <td colspan="3" class="bb ub">GST No. 29AADCE6527G1ZJ</td>
+                <td colspan="3" class="bb ub">GST No. %CustomerGSTIN%</td>
                 <td class="bb ub rb" colspan="1"></td>
                 <td class="bb ub lb">SGST</td>
-                <td style="text-align: right;">0.00</td>
+                <td style="text-align: right;">%SGSTOrUTGSTAmount%</td>
             </tr>
             <tr>
                 <td colspan="3" class="bb ub">PAN No. AADCE6527G</td>
                 <td class="bb ub rb" colspan="1"></td>
                 <td class="bb ub lb">CGST</td>
-                <td style="text-align: right;">0.00</td>
+                <td style="text-align: right;">%CGSTAmount%</td>
             </tr>
             <tr>
                 <td colspan="3" class="bb ub">REG No. U72200KA2014PTC074366</td>
                 <td class="bb ub rb" colspan="1"></td>
                 <td class="bb ub lb">IGST</td>
-                <td style="text-align: right;">0.00</td>
+                <td style="text-align: right;">%IGSTAmount%</td>
             </tr>
             <tr>
                 <td class="rb" colspan="3"></td>
                 <td class="lb rb" colspan="1"></td>
                 <td class="bb lb">Total</td>
-                <td style="text-align: right;">0.00</td>
+                <td style="text-align: right;">%InvoiceTotal%</td>
             </tr>
         </table>
         <style>
             .details td,
             .bank-details td {
-                padding: 8px;
                 border: none;
-            }
-
-            .amount_text {
-                display: flex;
-                align-items: center;
-                justify-content: left;
             }
         </style>
         <div class="footer">
             <table class="bank-details table-container">
                 <tr>
-                    <td rowspan="6" class="wide15 amount_text">Amouts in Words :</td>
+                    <td rowspan="6" class="wide15 amount_text" style="text-align: left;vertical-align: top;">Amouts in Words :</td>
+                    <td style="text-align: left;">%TotalInWords%</td>
+                </tr>
+                <tr>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
                     <td style="text-align: right;">Authorised Signature</td>
                 </tr>
                 <tr>
-                    <td style="text-align: right;">....Bipin Chandra....</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td colspan="2" style="text-align: right!important;">%CustomerName%</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
                 </tr>
             </table>
         </div>

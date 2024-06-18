@@ -87,6 +87,7 @@
         .company_logo img{
             max-width: 180px;
         }
+        footer tr,
         .table-container tr { 	
             page-break-inside: avoid; 	
             page-break-after:auto; 
@@ -100,12 +101,13 @@
                 <td>
                     <div class="header">
                         <div class="company_logo">
-                            <img src="https://i.ibb.co/5F7yN1Y/Picture1.png" alt="">
+                            <img src="%Logo%" alt="%Logo%">
                         </div>
                         <div class="company_detail">
-                            <h2>ESYASOFT TECHNOLOGIES PVT LTD</h2>
-                            <p>Regd. Office: No 135, 3rd Floor,Opp. <br>The Hindu, Infantry Road,<br>Bangalore - 560001 <br>Phone No. 080-6708-7002 <br>Email Id : accounts@gmail.com</p>
-                            <span>Website : www.esyasoft.com</span>
+                            <h2>%CompanyName%</h2>
+                            <p>%CompanyStreetAddress1%,%CompanyStreetAddress2%,<br>
+                                %CompanyPostalCode%, %CompanyCity%,<br>
+                                %CompanyState%</p>
                         </div>
                     </div>
                 </td>
@@ -118,15 +120,15 @@
         </table>
         <table class="table-container">
             <tr>
-                <td class="wide50">Date :</td>
-                <td class="wide50">Invoice No. :</td>
+                <td class="wide50">Date : %InvoiceDate%</td>
+                <td class="wide50">Invoice No. : %InvoiceNumber%</td>
             </tr>
             <tr>
-                <td>Due Date :</td>
-                <td>PO & Date :</td>
+                <td>Due Date : %DueDate%</td>
+                <td>PO & Date : %P.O.Number%</td>
             </tr>
             <tr>
-                <td>Payment Terms : </td>
+                <td>Payment Terms : %PaymentTerms%</td>
                 <td>Project:</td>
             </tr>
             <tr>
@@ -136,14 +138,14 @@
         <table class="table-container">
             <tr>
                 <td class="wide15">Bill To :</td>
-                <td class="wide30"></td>
+                <td class="wide30">%ContactCompanyName%</td>
                 <td class="wide15">Ship To :</td>
-                <td></td>
+                <td>%ContactCompanyName%</td>
             </tr>
             <tr>
-                <td class="rb" rowspan="3" style="vertical-align: top;">Address :</td>
+                <td class="rb" rowspan="3" style="vertical-align: top;">Address : %CustomerBAddress%</td>
                 <td class="bb">`</td>
-                <td class="lb rb" rowspan="3" style="vertical-align: top;">Address :</td>
+                <td class="lb rb" rowspan="3" style="vertical-align: top;">Address : %CustomerSAddress%</td>
                 <td class="bb">`</td>
             </tr>
             <tr>
@@ -163,23 +165,23 @@
             </tr>
             <tr>
                 <td>1.</td>
-                <td></td>
-                <td></td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
             </tr>
             <tr>
                 <td>2.</td>
-                <td></td>
-                <td></td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
             </tr>
             <tr>
                 <td>3.</td>
-                <td></td>
-                <td></td>
+                <td>%ItemDescription%</td>
+                <td>	%ItemRate%</td>
             </tr>
             <tr>
                 <td>4.</td>
-                <td></td>
-                <td></td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
             </tr>
         </table>
         <table class="table-container">
@@ -187,19 +189,19 @@
                 <td rowspan="3" class="wide10 rb"></td>
                 <td rowspan="3" class="wide40 lb"></td>
                 <td style="text-align: right;">Total Amount</td>
-                <td style="text-align: right;" class="wide20">-</td>
+                <td style="text-align: right;" class="wide20">%ItemAmount%</td>
             </tr>
             <tr>
                 <td style="text-align: right;">IGST @18%</td>
-                <td style="text-align: right;">-</td>
+                <td style="text-align: right;">%IGSTPercentage%</td>
             </tr>
             <tr>
                 <td style="text-align: right;">Grand Total</td>
-                <td style="text-align: right;">-</td>
+                <td style="text-align: right;">%InvoiceTotal%</td>
             </tr>
             <tr>
                 <td>In Words :</td>
-                <td colspan="3"></td>
+                <td colspan="3">%TotalInWords%</td>
             </tr>
         </table>
         <div class="footer">
@@ -214,22 +216,22 @@
                     <td class="wide15">Bank Details:</td>
                 </tr>
                 <tr>
-                    <td>Bank Name: <b>HDFC Bank</b></td>
+                    <td>Bank Name: <b></b></td>
                 </tr>
                 <tr>
-                    <td>Account No. : <b>502000009106607</b></td>
+                    <td>Account No. : <b></b></td>
                 </tr>
                 <tr>
-                    <td>Branch : <b>Banashankari Branch, Bangalore</b></td>
+                    <td>Branch : <b></b></td>
                 </tr>
                 <tr>
-                    <td>IFSC Code : <b>HDFC0000157</b></td>
+                    <td>IFSC Code : <b></b></td>
                 </tr>
                 <tr>
-                    <td>PAN No. : <b>AADCE6527G</b></td>
+                    <td>PAN No. : <b></b></td>
                 </tr>
                 <tr>
-                    <td>GST No. : <b>29AADCE6527G1ZJ</b></td>
+                    <td>GST No. : <b></b></td>
                 </tr>
             </table>
         </div>
@@ -249,19 +251,14 @@
                 padding: 8px;
                 border: none;
             }
-            .amount_text{
-                display: flex;
-                align-items: center;
-                justify-content: left;
-            }
             </style>
             <div class="footer">
                 <table class="bank-details table-container" style="border-top: none;">
                     <tr>
                         <td rowspan="6" class="wide15 amount_text ub"></td>
-                        <td></td>
                     </tr>
                     <tr>
+                        <td></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -270,17 +267,10 @@
                     </tr>
                     <tr>
                         <td></td>
-                    </tr>
-                    <tr>
                         <td></td>
                     </tr>
                     <tr>
                         <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td></td>
                     </tr>
                     <tr>

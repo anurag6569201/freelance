@@ -7,6 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            font-size: 13px;
         }
         .container {
             width: 100%;
@@ -68,6 +69,9 @@
         }
         .table-container .wide50 {
             width: 50%;
+        }#lineItem tr {
+            page-break-inside: avoid; 	
+            page-break-after:auto;
         }
     </style>
 </head>
@@ -78,13 +82,13 @@
                 <td>
                     <div class="header">
                         <div class="company_detail">
-                            <h2>ESYASOFT TECHNOLOGIES PVT LTD</h2>
-                            <p>Regd. Office: PROMS, 3rd Floor, 3H, 7th 'C' Main Road,<br>
-                            7th 'C' Main Road, Koramangala 3rd Block,<br>
-                            Bangalore - 560034, Karnataka, India.</p>
+                            <h2>%CompanyName%</h2>
+                            <p>%CompanyStreetAddress1%,%CompanyStreetAddress2%,<br>
+                                %CompanyPostalCode%, %CompanyCity%,<br>
+                                %CompanyState%</p>
                         </div>
                         <div class="company_logo">
-                            <img src="logo.jpg" alt="">
+                            <img src="%Logo%" alt="%Logo%">
                         </div>
                     </div>
                     <h3 class="heading_name">DEBIT NOTE</h3>
@@ -95,27 +99,27 @@
             <tr>
                 <th class="wide50">Customer Details:</th>
                 <th class="wide15">Date:</th>
-                <td></td>
+                <td>%InvoiceDate%</td>
             </tr>
             <tr>
-                <td></td>
+                <td>%CustomerName%</td>
                 <th>Debit Note No.:</th>
-                <td></td>
+                <td>%DebitNoteNumber%</td>
             </tr>
             <tr>
-                <td></td>
+                <td>%CustomerAddress%</td>
                 <th>Project:</th>
-                <td></td>
+                <td>%Project%</td>
             </tr>
             <tr>
                 <td></td>
                 <th>GST No.:</th>
-                <td></td>
+                <td>%CompanyGSTINLabel%</td>
             </tr>
             <tr>
                 <td></td>
                 <th>PAY No.:</th>
-                <td></td>
+                <td>%PaymentMade%</td>
             </tr>
         </table>
         <table class="table-container">
@@ -130,107 +134,107 @@
             </tr>
             <tr>
                 <td>1.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>2.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>3.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>4.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>5.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>6.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>7.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>8.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>9.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <tr>
                 <td>10.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%HSNOrSACLabel%</td>
+                <td>%ItemDescription%</td>
+                <td>%ItemRate%</td>
+                <td>%CGSTPercentage%</td>
+                <td>%SGSTOrUTGSTPercentage%</td>
+                <td>%ItemAmountIncTax%</td>
             </tr>
             <!-- Add more rows as needed -->
             <tr>
                 <td colspan="3" style="text-align:right;">TOTAL:</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>%TotalTaxableAmount%</td>
+                <td>%CGSTAmount%</td>
+                <td>%SGSTOrUTGSTAmount%</td>
+                <td>%InvoiceTotal%</td>
             </tr>
         </table>
         <table class="table-container">
             <tr>
                 <th class="wide15">Amount in Words:</th>
-                <td></td>
+                <td>%TotalInWords%</td>
             </tr>
         </table>
         <div class="footer">
@@ -242,19 +246,19 @@
                 </tr>
                 <tr>
                     <td>Account No.:</td>
-                    <td colspan="6"></td>
+                    <td colspan="6">%AccountNumber%</td>
                 </tr>
                 <tr>
                     <td>Bank Name:</td>
-                    <td colspan="6"></td>
+                    <td colspan="6">%BankName%</td>
                 </tr>
                 <tr>
                     <td>Branch:</td>
-                    <td colspan="6"></td>
+                    <td colspan="6">%Branch%</td>
                 </tr>
                 <tr>
                     <td>IFSC Code:</td>
-                    <td colspan="6"></td>
+                    <td colspan="6">%IFSCCode%</td>
                 </tr>
                 <tr>
                     <td></td>
