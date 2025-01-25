@@ -1,5 +1,5 @@
 // ==================================================
-// * Project Name  :  Harmoni Event Management
+// * Project Name  :  Asian Adept Event Management
 // * Author        :  jThemes Studio
 // * File          :  JS Base
 // * Version       :  1.0.0

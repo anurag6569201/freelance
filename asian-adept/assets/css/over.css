@@ -36,6 +36,7 @@
 .menu-item-has-children:hover a{
     color: #fff !important;
 }
+.service-section,
 #our-management-section,
 .upcomming-event-section{
     box-shadow: 0 0 80px 100px rgb(255, 255, 255);
@@ -129,4 +130,61 @@
 }
 .map-section #google-map{
     height: 60vh;
+}
+
+.service-image img{
+    border-radius: 15px;
+}
+.service-content{
+    padding-top: 0 !important;
+}
+.service-section .service-wrapper .service-item .service-content .service-title .service-price{
+    color: #cb3229;
+}
+
+
+/* team */
+.team-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.member{
+    flex: 1 1 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    max-width: 300px;
+    transition: all 0.3s;
+}
+
+.member:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-20px);
+    border-radius: 15px;
+}
+
+.member img{
+    display: block;
+    width: 150px; height: 150px;
+    object-fit: cover;
+    border:4px solid #726a95;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.member h2{
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #726a95;
+    margin: 15px 0;
+}
+
+.member p{
+    font-size: 15px;
+    color: #838383;
+    line-height: 1.6;
 }
