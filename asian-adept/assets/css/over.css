@@ -36,6 +36,8 @@
 .menu-item-has-children:hover a{
     color: #fff !important;
 }
+#contact-section,
+#faq-section,
 .service-section,
 #our-management-section,
 .upcomming-event-section{
@@ -187,4 +189,23 @@
     font-size: 15px;
     color: #838383;
     line-height: 1.6;
+}
+.default-footer-section .footer-top{
+    background-color: transparent;
+}
+.default-footer-section .footer-top .basic-info .basic-info-item{
+    border-radius: 15px;
+    background-color: #a52e2e;
+    color: black !important;
+    z-index: 100;
+    position: relative;
+}
+.defualt_footer_box_address .icon,
+.defualt_footer_box_address{
+    border-radius: 15px !important;
+}
+
+
+.switcher{
+    display: none !important;
 }
