@@ -43,9 +43,14 @@
     
     // preloader - start
     // --------------------------------------------------
-    $(window).on('load', function(){
-      $('#preloader').fadeOut('slow',function(){$(this).remove();});
+    $(window).on('load', function () {
+      setTimeout(function () {
+        $('#preloader').fadeOut('slow', function () {
+          $(this).remove();
+        });
+      }, 1500); // 1000ms = 1 second delay
     });
+    
     // preloader - end
     // --------------------------------------------------
   

@@ -494,7 +494,7 @@ textarea {
   z-index: 1005;
   position: fixed;
   overflow: visible;
-  background: #fff url("../images/preloader.gif") no-repeat center center; }
+  background: #fff url("../images/loader/preloader.gif") no-repeat center center; }
 
 /* preloader - end
 ================================================== */
@@ -2352,8 +2352,12 @@ button {
 ==================================================================================================== */
 /* index - 1 main-carousel1 - start
 ==================================================================================================== */
+.slide-section .main-carousel1 .item .overlay-black{
+  height: 100%;
+}
 .slide-section .main-carousel1 .item {
   position: relative;
+  height: 100vh !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }

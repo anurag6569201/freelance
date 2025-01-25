@@ -1,0 +1,132 @@
+.slide-section .owl-dot {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    font-size: 0px !important;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
+    border: none !important;
+}
+
+.slide-section .owl-dot.active {
+    scale: 1.2;
+    border: none !important;
+}
+.slide-section .owl-theme .owl-dots .owl-dot:after{
+    background-color: transparent !important;
+}
+.slide-section .owl-theme .owl-dots{
+    border-bottom: none !important;
+}
+.sticky-header-section .header-bottom{
+    padding: 10px;
+}
+.sticky-header-section.stuck{
+    background-color: #fff;
+}
+.sticky-header-section.stuck .header-bottom .menu-item-list > ul > li > a{
+    color: black;
+}
+.menu-item-has-children.active a{
+    color: #fff !important;
+}
+.menu-item-has-children:hover a{
+    color: #fff !important;
+}
+#our-management-section,
+.upcomming-event-section{
+    box-shadow: 0 0 80px 100px rgb(255, 255, 255);
+    z-index: 100;
+    position: relative;
+    padding: 30px 0;
+}
+.upcomming-event-section .upcomming-event-carousel .owl-item.active.center .item .event-item .event-content{
+    border-radius: 15px;
+}
+.upcomming-event-section .upcomming-event-carousel .item .event-item .event-image{
+    border-radius: 15px;
+}
+.upcomming-event-section .owl-stage-outer{
+    overflow: visible !important;
+}
+.upcomming-event-section{
+    overflow: hidden !important;
+}
+.about-section .about-item-wrapper ul li,
+.about-section .about-item-wrapper ul{
+    border-radius: 15px !important;
+}
+.about-section .about-item-wrapper ul li:hover .about-item:before{
+    border-radius: 15px !important;
+}
+.special-offer-section .special-offer-content h2,
+.special-offer-section .special-offer-content h2 strong{
+    color: #cb3229;
+}
+.map-larger-btn:hover, .special-offer-section .event-makeing-btn a:hover, .advertisement-section .advertisement-content .purchase-btn:hover{
+    background: linear-gradient(to bottom right, #872341 , #ff3e00)!important
+}
+.event-gallery-section{
+    background-color: #f7f7f7;
+}
+.image-wrapper{
+    border-radius: 15px;
+}
+.image-wrapper a{
+    border-radius: 15px;
+}
+.event-expertise-section .event-expertise-carousel .item .expertise-item .content{
+    bottom: -80px;
+    border-radius: 15px;
+}
+.expertise-item a{
+    padding: 5px 30px;
+    margin-top: 5px;
+}
+.event-expertise-carousel .owl-stage-outer{
+    overflow: visible !important;
+}
+.event-expertise-carousel{
+    overflow: hidden !important;
+}
+.footer a{
+    color: rgb(68, 67, 67);
+    text-decoration: underline;
+}
+.event-gallery-section .grid-item:hover a::before {
+    background:linear-gradient(to bottom right, #872341 , #ff3e00)!important;
+    opacity: .6;
+}
+.event-expertise-carousel .item:hover .plus-effect{
+    background:linear-gradient(to bottom right, #872341 , #ff3e00)!important;
+    opacity: .6 !important;
+}
+
+
+
+
+
+/* about */
+.breadcrumb-section .overlay-black{
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.default-header-p{
+    padding: 0;
+}
+.breadcrumb-section .breadcrumb-title .big-title strong{
+    color: #cb3229;
+}
+.service-section .service-wrapper > ul > li a:before,
+.service-section .service-wrapper > ul > li a:hover,
+.service-section .service-wrapper > ul > li a{
+    border-radius: 15px !important;
+}
+.map-section #google-map{
+    height: 60vh;
+}

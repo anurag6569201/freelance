@@ -1,37 +1,37 @@
 /* global - start
 ================================================== */
-.custom-btn {background: #ffbe30!important;}
-.custom-btn:before {background: linear-gradient(to bottom right, #ffbe30 , #ff3e00)!important;}
-.custom-btn:after {background: linear-gradient(to bottom right, #ff3e00 , #ffbe30)!important;}
+.custom-btn {background: #872341!important;}
+.custom-btn:before {background: linear-gradient(to bottom right, #872341 , #ff3e00)!important;}
+.custom-btn:after {background: linear-gradient(to bottom right, #ff3e00 , #872341)!important;}
 
-.scroll:before {background: linear-gradient(to bottom right, #ffbe30 , #ff3e00)!important;}
-.scroll:after {background: linear-gradient(to bottom right, #ff3e00 , #ffbe30)!important;}
+.scroll:before {background: linear-gradient(to bottom right, #872341 , #ff3e00)!important;}
+.scroll:after {background: linear-gradient(to bottom right, #ff3e00 , #872341)!important;}
 
 .map-larger-btn,
 .special-offer-section .event-makeing-btn a,
-.advertisement-section .advertisement-content .purchase-btn {color: #ffbe30!important;}
+.advertisement-section .advertisement-content .purchase-btn {color: #872341!important;}
 .map-larger-btn:hover,
 .special-offer-section .event-makeing-btn a:hover,
 .advertisement-section .advertisement-content .purchase-btn:hover {
 	color: #ffffff!important;
-	background: #ffbe30!important;
+	background: #872341!important;
 }
 
-.event-advertisement-section .right-content-wrapper .booking-btn {color: #ffbe30!important;}
+.event-advertisement-section .right-content-wrapper .booking-btn {color: #872341!important;}
 .event-advertisement-section .right-content-wrapper .booking-btn:hover {
 	color: #ffffff!important;
-	background: #ffbe30!important;
+	background: #872341!important;
 }
 
-.testimonial5-section .item .quote-icon i {background: linear-gradient(to bottom right, #ffbe30 , #ff3e00)!important;}
+.testimonial5-section .item .quote-icon i {background: linear-gradient(to bottom right, #872341 , #ff3e00)!important;}
 
 .service-section .service-wrapper .service-item .service-content .conference-btn {
-	color: #ffbe30!important;
-	border-color: #ffbe30!important;
+	color: #872341!important;
+	border-color: #872341!important;
 }
 .service-section .service-wrapper .service-item .service-content .conference-btn:hover {
 	color: #ffffff!important;
-	background: #ffbe30!important;
+	background: #872341!important;
 }
 /* global - end
 ================================================== */
@@ -41,7 +41,7 @@
 /* color - start
 ================================================== */
 .tag i,
-.#ffbe30-color,
+.#872341-color,
 .ticket-price,
 .blog-section .tag,
 .footer-bottom .copyright-text .site-link,
@@ -132,7 +132,7 @@
 .sticky-header-section .header-bottom .menu-item-list > ul > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu > li:hover a,
 .default-header-section .header-bottom .menu-item-list > ul > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu > li:hover a,
 .scrolltop-fixed-header-section .header-bottom .menu-item-list > ul > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu > li:hover a {
-	color: #ffbe30!important;
+	color: #872341!important;
 }
 /* color - end
 ================================================== */
@@ -179,7 +179,7 @@
 .upcomming-event-section .upcomming-event-carousel .item .event-item .event-content .event-title:before,
 .award-section .awaed-item-area .awaed-wrapper .awaed-item .awaed-content .awaed-title .awaed-date:before,
 .event-details-section .event-schedule .tab-content .tab-content .tab-pane .hall-item .hall-content .event-info-list ul li .icon {
-	background: #ffbe30!important;
+	background: #872341!important;
 }
 /* bg-color - end
 ================================================== */
@@ -207,7 +207,7 @@ textarea:focus,
 .scrolltop-fixed-header-section .header-bottom .user-search-btn-group ul li > a,
 .scrolltop-fixed-header-section .header-bottom .user-search-btn-group ul li > button,
 .event-details-section .reviewer-comment-wrapper .comment-bar .comment-content .meta-wrapper .btn-group-right ul li button:hover {
-	border-color: #ffbe30!important;
+	border-color: #872341!important;
 }
 /* border-color - end
 ================================================== */
@@ -220,7 +220,7 @@ textarea:focus,
 .faq-section .faq-content-wrapper .faq-accordion .card .card-body,
 .news-update-section .faq-accordion .card .card-header .btn:not(.collapsed),
 .faq-section .faq-content-wrapper .faq-accordion .card .card-header .btn:not(.collapsed) {
-	border-left-color: #ffbe30!important;
+	border-left-color: #872341!important;
 }
 /* border-left-color - end
 ================================================== */
@@ -250,7 +250,7 @@ textarea:focus,
 .sticky-header-section .header-bottom .menu-item-list > ul > li > a:before,
 .booking-section .booking-content-wrapper .order-summary-table .table .tfooter,
 .partners-clients-section .partners-wrapper .partners-carousel .item ul li a:before {
-	background: linear-gradient(to bottom right, #ffbe30 , #ff3e00)!important;
+	background: linear-gradient(to bottom right, #872341 , #ff3e00)!important;
 }
 /* gradient bg - end
 ================================================== */
