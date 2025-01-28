@@ -38,9 +38,26 @@
 	<!-- custom css include -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/over.css">
-
+<style>
+	.sticky-header-section{
+		box-shadow: 0 0 10px 20px white;
+		background-color: #fff;
+}
+.sticky-header-section .svg_container_logo svg{
+    fill: black;
+}
+.sticky-header-section .logo_wrapper_header_top img{
+    border: 4px solid black !important;
+}
+.sticky-header-section .site-logo-wrapper h3,
+.sticky-header-section .user-search-btn-group a{
+    color: black !important;
+}
+.sticky-header-section .header-bottom .menu-item-list > ul > li > a{
+    color: black;
+}
+</style>
 </head>
-
 
 	<body class="default-header-p">
 
@@ -184,151 +201,167 @@
 
 
 
-
-
-		<!-- breadcrumb-section - start
-		================================================== -->
-		<section id="breadcrumb-section" class="breadcrumb-section clearfix">
-			<div class="jarallax" style="background-image: url(assets/images/gallery/galbread.jpg);">
-				<div class="overlay-black">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6 col-md-12 col-sm-12">
-
-								<!-- breadcrumb-title - start -->
-								<div class="breadcrumb-title text-center mb-50">
-									<span class="sub-title">event gallery</span>
-									<h2 class="big-title">Asian Adept <strong>gallery</strong></h2>
-								</div>
-								<!-- breadcrumb-title - end -->
-
-								<!-- breadcrumb-list - start -->
-								<div class="breadcrumb-list">
-									<ul>
-										<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>
-										<li class="breadcrumb-item active" aria-current="page">Asian Adept gallery</li>
-									</ul>
-								</div>
-								<!-- breadcrumb-list - end -->
-
-							</div>
-						</div>
-					</div>
-				</div>
+<!-- service-section - start
+================================================== -->
+<section id="service-section" class="service-section sec-ptb-100 clearfix" style="margin-top: 170px;">
+	<div class="container">
+  
+	  <!-- service-wrapper - start -->
+	  <div class="service-wrapper">
+  
+		<!-- service-item - start -->
+		<div class="service-item clearfix">
+		  <!-- service-image - start -->
+		  <div class="service-image float-left">
+			<div class="big-image mb-3">
+			  <img src="assets/images/services/corpevents2.png" alt="Corporate Events Big Image" class="img-fluid rounded">
 			</div>
-		</section>
-		<!-- breadcrumb-section - end
-		================================================== -->
-
-
-
-
-
-		<!-- event-gallery-section - start
-		================================================== -->
-		<section id="event-gallery-section" class="event-gallery-section sec-ptb-100 clearfix" style="box-shadow: 0 0 50px 70px #f7f7f7;position: relative;">
-			<div class="container">
-
-				<div class="button-group filters-button-group mb-30">
-					<button class="button is-checked" data-filter="*">
-						<i class="fas fa-star"></i>
-						<strong>all</strong> gallery
-					</button>
-					<button class="button" data-filter=".video-gallery">
-						<i class="fas fa-play-circle"></i>
-						<strong>video</strong> gallery
-					</button>
-					<button class="button" data-filter=".photo-gallery">
-						<i class="far fa-image"></i>
-						<strong>photo</strong> gallery
-					</button>
-				</div>
-	
-				<div class="grid zoom-gallery clearfix mb-80" data-isotope="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 0 } }">
-					<div class="grid-item  photo-gallery " data-category="photo-gallery">
-						<a class="popup-link" href="assets/images/gallery/gal2.jpg">
-							<img src="assets/images/gallery/gal2.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>Wedding day</h3>
-							<span>Wedding Party</span>
-						</div>
-					</div>
-					<div class="grid-item video-gallery " data-category="video-gallery">
-						<a class="popup-youtube" href="https://youtu.be/rD3e6avEOKc?si=I3ye77PP7vTsdyuN">
-							<img src="assets/images/gallery/gal1.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>Business Conference in Dubai</h3>
-							<span>Food Festival, 24 June 2016</span>
-						</div>
-					</div>
-					<div class="grid-item photo-gallery " data-category="photo-gallery">
-						<a class="popup-link" href="assets/images/gallery/gal3.jpg">
-							<img src="assets/images/gallery/gal3.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>Envato Author Fun Hiking</h3>
-							<span>Food Festival, 24 June 2016</span>
-						</div>
-					</div>
-	
-					<div class="grid-item photo-gallery " data-category="photo-gallery">
-						<a class="popup-link" href="assets/images/gallery/gal4.jpg">
-							<img src="assets/images/gallery/gal4.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>John Doe Wedding day</h3>
-							<span>Wedding Party, 24 June 2016</span>
-						</div>
-					</div>
-					<div class="grid-item video-gallery " data-category="video-gallery">
-						<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-							<img src="assets/images/gallery/gal7.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>New Year Celebration</h3>
-							<span>Food Festival, 24 June 2016</span>
-						</div>
-					</div>
-	
-					<div class="grid-item photo-gallery " data-category="photo-gallery">
-						<a class="popup-link" href="assets/images/gallery/ga5l.jpg">
-							<img src="assets/images/gallery/ga5l.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>John Doe Wedding day</h3>
-							<span>Wedding Party, 24 June 2016</span>
-						</div>
-					</div>
-					<div class="grid-item video-gallery " data-category="video-gallery">
-						<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-							<img src="assets/images/gallery/gal8.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>New Year Celebration</h3>
-							<span>Food Festival, 24 June 2016</span>
-						</div>
-					</div>
-					<div class="grid-item photo-gallery " data-category="photo-gallery">
-						<a class="popup-link" href="assets/images/gallery/gal6.jpg">
-							<img src="assets/images/gallery/gal6.jpg" alt="Image_not_found">
-						</a>
-						<div class="item-content">
-							<h3>Envato Author Fun Hiking</h3>
-							<span>Food Festival, 24 June 2016</span>
-						</div>
-					</div>
-				</div>
-
+			<div class="small-image">
+			  <img src="assets/images/services/corpevents1.png" alt="Corporate Events Small Image" class="img-fluid rounded">
 			</div>
-		</section>
-		<!-- event-gallery-section - end
-		================================================== -->
-
-
-
-
+		  </div>
+		  <!-- service-image - end -->
+  
+		  <!-- service-content - start -->
+		  <div class="service-content float-right">
+			<!-- service-title -->
+			<div class="service-title mb-4">
+			  <h2 class="title-text text-uppercase font-weight-bold">
+				Corporate <strong>Events</strong>
+			  </h2>
+			  <span class="service-price text-success font-weight-bold">Starts from ₹40,000</span>
+			</div>
+  
+			<!-- service-description -->
+			<p class="service-description text-muted mb-4">
+			  Elevate your corporate gatherings with our premium event planning services. From seamless organization to flawless execution, we specialize in crafting events that leave lasting impressions. Whether it's conferences, product launches, or team-building retreats, our expertise ensures every detail is perfected.
+			</p>
+  
+			<!-- service-type-list -->
+			<div class="service-type-list mb-4">
+			  <h5 class="mb-3 font-weight-bold">Our Corporate Event Offerings:</h5>
+			  <ul class="list-unstyled row">
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Conferences
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Seminars
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Workshops
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Product Launches
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Trade Shows
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Expo and Exhibitions
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Networking Events
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Team-Building Events
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Corporate Retreats
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Award Ceremonies
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Corporate Galas
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Board Meetings
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Corporate Celebrations
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Fundraisers
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Press Conferences
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  Incentive Trips
+				</li>
+				<li class="col-md-6 mb-2">
+				  <span class="icon mr-2">
+					<i class="fas fa-arrow-circle-right text-primary"></i>
+				  </span>
+				  MICE Events
+				</li>
+			  </ul>
+			</div>
+  
+			<!-- action button -->
+			<div class="text-left">
+			  <a href="#!" class="custom-btn btn btn-primary btn-lg rounded-pill px-4 py-2">Make an Event</a>
+			</div>
+		  </div>
+		  <!-- service-content - end -->
+		</div>
+		<!-- service-item - end -->
+	  </div>
+	  <!-- service-wrapper - end -->
+  
+	</div>
+  </section>
+  <!-- service-section - end
+  ================================================== -->
+  
 
 
 		<!-- footer-section2 - start
