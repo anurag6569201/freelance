@@ -254,3 +254,8 @@
 .menu-item-has-children .sub-menu{
     border-radius: 15px !important;
 }
+
+
+body{
+    scroll-behavior: smooth !important;
+}
