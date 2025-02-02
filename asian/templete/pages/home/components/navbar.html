@@ -36,7 +36,7 @@
                 <!-- site-logo-wrapper - start -->
                 <div class="col-lg-2">
                     <div class="site-logo-wrapper">
-                        <a href="index.html" class="logo">
+                        <a href="{% url 'home:home' %}" class="logo">
                             <h3 style="color: white;">ASIAN ADEPT</h3>
                         </a>
                     </div>
@@ -53,21 +53,21 @@
                                 <div class="menu-item-list ul-li clearfix"
                                     style="display: flex;justify-content: center;">
                                     <ul>
-                                        <li class="menu-item-has-children active">
-                                            <a href="index.html">home</a>
+                                        <li class="menu-item-has-children {% if request.path == '/' %}active{% endif %}">
+                                            <a href="{% url 'home:home' %}">home</a>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li class="menu-item-has-children {% if '/about/' in request.path %}active{% endif %}">
                                             <a href="#!">about</a>
                                             <ul class="sub-menu">
-                                                <li><a href="about.html">Who We Are</a></li>
-                                                <li><a href='team.html'>Our Team</a></li>
+                                                <li><a href="{% url 'home:about' %}">Who We Are</a></li>
+                                                <li><a href="{% url 'home:team' %}">Our Team</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li class="menu-item-has-children {% if '/service/' in request.path %}active{% endif %}">
                                             <a href="#!">What We Do</a>
                                             <ul class="sub-menu">
-                                                <li><a href="corporate_service.html">Corporate Events</a></li>
-                                                <li><a href='social_service.html'>Social Events</a></li>
+                                                <li><a href="{% url 'home:corp_service' %}">Corporate Events</a></li>
+                                                <li><a href="{% url 'home:corp_social' %}">Social Events</a></li>
                                                 <li><a href='exhibition_service.html'>Exhibitions</a></li>
                                                 <li><a href='event_service.html'>Event Services</a></li>
                                             </ul>

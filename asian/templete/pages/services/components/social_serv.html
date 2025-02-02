@@ -1,0 +1,60 @@
+{% load static %}
+
+<section id="service-section" class="service-section sec-ptb-100 clearfix"
+    style="margin-top: 30vh;background-color: #fff;">
+    <div class="container">
+
+        <!-- service-wrapper - start -->
+        <div class="service-wrapper">
+
+            <!-- service-item - start -->
+            <div class="service-item clearfix">
+                <!-- service-image - start -->
+                <div class="service-image float-right">
+                    <div class="big-image">
+                        <img src="{% static 'assets/images/services/social1.jpg' %}" alt="Image_not_found">
+                    </div>
+                    <div class="small-image">
+                        <img src="{% static 'assets/images/services/social2.jpg' %}" alt="Image_not_found">
+                    </div>
+                </div>
+                <!-- service-image - end -->
+
+                <!-- service-content - start -->
+                <div class="service-content float-right mb-5">
+                    <!-- service-title -->
+                    <div class="service-title mb-30">
+                        <h2 class="title-text">Social <strong>Events</strong></h2>
+                        <span class="service-price">price start from 30,000</span>
+                    </div>
+                    <!-- service-description -->
+                    <p class="service-description text-muted mb-4">
+                        Immerse yourself in unforgettable experiences with <strong>Asian Adept</strong>, your trusted partner for
+                        exceptional social event planning. Whether it's a casual get-together or a lavish celebration, we bring a unique
+                        flair to every occasion. Our team specializes in curating events that foster connections, celebrate milestones,
+                        and create lasting memories for all guests.
+                        
+                        <br><br>
+                        Let us take care of the details, from venue selection to event coordination, while you enjoy a stress-free,
+                        engaging atmosphere. With Asian Adept, your social event will be a seamless blend of fun, elegance, and excitement.
+                    </p>
+                    
+
+                    <!-- action button -->
+                    <div class="text-left">
+                        <a href="contact.html" class="custom-btn btn btn-primary btn-lg rounded-pill px-4 py-2">Make
+                            an Event</a>
+                    </div>
+                </div>
+               
+
+                <!-- service-content - end -->
+            </div>
+            <!-- service-item - end -->
+        </div>
+        {% include './whychoose.html' %}
+        {% include './social_services.html' %}
+        
+
+    </div>
+</section>
