@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from home import models
 
 def home(request):
     return render(request,"pages/home/index.html")
@@ -13,8 +14,16 @@ def team(request):
 
 
 def corp_service(request):
-    return render(request,"pages/services/corporate.html")
+    corporate = models.CorporateSerices.objects.all()
+    context={
+        'corporate':corporate,
+    }
+    return render(request,"pages/services/corporate.html",context)
 
 
 def corp_social(request):
-    return render(request,"pages/services/social.html")
+    social = models.SocialSerices.objects.all()
+    context={
+        'social':social,
+    }
+    return render(request,"pages/services/social.html",context)
