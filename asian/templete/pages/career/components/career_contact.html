@@ -1,0 +1,37 @@
+{% load static %}
+
+<section id="apply" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Ready to Apply?</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="position" class="form-label">Position Applying For</label>
+                        <select id="position" class="form-select" required>
+                            <option selected disabled>Select a position</option>
+                            <option>Event Manager</option>
+                            <option>Marketing Specialist</option>
+                            <option>Logistics Coordinator</option>
+                            <option>Graphic Designer</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Cover Letter</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Tell us about yourself"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn custom-btn w-100">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

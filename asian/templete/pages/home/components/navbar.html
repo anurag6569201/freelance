@@ -68,18 +68,18 @@
                                             <ul class="sub-menu">
                                                 <li><a href="{% url 'home:corp_service' %}">Corporate Events</a></li>
                                                 <li><a href="{% url 'home:corp_social' %}">Social Events</a></li>
-                                                <li><a href='exhibition_service.html'>Exhibitions</a></li>
-                                                <li><a href='event_service.html'>Event Services</a></li>
+                                                <li><a href="{% url 'home:corp_exhibition' %}">Exhibitions</a></li>
+                                                <li><a href="{% url 'home:corp_event' %}">Event Services</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="gallery.html">gallery</a>
+                                        <li class="{% if '/gallery/' in request.path %}active{% endif %}">
+                                            <a href="{% url 'home:gallery' %}">gallery</a>
                                         </li>
-                                        <li>
-                                            <a href="career.html">Careers</a>
+                                        <li class="{% if '/career/' in request.path %}active{% endif %}">
+                                            <a href="{% url 'home:career' %}">Careers</a>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="contact.html">contact</a>
+                                        <li class="menu-item-has-children {% if '/contact/' in request.path %}active{% endif %}">
+                                            <a href="{% url 'home:contact' %}">contact</a>
                                         </li>
                                     </ul>
                                 </div>
