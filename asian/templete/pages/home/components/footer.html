@@ -6,37 +6,23 @@
     <div class="container">
         <footer class="py-5 pb-0">
             <div class="container">
-                <div class="row">
+                <div class="row" style="justify-content: space-between;">
                     <!-- Company Info -->
                     <div class="col-md-4 mb-3">
                         <h5 class="text-light" style="font-weight: 600;">ASIAN ADEPT</h5>
                         <p class="text-light">We specialize in crafting unforgettable corporate events with precision
                             and creativity. Let us bring your vision to life!</p>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="home.html" class="nav-link text-light p-0">Home</a></li>
-                            <li class="nav-item mb-2"><a href="about.html" class="nav-link text-light p-0">About</a>
+                            <li class="nav-item mb-2"><a href="{% url 'home:home' %}" class="nav-link text-light p-0">Home</a></li>
+                            <li class="nav-item mb-2"><a href="{% url 'home:about' %}" class="nav-link text-light p-0">About</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="contact.html" class="nav-link text-light p-0">Contact</a>
+                            <li class="nav-item mb-2"><a href="{% url 'home:contact' %}" class="nav-link text-light p-0">Contact</a>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Quick Links -->
-                    <div class="col-md-3 mb-3">
-                        <h5 class="text-light" style="font-weight: 600;">Event Services</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="corporate_service.html"
-                                    class="nav-link text-light p-0">Corporate Events</a></li>
-                            <li class="nav-item mb-2"><a href="exhibition_service.html"
-                                    class="nav-link text-light p-0">Exhibitions Events</a></li>
-                            <li class="nav-item mb-2"><a href="event_service.html" class="nav-link text-light p-0">Event
-                                    Services</a></li>
-                            <li class="nav-item mb-2"><a href="social_service.html"
-                                    class="nav-link text-light p-0">Social Services</a></li>
-                            <li class="nav-item mb-2"><a href="career.html" class="nav-link text-light p-0">Careers</a>
-                            </li>
-                        </ul>
-                    </div>
+
 
                     <!-- Newsletter Subscription -->
                     <div class="col-md-5 mb-3">

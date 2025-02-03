@@ -4,7 +4,8 @@ from .models import (
     CorporateServices, CorporateServiceSubcategory, CorporateServiceImage,
     SocialServices, SocialServiceSubcategory, SocialServiceImage,
     EventServices, EventServiceSubcategory, EventServiceImage,
-    ExhibitionServices, ExhibitionServiceSubcategory, ExhibitionServiceImage
+    ExhibitionServices, ExhibitionServiceSubcategory, ExhibitionServiceImage,
+    Career,JobApplication,Contact,Testimonials
 )
 
 # Inlines for Images and Subcategories
@@ -58,3 +59,8 @@ admin.site.register(CorporateServices, CorporateServicesAdmin)
 admin.site.register(SocialServices, SocialServicesAdmin)
 admin.site.register(EventServices, EventServicesAdmin)
 admin.site.register(ExhibitionServices, ExhibitionServicesAdmin)
+admin.site.register(Career, ImportExportModelAdmin)
+
+admin.site.register(Contact,ImportExportModelAdmin)
+admin.site.register(JobApplication,ImportExportModelAdmin)
+admin.site.register(Testimonials,ImportExportModelAdmin)

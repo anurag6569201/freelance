@@ -98,3 +98,36 @@ class ExhibitionServiceImage(models.Model):
         if self.subcategory:
             return f"Image for {self.subcategory.name} ({self.subcategory.service.name})"
         return f"Image for {self.service.name}"
+
+
+
+
+class Career(models.Model):
+    topic=models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    paragraph = models.CharField(max_length=200)
+    def __str__(self):
+        return self.topic 
+
+
+class Contact(models.Model):
+    name=models.CharField(max_length=100)
+    email=models.CharField(max_length=100)
+    country=models.CharField(max_length=100)
+    phone=models.CharField(max_length=100)
+    message=models.TextField()
+
+class JobApplication(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    position = models.ForeignKey(Career, on_delete=models.CASCADE)
+    message = models.TextField()
+
+    def __str__(self):
+        return f'{self.name} - {self.position}'
+
+
+class Testimonials(models.Model):
+    name = models.CharField(max_length=100)
+    role = models.CharField(max_length=100)
+    review = models.TextField()

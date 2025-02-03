@@ -1,7 +1,7 @@
 {% load static %}
 
 <section id="event-gallery-section" class="event-gallery-section sec-ptb-100 clearfix"
-    style="box-shadow: 0 0 50px 70px #f7f7f7; position: relative;">
+    style="box-shadow: 0 0 50px 70px #f7f7f7;position: relative;">
     <div class="container">
 
         <div class="button-group filters-button-group mb-30">
@@ -43,8 +43,6 @@
                     </div>
                 </div>
                 {% endfor %}
-            {% else %}
-                <div class="no-photos corporate-gallery">No photos related to Corporate gallery.</div>
             {% endif %}
 
             <!-- Social Service Images -->
@@ -60,8 +58,6 @@
                     </div>
                 </div>
                 {% endfor %}
-            {% else %}
-                <div class="no-photos social-gallery">No photos related to Social gallery.</div>
             {% endif %}
 
             <!-- Event Service Images -->
@@ -77,8 +73,6 @@
                     </div>
                 </div>
                 {% endfor %}
-            {% else %}
-                <div class="no-photos event-gallery">No photos related to Event gallery.</div>
             {% endif %}
 
             <!-- Exhibition Service Images -->
@@ -94,8 +88,6 @@
                     </div>
                 </div>
                 {% endfor %}
-            {% else %}
-                <div class="no-photos exhibition-gallery">No photos related to Exhibition gallery.</div>
             {% endif %}
 
         </div>
@@ -109,28 +101,7 @@
         font-size: 18px;
         color: #777;
         padding: 20px;
-        display: none; /* Initially hidden */
+        display: block;
         width: 100%;
     }
 </style>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll(".button-group .button");
-        buttons.forEach(button => {
-            button.addEventListener("click", function () {
-                const filter = this.getAttribute("data-filter");
-                const images = document.querySelectorAll(".grid-item" + filter);
-                const noPhotosMessage = document.querySelectorAll(".no-photos");
-
-                // Hide all "No photos" messages
-                noPhotosMessage.forEach(msg => msg.style.display = "none");
-
-                // If no images exist for the selected filter, show the "No photos" message
-                if (images.length === 0 && filter !== "*") {
-                    document.querySelector(".no-photos" + filter).style.display = "block";
-                }
-            });
-        });
-    });
-</script>

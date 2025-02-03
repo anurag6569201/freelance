@@ -6,8 +6,8 @@
 {% include './components/career_style.html' %}
 {% include './components/career_bread.html' %}
 {% include './components/career_hero.html' %}
-{% include './components/career_jobs.html' %}
+{% include './components/career_jobs.html' with data=career %}
 {% include './components/career_benefit.html' %}
-{% include './components/career_contact.html' %}
+{% include './components/career_contact.html' with data=career %}
 
 {% endblock content %}

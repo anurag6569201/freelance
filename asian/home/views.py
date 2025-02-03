@@ -1,9 +1,16 @@
 from django.shortcuts import render,get_object_or_404
-
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
+from home.forms import ContactForm ,JobApplicationForm
 from home import models
 
 def home(request):
-    return render(request,"pages/home/index.html")
+    testimonial=models.Testimonials.objects.all()
+    context={
+        'testimonial':testimonial,
+    }
+    return render(request,"pages/home/index.html",context)
 
 
 def about(request):
@@ -62,23 +69,100 @@ def gallery(request):
     event_images = models.EventServiceImage.objects.all()
     exhibition_images = models.ExhibitionServiceImage.objects.all()
 
+    active_filter = request.GET.get('filter', 'all')
+
     context = {
         "corporate_images": corporate_images,
         "social_images": social_images,
         "event_images": event_images,
         "exhibition_images": exhibition_images,
+        'active_filter': active_filter,
     }
     return render(request, "pages/gallery/gallery.html", context)
 
 
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from .forms import JobApplicationForm
+from .models import Career
+
 def career(request):
-    return render(request,"pages/career/career.html")
+    if request.method == 'POST':
+        form = JobApplicationForm(request.POST)
+        print(form)
+        if form.is_valid():
+            # Save the form data to the database
+            form.save()
+
+            # Extract the cleaned data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            position = form.cleaned_data['position']
+            message = form.cleaned_data['message']
+
+            html_message = render_to_string('../templete/pages/career/components/email.html', {
+                'name': name,
+                'email': email,
+                'position': position,
+                'message': message,
+            })
+
+            send_mail(
+                f'New Job Application for {position}',
+                'You have received a new job application.',
+                email,
+                ['anurag6569201@gmail.com'],
+                html_message=html_message
+            )
+            return redirect('home:application_thank_you')
+    else:
+        form = JobApplicationForm()
+    career = Career.objects.all()
+    context = {
+        'career': career,
+        'form': form,
+    }
+
+    # Render the page with the context
+    return render(request, "pages/career/career.html", context)
 
 
+def thank_you(request):
+    return render(request, 'pages/career/thank_you.html')
 
 def contact(request):
-    return render(request,"pages/contact/contact.html")
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            content = form.cleaned_data['content']
+            country = form.cleaned_data['country']
+            phone = form.cleaned_data['phone']
 
+            html = render_to_string('../templete/pages/contact/components/email.html', {
+                'name': name,
+                'email': email,
+                'content': content,
+                'country': country,
+                'phone': phone,
+            })
+
+            send_mail(
+                "The contact form subject",
+                'This is the message body',
+                email,
+                ['anurag6569201@gmail.com'], 
+                html_message=html
+            )
+            return redirect("home:home") 
+        
+    else:
+        form = ContactForm()  
+
+    return render(request, "pages/contact/contact.html", {'form': form})
 
 
 import json
