@@ -1,0 +1,57 @@
+{% load static %}
+
+<section id="service-section" class="service-section sec-ptb-100 clearfix"
+    style="margin-top: 30vh;background-color: #fff;">
+    <div class="container">
+
+        <!-- service-wrapper - start -->
+        <div class="service-wrapper">
+
+            <!-- service-item - start -->
+            <div class="service-item clearfix">
+                <!-- service-image - start -->
+                <div class="service-image float-left">
+                    <div class="big-image">
+                        <img src="{% static 'assets/images/services/exe2.jpg' %}" alt="Image_not_found">
+                    </div>
+                    <div class="small-image">
+                        <img src="{% static 'assets/images/services/exe1.png' %}" alt="Image_not_found">
+                    </div>
+                </div>
+                <!-- service-image - end -->
+
+                <!-- service-content - start -->
+                <div class="service-content float-right mb-5">
+                    <!-- service-title -->
+                    <div class="service-title mb-30">
+                        <h2 class="title-text">Event  <strong>Services</strong></h2>
+                        <span class="service-price">price start from 45,000</span>
+                    </div>
+                    <!-- service-description -->
+                    <p class="service-description text-muted mb-4">
+                        At <strong>Asian Adept</strong>, we specialize in delivering exceptional event services that turn your vision into reality. Whether you're hosting a corporate gathering, a private celebration, or a large-scale festival, our dedicated team ensures every detail is executed flawlessly. From event design and planning to seamless coordination, we create experiences that captivate and inspire.
+                    
+                        <br><br>
+                        Let us take care of everything—venue selection, catering, entertainment, and logistics—so you can focus on enjoying the event. With Asian Adept, you can expect nothing less than perfection, ensuring your event is a smooth, memorable, and impactful experience for all.
+                    </p>                    
+                    
+                    
+
+                    <!-- action button -->
+                    <div class="text-left">
+                        <a href="{% url 'home:contact' %}" class="custom-btn btn btn-primary btn-lg rounded-pill px-4 py-2">Make
+                            an Event</a>
+                    </div>
+                </div>
+               
+
+                <!-- service-content - end -->
+            </div>
+            <!-- service-item - end -->
+        </div>
+        {% include './whychoose.html' %}
+        {% include './services.html' with data=event data1=title %}
+        
+
+    </div>
+</section>

@@ -1,0 +1,107 @@
+{% load static %}
+
+<section id="event-gallery-section" class="event-gallery-section sec-ptb-100 clearfix"
+    style="box-shadow: 0 0 50px 70px #f7f7f7;position: relative;">
+    <div class="container">
+
+        <div class="button-group filters-button-group mb-30">
+            <button class="button is-checked" data-filter="*">
+                <i class="fas fa-star"></i>
+                <strong>all</strong> gallery
+            </button>
+            <button class="button" data-filter=".corporate-gallery">
+                <i class="far fa-building"></i>
+                <strong>Corporate</strong> gallery
+            </button>
+            <button class="button" data-filter=".social-gallery">
+                <i class="fas fa-users"></i>
+                <strong>Social</strong> gallery
+            </button>
+            <button class="button" data-filter=".event-gallery">
+                <i class="fas fa-calendar-alt"></i>
+                <strong>Event</strong> gallery
+            </button>
+            <button class="button" data-filter=".exhibition-gallery">
+                <i class="fas fa-paint-brush"></i>
+                <strong>Exhibition</strong> gallery
+            </button>
+        </div>
+
+        <div class="grid zoom-gallery clearfix mb-80"
+            data-isotope="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 0 } }">
+
+            <!-- Corporate Service Images -->
+            {% if corporate_images %}
+                {% for image in corporate_images %}
+                <div class="grid-item photo-gallery corporate-gallery" data-category="corporate-gallery">
+                    <a class="popup-link" href="{{ image.image.url }}">
+                        <img src="{{ image.image.url }}" alt="Corporate Image">
+                    </a>
+                    <div class="item-content">
+                        <h3>{{ image.service.name }}</h3>
+                        <span>Corporate Service</span>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+
+            <!-- Social Service Images -->
+            {% if social_images %}
+                {% for image in social_images %}
+                <div class="grid-item photo-gallery social-gallery" data-category="social-gallery">
+                    <a class="popup-link" href="{{ image.image.url }}">
+                        <img src="{{ image.image.url }}" alt="Social Image">
+                    </a>
+                    <div class="item-content">
+                        <h3>{{ image.service.name }}</h3>
+                        <span>Social Service</span>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+
+            <!-- Event Service Images -->
+            {% if event_images %}
+                {% for image in event_images %}
+                <div class="grid-item photo-gallery event-gallery" data-category="event-gallery">
+                    <a class="popup-link" href="{{ image.image.url }}">
+                        <img src="{{ image.image.url }}" alt="Event Image">
+                    </a>
+                    <div class="item-content">
+                        <h3>{{ image.service.name }}</h3>
+                        <span>Event Service</span>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+
+            <!-- Exhibition Service Images -->
+            {% if exhibition_images %}
+                {% for image in exhibition_images %}
+                <div class="grid-item photo-gallery exhibition-gallery" data-category="exhibition-gallery">
+                    <a class="popup-link" href="{{ image.image.url }}">
+                        <img src="{{ image.image.url }}" alt="Exhibition Image">
+                    </a>
+                    <div class="item-content">
+                        <h3>{{ image.service.name }}</h3>
+                        <span>Exhibition Service</span>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .no-photos {
+        text-align: center;
+        font-size: 18px;
+        color: #777;
+        padding: 20px;
+        display: block;
+        width: 100%;
+    }
+</style>

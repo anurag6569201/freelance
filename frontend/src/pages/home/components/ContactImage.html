@@ -1,0 +1,14 @@
+{% load static %}
+<section
+    style="height: 350px;width: 100%;display: flex;align-items: center;flex-direction: column;justify-content: center;background-color: #f7f7f7;z-index: 100;position: relative;">
+    <div class="container"
+        style="text-align: center; display: flex; align-items: center; flex-direction: column; gap: 20px; justify-content: center; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({% static 'assets/images/home/contact.jpg' %}); background-size: cover; background-position: center center; height: 100%;">
+        <p style="font-size: 1rem; text-transform: uppercase; color: #fff;">make your dreams come true</p>
+        <p style="font-size: 2rem; color: #fff">Plan your next event with us.</p>
+        <div class="buttons_groups" style="font-size: 1.6rem; color: #fff">
+            <a style="margin-right: 20px; color: #fff" href="">+91 8329969729</a>
+            <a href="{% url 'home:contact' %}" class="custom-btn">Contact Us</a>
+        </div>
+    </div>
+    <br><br>
+</section>

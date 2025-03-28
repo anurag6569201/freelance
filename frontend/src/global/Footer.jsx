@@ -1,0 +1,56 @@
+function Footer() {
+    return (
+        <>
+            <section class=" border-top footer mt-3" style="background-color: #010101;color: rgb(255, 255, 255);z-index: 100;position: relative;">
+                <div class="container">
+                    <footer class="py-5 pb-0">
+                        <div class="container">
+                            <div class="row" style="justify-content: space-between;">
+                                <div class="col-md-4 mb-3">
+                                    <h5 class="text-light" style="font-weight: 600;">ASIAN ADEPT</h5>
+                                    <p class="text-light">We specialize in crafting unforgettable corporate events with precision
+                                        and creativity. Let us bring your vision to life!</p>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item mb-2"><a href="{% url 'home:home' %}" class="nav-link text-light p-0">Home</a></li>
+                                        <li class="nav-item mb-2"><a href="{% url 'home:about' %}" class="nav-link text-light p-0">About</a>
+                                        </li>
+                                        <li class="nav-item mb-2"><a href="{% url 'home:contact' %}" class="nav-link text-light p-0">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5 mb-3">
+                                    <h5 class="text-light" style="font-weight: 600;">Subscribe to Our Newsletter</h5>
+                                    <p class="text-light">Stay updated on our latest events, offers, and trends in the industry.</p>
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control text-light" placeholder="Enter your email"
+                                                required />
+                                                <button class="btn text-light" type="submit"
+                                                    style="background-color: #d21243;">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row justify-content-between border-top pt-3">
+                                <p class="mb-0 text-light">&copy; 2024 ASIAN ADEPT. All rights reserved.</p>
+                                <div>
+                                    <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                                    <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                                    <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                                    <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                                    <a href="#" class="text-light me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <p class="mb-1 text-light"><i class="fas fa-map-marker-alt"></i> 123 Event Street, City, Country</p>
+                                <p class="mb-1 text-light"><i class="fas fa-envelope"></i> contact@asianadept.com</p>
+                                <p class="mb-1 text-light"><i class="fas fa-phone"></i> +123 456 7890</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </section>
+        </>
+    )
+}
+export default Footer;
