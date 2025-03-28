@@ -17,6 +17,9 @@ import './assets/css/style.css'
 
 import Footer from "./global/Footer";
 import AboutPage from "./pages/about/About";
+import Gallery from "./pages/gallery/Gallery";
+
+
 function App() {
   return (
     <Router>
@@ -24,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
       <Footer/>
     </Router>

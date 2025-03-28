@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZipSecure - Advanced Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ZipSecure - Advanced Interactive Prototype</h1>
+    <p>Simulating the Smart Zipper Concept (<span id="current-datetime"></span>)</p>
+
+    <div class="prototype-container">
+
+        <div class="zipper-section">
+            <h2 id="zipper-module-title">Simulated Zipper Module</h2>
+            <div class="bag-context"> BAG FABRIC
+                <div class="zipper-track"></div>
+                <div id="zipsecure-module" class="zipper-pull locked">
+                    <div id="zipsecure-led" class="led"></div>
+                    <div id="zipsecure-sensor" class="sensor">
+                        TAP TO SCAN
+                    </div>
+                    <div class="module-body">ZipSecure</div>
+                    <div id="zipper-status-text" class="status-text">Status: Locked</div>
+                </div>
+            </div>
+             <div class="simulation-controls">
+                <h3>Simulate Events for <span id="current-device-name-sim">Backpack</span>:</h3>
+                <button id="btn-auth-scan">Scan Authorized Finger</button>
+                <button id="btn-unauth-scan">Scan Unauthorized Finger</button>
+                <button id="btn-tamper">Simulate Tamper/Force</button>
+                <button id="btn-proximity">Simulate Proximity Loss</button>
+                <button id="btn-dec-battery" title="Decrease battery by 10%">- Battery</button>
+                <button id="btn-inc-battery" title="Increase battery by 10%">+ Battery</button>
+                <button id="btn-low-batt-alert">Trigger Low Batt Alert</button>
+                <button id="btn-geofence-breach">Simulate Geo-fence Breach</button>
+             </div>
+        </div>
+
+        <div class="app-section">
+            <h2>Simulated Mobile App</h2>
+            <div id="phone-frame">
+                <div class="phone-screen">
+                    <div id="app-dashboard" class="app-view active">
+                        <div class="app-header"><span>ZipSecure</span> <button id="btn-add-device" class="app-btn-sm">＋</button></div>
+                        <div class="app-content">
+                            <p class="app-list-header">MY DEVICES:</p>
+                            <div id="device-list-container">
+                                </div>
+                        </div>
+                    </div>
+
+                    <div id="app-alert-view" class="app-view">
+                        <div class="app-header alert-header">
+                            <button class="app-nav-btn" data-target="dashboard">← Back</button>
+                            <span>⚠️ ALERT!</span>
+                            <span></span> </div>
+                        <div class="app-content">
+                            <div class="alert-icon">🚨</div>
+                            <h3 id="alert-title">SECURITY ALERT</h3>
+                            <p id="alert-device" class="alert-device-name">Device Name</p>
+                            <hr>
+                            <p><strong>Status:</strong> <span id="alert-status-text">Unauthorized Access</span></p>
+                            <p><strong>Time:</strong> <span id="alert-time"></span></p>
+                            <p><strong>Location:</strong> <span id="alert-location"></span></p>
+                            <p><strong>Details:</strong> <span id="alert-details"></span></p>
+                            <hr>
+                            <p><strong>ACTIONS:</strong></p>
+                            <div class="alert-actions">
+                                <button class="app-btn">Sound Again</button>
+                                <button class="app-btn btn-view-log">View Log</button>
+                                <button id="btn-dismiss-alert" class="app-btn">Dismiss</button>
+                                <button id="btn-track-gps" class="app-btn">Track (GPS)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div id="app-log-view" class="app-view">
+                        <div class="app-header">
+                             <button class="app-nav-btn" data-target="dashboard">← Back</button>
+                             <span id="log-view-title">Event Log</span>
+                             <span></span>
+                        </div>
+                        <div class="app-content">
+                            <ul id="event-log-list">
+                                </ul>
+                        </div>
+                    </div>
+
+                     <div id="app-tracking-view" class="app-view">
+                         <div class="app-header">
+                              <button class="app-nav-btn" data-target="alert">← Alert</button>
+                              <span id="track-view-title">Tracking Device</span>
+                              <span></span>
+                         </div>
+                         <div class="app-content">
+                              <p>Simulated Location:</p>
+                              <div class="map-placeholder">
+                                   <div id="device-marker" class="map-marker">🎒</div>
+                                   <div class="map-text">Gothapatna Area Map (Simulated)</div>
+                              </div>
+                              <p id="tracking-status">Tracking active...</p>
+                         </div>
+                     </div>
+
+                </div></div> </div> </div> <script src="script.js"></script>
+</body>
+</html>
