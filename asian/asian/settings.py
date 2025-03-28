@@ -40,11 +40,15 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    'rest_framework',
+    'corsheaders',
+
     'home',
     'import_export',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -140,3 +144,30 @@ EMAIL_HOST_USER = 'anurag6569201@gmail.com'
 EMAIL_HOST_PASSWORD = 'ihasreqxxrrtzmrc'
 EMAIL_USE_TLS=True
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
+
+
+# Allow requests from your frontend URL
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5174",
+    "http://0.0.0.0:8002",
+]
+
+# Allow all methods (GET, POST, PUT, DELETE, etc.)
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+
+# Allow all headers
+CORS_ALLOW_HEADERS = ["*"]
+
+# Allow credentials (if using authentication)
+CORS_ALLOW_CREDENTIALS = True
