@@ -24,34 +24,18 @@
 .sticky-header-section .header-bottom{
     padding: 10px;
 }
-.sticky-header-section{
-    box-shadow: 0 0 130px 160px #ffffff;
-}
-.sticky-header-section.stuck{
-    box-shadow: 0 0 40px 50px white;
-    transition: .5s;
-    background-color: #fff;
-    color: black;
-}
+
 .sticky-header-section{
     background-color: #ffffff;
 }
-.sticky-header-section .user-search-btn-group a{
-    color: white !important;
-}
+
 .sticky-header-section .svg_container_logo svg{
     fill: black;
 }
 .sticky-header-section .logo_wrapper_header_top img{
     border: 4px solid black !important;
 }
-.sticky-header-section .site-logo-wrapper h3,
-.sticky-header-section .user-search-btn-group a{
-    color: black !important;
-}
-.sticky-header-section .header-bottom .menu-item-list > ul > li > a{
-    color: black;
-}
+
 .menu-item-has-children.active a{
     color: #fff !important;
 }
@@ -316,4 +300,26 @@ body{
         display: flex;
         justify-content: space-between;
     }
+}
+
+
+.ContactPageBtn:hover{
+    background-color: rgb(102, 99, 99) !important;
+}
+
+#header-section ul li a {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+/* When Scrolled */
+
+#header-section.scrolled {
+    background: white;
+}
+
+/* Change Link Colors when Scrolled */
+
+#header-section.scrolled ul li a {
+    color: black;
 }

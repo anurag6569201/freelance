@@ -14,14 +14,17 @@ import './assets/css/slick-theme.css'
 import './assets/css/slick.css'
 import './assets/css/style.css'
 
-function App() {
 
+import Footer from "./global/Footer";
+
+function App() {
   return (
     <Router>
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
