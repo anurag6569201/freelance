@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 100px;
+}
+
+
 .slide-section .owl-dot {
     background-size: cover !important;
     background-repeat: no-repeat !important;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { HashLink } from 'react-router-hash-link';
 import logo from '../assets/images/services/exe1.png'
 
 function NavigationBar() {
@@ -93,7 +94,7 @@ function NavigationBar() {
                         </div>
                     </div>
                 </nav>
-                <div className="container-fluid smaller_navbar_container" style={{height:'66px',overflow:'hidden'}}>
+                <div className="container-fluid smaller_navbar_container" style={{height:'66px'}}>
                     <div className="row" style={{ justifyContent: "center" }}>
                         <div className="col-lg-2 site-logo-wrapper-container">
                             <div className="site-logo-wrapper">
@@ -116,10 +117,10 @@ function NavigationBar() {
                                                     <Link to="/">home</Link>
                                                 </li>
                                                 <li className="menu-item-has-children">
-                                                    <a href="#!">about</a>
+                                                    <Link to="/about">about</Link>
                                                     <ul className="sub-menu">
-                                                        <li><Link to="/about">Who We Are</Link></li>
-                                                        <li><Link to="/team">Our Team</Link></li>
+                                                        <li><HashLink smooth to="/about#WhoWe">Who We Are</HashLink></li>
+                                                        <li><HashLink smooth to="/about#team">Our Team</HashLink></li>
                                                     </ul>
                                                 </li>
                                                 <li className="menu-item-has-children">

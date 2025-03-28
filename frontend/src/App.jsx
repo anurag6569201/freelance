@@ -16,13 +16,14 @@ import './assets/css/style.css'
 
 
 import Footer from "./global/Footer";
-
+import AboutPage from "./pages/about/About";
 function App() {
   return (
     <Router>
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer/>
     </Router>
