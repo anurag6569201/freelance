@@ -45,14 +45,10 @@ const Gallery = () => {
                     {['corporate', 'social', 'event', 'exhibition'].map(category => (
                         (activeFilter === 'all' || activeFilter === category) &&
                         images[category]?.map(image => (
-                            <div key={image.id} className={`grid-item photo-gallery ${category}-gallery`}>
+                            <div key={image.id} className={`grid-item photo-gallery ${category}-gallery`} data-category={`${category}-gallery`}>
                                 <a className="popup-link" href={image.image}>
                                     <img src={`http://0.0.0.0:8002${image.image}`} alt={`${category} Image`} />
                                 </a>
-                                <div className="item-content">
-                                    <h3>Service ID: {image.service}</h3>
-                                    <span>{category.charAt(0).toUpperCase() + category.slice(1)} Service</span>
-                                </div>
                             </div>
                         ))
                     ))}

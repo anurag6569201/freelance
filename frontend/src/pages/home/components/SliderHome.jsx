@@ -32,7 +32,7 @@ const SliderHome = () => {
                                     <small className="small-text">every event should be perfect</small>
                                     <div className="link-groups">
                                         <a href="/about" className="about-btn custom-btn">about us</a>
-                                        <a href="#event-expertise-section" className="start-btn">get started!</a>
+                                        <a href="#Services" className="start-btn">get started!</a>
                                     </div>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { HashLink } from 'react-router-hash-link';
-import logo from '../assets/images/services/exe1.png'
+import logo from '../assets/images/home/logo.png'
 
 function NavigationBar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -139,7 +139,11 @@ function NavigationBar() {
                                                     <Link to="/career">Careers</Link>
                                                 </li>
                                                 <li className="menu-item-has-children">
-                                                    <Link to="/contact">contact</Link>
+                                                    <a href="#!">Quote</a>
+                                                    <ul className="sub-menu">
+                                                        <li><Link to="/quote/standard">Stand Quotation</Link></li>
+                                                        <li><Link to="/quote/event">Event Quotation</Link></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </div>

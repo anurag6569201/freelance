@@ -1,4 +1,5 @@
 import image1 from '../../../assets/images/home/re.png'
+import { HashLink } from 'react-router-hash-link';
 
 function AboutSection() {
     return (
@@ -14,9 +15,9 @@ function AboutSection() {
                             <p className="black-color mb-50">
                                 Asian Adept is a premier event management company specializing in curating seamless, innovative, and unforgettable experiences. With a strong presence across Asia, the company excels in organizing corporate events, weddings, product launches, conferences, and large-scale public gatherings.
                             </p>
-                            <a href="/about" className="custom-btn">
+                            <HashLink  smooth to="/about#WhoWe" className="custom-btn">
                                 Discover who we are
-                            </a>
+                            </HashLink>
                         </div>
                     </div>
                     {/* Section Title - End */}

@@ -18,7 +18,12 @@ import './assets/css/style.css'
 import Footer from "./global/Footer";
 import AboutPage from "./pages/about/About";
 import Gallery from "./pages/gallery/Gallery";
+import Career from "./pages/career/Career";
 
+import StandardQuoteForm from "./pages/quote/StandardQuoteForm";
+import EventQuoteForm from "./pages/quote/EventQuoteForm";
+import Contact from "./pages/contact/Contact";
+import ThankYouMessage from "./pages/career/thank_you";
 
 function App() {
   return (
@@ -28,6 +33,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/thank-you" element={<ThankYouMessage />} />
+        <Route path="/quote/standard" element={<StandardQuoteForm />} />
+        <Route path="/quote/event" element={<EventQuoteForm />} />
       </Routes>
       <Footer/>
     </Router>

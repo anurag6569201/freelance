@@ -37,7 +37,7 @@ const expertiseData = [
 
 const EventExpertise = () => {
   return (
-    <section className="event-expertise-section bg-gray-light sec-ptb-100 clearfix">
+    <section id="Services" className="event-expertise-section bg-gray-light sec-ptb-100 clearfix">
       <div className="container">
         <div className="section-title text-center mb-50">
           <small className="sub-title">our services</small>
