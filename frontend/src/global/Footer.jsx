@@ -10,13 +10,13 @@ function Footer() {
                     <div className="row" style={{ justifyContent: "space-between" }}>
                         
                         {/* Brand and Social Links */}
-                        <div className="col-md-3 mb-3">
-                            <h2 className="text-light" style={{ fontWeight: 600, letterSpacing: "5px" }}>ASIAN ADEPT</h2>
+                        <div className="col-md-4 mb-3">
                             <img style={{width:'70px',height:'70px',borderRadius:'50%'}} src={logo} alt="" />
+                            <h2 className="text-light mt-3" style={{ fontWeight: 600, letterSpacing: "5px" }}>ASIAN ADEPT</h2>
                         </div>
 
                         {/* Explore Section */}
-                        <div className="col-md-3 mb-3">
+                        <div className="col-md-2 mb-3">
                             <h5 className="text-secondary">EXPLORE</h5>
                             <ul className="list-unstyled">
                                 <li><a href="#" className="nav-link text-light">About</a></li>
@@ -44,7 +44,7 @@ function Footer() {
 
                         <hr />
                         <div className="col-md-12">
-                            <p className="p-0 m-0">© 2025 Asian Adept. All rights reserved.</p>
+                            <p className="p-0 m-0" style={{color:'grey'}}>© 2025 Asian Adept. All rights reserved.</p>
                         </div>
                     </div>
                 </footer>

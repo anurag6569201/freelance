@@ -24,6 +24,8 @@ import StandardQuoteForm from "./pages/quote/StandardQuoteForm";
 import EventQuoteForm from "./pages/quote/EventQuoteForm";
 import Contact from "./pages/contact/Contact";
 import ThankYouMessage from "./pages/career/thank_you";
+import Services from "./pages/services/Services";
+import ServicesCorporate from "./pages/services/Corporate";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/corporate" element={<ServicesCorporate />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />

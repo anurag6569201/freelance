@@ -2,7 +2,7 @@ function ServiceOffer() {
     return (
         <>
             <section id="service-section" className="service-section sec-ptb-100 clearfix" style={{ boxShadow: "none" }}>
-                <div className="container" >
+                <div className="container" id="WhyUs" >
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="section-title mb-50 sr-fade1">
