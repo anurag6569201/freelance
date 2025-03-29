@@ -19,6 +19,7 @@ router.register(r'event-images', EventServiceImageViewSet)
 router.register(r'exhibition-services', ExhibitionServicesViewSet)
 router.register(r'exhibition-subcategories', ExhibitionServiceSubcategoryViewSet)
 router.register(r'exhibition-images', ExhibitionServiceImageViewSet)
+router.register(r'career', CareerViewSet)
 router.register(r'gallery', GalleryViewSet, basename='gallery')
 
 urlpatterns=[
@@ -43,4 +44,8 @@ urlpatterns=[
     path('service/event/<int:id>',views.corp_event_byid,name='corp_event_byid'),
 
     path('api/', include(router.urls)),
+    path('api/career/form', CareerAPIView.as_view(), name='career_api'),
+    path('api/contact/', ContactView.as_view(), name='contact'),
+    path('api/exhibition-quote/', ExhibitionQuoteView.as_view(), name='exhibition-quote'),
+    path('api/event-quote/', EventQuoteView.as_view(), name='event-quote'),
 ]

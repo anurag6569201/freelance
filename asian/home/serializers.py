@@ -60,3 +60,27 @@ class ExhibitionServiceImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExhibitionServiceImage
         fields = '__all__'
+
+
+class CareerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Career
+        fields = '__all__'
+
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = '__all__'
+
+
+class ExhibitionQuoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExhibitionQuote
+        fields = '__all__'
+
+
+class EventQuoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EventQuote
+        fields = '__all__'

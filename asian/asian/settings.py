@@ -160,6 +160,7 @@ REST_FRAMEWORK = {
 # Allow requests from your frontend URL
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5174",
+    "http://localhost:5173",
     "http://0.0.0.0:8002",
 ]
 
@@ -171,3 +172,6 @@ CORS_ALLOW_HEADERS = ["*"]
 
 # Allow credentials (if using authentication)
 CORS_ALLOW_CREDENTIALS = True
+
+DEFAULT_FROM_EMAIL="anurag6569201@gmail.com"
+ADMIN_EMAIL="anuragsingh6569201@gmail.com"

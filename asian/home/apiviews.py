@@ -52,6 +52,11 @@ class ExhibitionServiceImageViewSet(viewsets.ModelViewSet):
     serializer_class = ExhibitionServiceImageSerializer
 
 
+class CareerViewSet(viewsets.ModelViewSet):
+    queryset = Career.objects.all()
+    serializer_class = CareerSerializer
+
+
 class GalleryViewSet(viewsets.ViewSet):
     def list(self, request):
         active_filter = request.GET.get('filter', 'all')
@@ -68,3 +73,117 @@ class GalleryViewSet(viewsets.ViewSet):
             data['exhibition_images'] = ExhibitionServiceImageSerializer(ExhibitionServiceImage.objects.all(), many=True).data
         
         return Response(data)
+    
+
+import json
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from .models import Career
+from .forms import JobApplicationForm
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from django.views import View
+@method_decorator(csrf_exempt, name='dispatch')
+class CareerAPIView(View):
+    def post(self, request, *args, **kwargs):
+        # Handle both JSON and form-data
+        if request.content_type == 'application/json':
+            try:
+                data = json.loads(request.body)
+                form = JobApplicationForm(data)
+            except json.JSONDecodeError:
+                return JsonResponse({'error': 'Invalid JSON'}, status=400)
+        else:
+            # Handle regular form data (including files)
+            form = JobApplicationForm(request.POST, request.FILES)
+        
+        if form.is_valid():
+            application = form.save()
+            
+            # Extract the cleaned data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            position = form.cleaned_data['position']
+            message = form.cleaned_data['message']
+            
+            # Render email template
+            html_message = render_to_string('pages/career/components/email.html', {
+                'name': name,
+                'email': email,
+                'position': position,
+                'message': message,
+            })
+            
+            # Send email
+            send_mail(
+                subject=f'New Job Application for {position}',
+                message='You have received a new job application.',
+                from_email=email,
+                recipient_list=['anurag6569201@gmail.com'],
+                html_message=html_message
+            )
+            
+            return JsonResponse({
+                'message': 'Application submitted successfully',
+                'id': application.id
+            }, status=201)
+        
+        return JsonResponse({'errors': form.errors}, status=400)
+    
+
+
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .models import Contact
+from .serializers import ContactSerializer
+import random
+import string
+from datetime import datetime
+
+class ContactView(APIView):
+    def post(self, request):
+        serializer = ContactSerializer(data=request.data)
+        
+        if serializer.is_valid():
+            # Save the contact with user-provided meeting link
+            contact = serializer.save()
+            
+            response_data = {
+                'success': True,
+                'message': 'Meeting scheduled successfully! Emails have been sent.',
+                'meeting_link': contact.meeting_link
+            }
+            return Response(response_data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class ExhibitionQuoteView(APIView):
+    def post(self, request):
+        serializer = ExhibitionQuoteSerializer(data=request.data)
+        
+        if serializer.is_valid():
+            serializer.save()
+            return Response({
+                'success': True,
+                'message': 'Quote request submitted successfully!',
+                'data': serializer.data
+            }, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+
+class EventQuoteView(APIView):
+    def post(self, request):
+        serializer = EventQuoteSerializer(data=request.data)
+        
+        if serializer.is_valid():
+            serializer.save()
+            return Response({
+                'success': True,
+                'message': 'Event quote request submitted successfully!',
+                'data': serializer.data
+            }, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
