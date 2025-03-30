@@ -129,7 +129,7 @@ function NavigationBar() {
                                                     </ul>
                                                 </li>
                                                 <li className="menu-item-has-children">
-                                                        <Link to="/about">What We Do</Link>
+                                                        <Link to="/services">What We Do</Link>
                                                     <ul className="sub-menu">
                                                         <li><HashLink smooth to="/services#corporate">Corporate Events</HashLink></li>
                                                         <li><HashLink smooth to="/services#social">Social Events</HashLink></li>
