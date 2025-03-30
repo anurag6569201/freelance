@@ -7,6 +7,7 @@ import image1 from '../../../assets/images/services/wed.jpg'
 import image2 from '../../../assets/images/services/mus.jpg'
 import image3 from '../../../assets/images/services/party.jpg'
 import image4 from '../../../assets/images/services/team.jpg'
+import { Link } from "react-router-dom";
 
 const expertiseData = [
   {
@@ -75,9 +76,9 @@ const EventExpertise = () => {
                   </div>
                   <div className="content">
                     <h3 className="title">{item.title}</h3>
-                    <a href={item.link} className="custom-btn">
+                    <Link to={item.link} className="custom-btn">
                       Know More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
