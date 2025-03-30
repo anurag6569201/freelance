@@ -4,7 +4,7 @@ import axios from 'axios';
 const Gallery = () => {
     const [images, setImages] = useState({ corporate: [], social: [], event: [], exhibition: [] });
     const [activeFilter, setActiveFilter] = useState('all');
-    const API_URL = process.env.REACT_APP_API_URL;
+    const API_URL = import.meta.env.VITE_API_URL;
     useEffect(() => {
         axios.get(`${API_URL}/api/gallery/?filter=${activeFilter}`)
             .then(response => {

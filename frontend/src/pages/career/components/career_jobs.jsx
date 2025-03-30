@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const CareerJobOpenings = () => {
   const [jobs, setJobs] = useState([]);
   const [error, setError] = useState(null);
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     const fetchJobs = async () => {
       try {
