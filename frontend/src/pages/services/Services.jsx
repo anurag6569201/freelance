@@ -5,6 +5,7 @@ import image2 from '../../assets/images/services/social1.jpg'
 import image3 from '../../assets/images/services/exe1.png'
 import image4 from '../../assets/images/services/party.jpg'
 
+import { Link } from "react-router-dom";
 function Services() {
     const serviceList = [
         {
@@ -73,9 +74,9 @@ function Services() {
                             <div style={styles.serviceBadge}>Service {index + 1}</div>
                             <h2 style={styles.rowTitle}>{service.title}</h2>
                             <p style={styles.rowDescription}>{service.description}</p>
-                            <a className='btn custom-btn' href={service.link} style={styles.learnMoreLink}>
+                            <Link className='btn custom-btn' to={service.link} style={styles.learnMoreLink}>
                                 Discover More →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ))}
