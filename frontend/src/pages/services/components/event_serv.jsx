@@ -1,101 +1,99 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import image from '../../../assets/images/services/corp/corp3.png'
+import image from '../../../assets/images/services/corp/corp2.png'
 import { Image } from "react-bootstrap";
 import WhyChooseAsianAdept from './whychoose';
 
 import image1 from "../../../assets/images/services/corp/corp1.png";
 import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a second image for variation
-import image3 from "../../../assets/images/services/corp/corp3.png"; // Add a second image for variation
 import ContactForm from './corp_serv_form';
-import CorpSubCategory from './serv_subcategory';
 import CorpServScroller from './corp_serv_scroller';
 
-const CorporateEvents = () => {
+const EventsEvents = () => {
     const subservices = [
         {
-            name: 'Conferences',
-            description: 'Organize large-scale conferences with expert planning, venue selection, and attendee management. We handle everything from keynote arrangements to breakout sessions.',
-            image: 'https://picsum.photos/seed/conference/800/500'
+            name: 'Event Planning and Coordination',
+            description: 'Comprehensive event planning services, from concept development to flawless execution, ensuring a seamless experience.',
+            image: 'https://picsum.photos/seed/eventplanning/800/500'
         },
         {
-            name: 'Seminars',
-            description: 'Host impactful seminars with professional speaker coordination, content development, and audience engagement strategies.',
-            image: 'https://picsum.photos/seed/seminar/800/500'
+            name: 'Venue Selection and Setup',
+            description: 'Find and prepare the perfect venue with layout planning, seating arrangements, and ambiance creation.',
+            image: 'https://picsum.photos/seed/venue/800/500'
         },
         {
-            name: 'Workshops',
-            description: 'Interactive workshops featuring hands-on learning experiences, expert facilitators, and customized training materials.',
-            image: 'https://picsum.photos/seed/workshop/800/500'
+            name: 'Catering and Hospitality',
+            description: 'Delight your guests with exquisite catering options and seamless hospitality services.',
+            image: 'https://picsum.photos/seed/catering/800/500'
         },
         {
-            name: 'Product Launches',
-            description: 'Create buzzworthy product launches with immersive experiences, media coordination, and influencer engagements.',
-            image: 'https://picsum.photos/seed/productlaunch/800/500'
+            name: 'Entertainment and Activities',
+            description: 'Engaging entertainment options including live performances, interactive activities, and unique experiences.',
+            image: 'https://picsum.photos/seed/entertainment/800/500'
         },
         {
-            name: 'Trade Shows',
-            description: 'End-to-end trade show management including booth design, logistics, and lead generation strategies.',
-            image: 'https://picsum.photos/seed/tradeshow/800/500'
+            name: 'Decor and Theme Design',
+            description: 'Bespoke event decor and theme designs to create immersive and visually stunning experiences.',
+            image: 'https://picsum.photos/seed/decor/800/500'
         },
         {
-            name: 'Expo and Exhibitions',
-            description: 'Large-scale expo management with thematic zoning, vendor coordination, and visitor flow optimization.',
-            image: 'https://picsum.photos/seed/expo/800/500'
+            name: 'Audio-Visual and Technical Support',
+            description: 'State-of-the-art AV equipment, lighting, and technical support for flawless event execution.',
+            image: 'https://picsum.photos/seed/avsupport/800/500'
         },
         {
-            name: 'Networking Events',
-            description: 'Curated networking events with matchmaking algorithms, ice-breaking activities, and relationship-building sessions.',
-            image: 'https://picsum.photos/seed/networking/800/500'
+            name: 'Guest Management and Invitations',
+            description: 'Streamlined guest management solutions including invitations, RSVPs, and on-site coordination.',
+            image: 'https://picsum.photos/seed/guestmanagement/800/500'
         },
         {
-            name: 'Team-Building Events',
-            description: 'Custom team-building programs featuring adventure activities, problem-solving challenges, and leadership exercises.',
-            image: 'https://picsum.photos/seed/teambuilding/800/500'
+            name: 'Transportation and Logistics',
+            description: 'Efficient transport and logistics coordination for seamless guest and vendor movement.',
+            image: 'https://picsum.photos/seed/transport/800/500'
         },
         {
-            name: 'Corporate Retreats',
-            description: 'Destination retreats combining strategic planning sessions with recreational activities in inspiring locations.',
-            image: 'https://picsum.photos/seed/retreat/800/500'
+            name: 'Photography and Videography',
+            description: 'Professional photography and videography to capture unforgettable moments.',
+            image: 'https://picsum.photos/seed/photography/800/500'
         },
         {
-            name: 'Award Ceremonies',
-            description: 'Prestigious award ceremonies with stage design, nominee management, and live streaming capabilities.',
-            image: 'https://picsum.photos/seed/awards/800/500'
+            name: 'Event Staffing',
+            description: 'Trained event staff, including hosts, coordinators, and service personnel to manage all aspects of the event.',
+            image: 'https://picsum.photos/seed/eventstaff/800/500'
         },
         {
-            name: 'Corporate Galas',
-            description: 'Elegant gala dinners featuring entertainment programming, themed décor, and luxury catering services.',
-            image: 'https://picsum.photos/seed/gala/800/500'
+            name: 'Security and Crowd Management',
+            description: 'Comprehensive security services to ensure a safe and well-managed event.',
+            image: 'https://picsum.photos/seed/security/800/500'
         },
         {
-            name: 'Board Meetings',
-            description: 'Executive-level meeting planning with confidential document handling and high-security arrangements.',
-            image: 'https://picsum.photos/seed/boardmeeting/800/500'
+            name: 'Event Marketing and Promotion',
+            description: 'Strategic marketing and promotional campaigns to maximize event reach and engagement.',
+            image: 'https://picsum.photos/seed/marketing/800/500'
         },
         {
-            name: 'Milestone Celebrations',
-            description: 'Anniversary and milestone events celebrating corporate achievements with historical timelines and legacy showcases.',
-            image: 'https://picsum.photos/seed/milestone/800/500'
+            name: 'Custom Invitations and Printed Materials',
+            description: 'Beautifully designed invitations, brochures, and event materials tailored to your theme.',
+            image: 'https://picsum.photos/seed/invitations/800/500'
         },
         {
-            name: 'Fundraisers',
-            description: 'Charity events with donor management systems, auction coordination, and impact storytelling.',
-            image: 'https://picsum.photos/seed/fundraiser/800/500'
+            name: 'Party Favours and Gifts',
+            description: 'Curated party favors and gifts to leave a lasting impression on your guests.',
+            image: 'https://picsum.photos/seed/gifts/800/500'
         },
         {
-            name: 'Press Conferences',
-            description: 'Media events with press kit preparation, journalist coordination, and live broadcasting setups.',
-            image: 'https://picsum.photos/seed/pressconference/800/500'
+            name: 'Lighting and Stage Design',
+            description: 'Expert lighting and stage design to enhance the visual appeal and atmosphere of your event.',
+            image: 'https://picsum.photos/seed/stagedesign/800/500'
         },
         {
-            name: 'Incentive Trips',
-            description: 'Motivational travel programs with unique experiences, recognition ceremonies, and luxury accommodations.',
-            image: 'https://picsum.photos/seed/incentive/800/500'
+            name: 'Budget Management',
+            description: 'Smart financial planning and budget management to optimize event expenses.',
+            image: 'https://picsum.photos/seed/budget/800/500'
         },
         {
-            name: 'MICE Events',
-            description: 'Full-service MICE (Meetings, Incentives, Conferences, Exhibitions) management for global corporate needs.',
-            image: 'https://picsum.photos/seed/mice/800/500'
+            name: 'Post-Event Clean Up and Restoration',
+            description: 'Efficient clean-up and venue restoration services for a hassle-free post-event experience.',
+            image: 'https://picsum.photos/seed/cleanup/800/500'
         }
     ];
 
@@ -107,19 +105,16 @@ const CorporateEvents = () => {
                         <div className="service-title mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                             <p className='lead text-center fs-6'>SERVICES</p>
                             <h1 className="text-uppercase font-weight-bold text-center">
-                                Corporate
+                                Events
                             </h1>
                             <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
-                        <p className="text-muted mb-4">
-                            Elevate your corporate gatherings with <strong>Asian Adept</strong>, your trusted partner in
-                            premium event planning. We understand that corporate events are more than just meetings—they are
-                            an opportunity to showcase your brand, strengthen professional relationships, and create memorable experiences.
-                            With our expertise, we craft seamless, high-impact events that leave a lasting impression on your guests.
-                            <br /><br />
-                            Let us handle the complexities while you focus on what matters most—engaging with your audience and
-                            building stronger business connections.
-                        </p>
+                        <p class="service-description text-muted mb-4">
+                        Step into a world of innovation and discovery with <strong>Asian Adept</strong>, your premier partner for unforgettable exhibition events. Whether you're showcasing groundbreaking products, fostering industry connections, or unveiling the latest trends, we bring creativity and precision to every event. Our team excels in curating exhibitions that not only highlight your vision but also engage and inspire attendees, creating a dynamic platform for success.
+                    
+                        <br/><br/>
+                        Let us handle the logistics, from booth design to event management, ensuring a seamless experience. With Asian Adept, your exhibition will be a captivating fusion of creativity, professionalism, and impact, leaving a lasting impression on all your visitors.
+                    </p>
                         <div className="text-left mb-5">
                             <a href="/contact" className="btn custom-btn btn-lg rounded-pill px-4 py-2">Make an Event</a>
                         </div>
@@ -127,7 +122,7 @@ const CorporateEvents = () => {
                 </div>
 
                 <WhyChooseAsianAdept />
-                <CorpServScroller subservices={subservices} maintitle={"Corporate Service"}/>
+                <CorpServScroller subservices={subservices} maintitle={"Events Service"}/>
 
                 <div className="container mt-4">
                     <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">Our Services</h2>
@@ -268,4 +263,4 @@ const CorporateEvents = () => {
     );
 };
 
-export default CorporateEvents;
+export default EventsEvents;

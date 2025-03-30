@@ -40,13 +40,13 @@ function Services() {
     return (
         <div style={styles.servicesPage} className='mt-5'>
             <div style={styles.header}>
-                <h1 style={styles.mainTitle}><span style={{fontWeight:'1000'}}>Our</span> <span style={{fontWeight:'400'}}>Services</span></h1>
+                <h1 style={styles.mainTitle}><span style={{ fontWeight: '1000' }}>Our</span> <span style={{ fontWeight: '400' }}>Services</span></h1>
                 <div style={styles.titleUnderline}></div>
             </div>
-            
+
             <p style={styles.introText}>
-                At Asian Adept, we offer a comprehensive suite of event planning and management services 
-                designed to bring your vision to life. Explore our core service areas below, each presented 
+                At Asian Adept, we offer a comprehensive suite of event planning and management services
+                designed to bring your vision to life. Explore our core service areas below, each presented
                 with tailored solutions.
             </p>
 
@@ -70,7 +70,7 @@ function Services() {
                         </div>
 
                         <div style={styles.textColumn} id={service.id}>
-                            <div  style={styles.serviceBadge}>Service {index + 1}</div>
+                            <div style={styles.serviceBadge}>Service {index + 1}</div>
                             <h2 style={styles.rowTitle}>{service.title}</h2>
                             <p style={styles.rowDescription}>{service.description}</p>
                             <a className='btn custom-btn' href={service.link} style={styles.learnMoreLink}>
