@@ -14,6 +14,7 @@ const EventQuoteForm = () => {
     eventExplanation: "",
     eventDates: "",
   });
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -42,7 +43,7 @@ const EventQuoteForm = () => {
       };
 
       const response = await axios.post(
-        'http://0.0.0.0:8002/api/event-quote/', 
+        `${API_URL}/api/event-quote/`, 
         submissionData
       );
 

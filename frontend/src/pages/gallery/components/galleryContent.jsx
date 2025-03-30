@@ -4,9 +4,9 @@ import axios from 'axios';
 const Gallery = () => {
     const [images, setImages] = useState({ corporate: [], social: [], event: [], exhibition: [] });
     const [activeFilter, setActiveFilter] = useState('all');
-
+    const API_URL = process.env.REACT_APP_API_URL;
     useEffect(() => {
-        axios.get(`http://0.0.0.0:8002/api/gallery/?filter=${activeFilter}`)
+        axios.get(`${API_URL}/api/gallery/?filter=${activeFilter}`)
             .then(response => {
                 console.log("API Response:", response.data); // Debugging
 
@@ -47,7 +47,7 @@ const Gallery = () => {
                         images[category]?.map(image => (
                             <div key={image.id} className={`grid-item photo-gallery ${category}-gallery`} data-category={`${category}-gallery`}>
                                 <a className="popup-link" href={image.image}>
-                                    <img src={`http://0.0.0.0:8002${image.image}`} alt={`${category} Image`} />
+                                    <img src={`${API_URL}${image.image}`} alt={`${category} Image`} />
                                 </a>
                             </div>
                         ))

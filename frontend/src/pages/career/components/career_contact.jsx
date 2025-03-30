@@ -14,12 +14,13 @@ const CareerApplySection = () => {
     message: "",
   });
   const navigate = useNavigate();
+  const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchJobs = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('http://0.0.0.0:8002/api/career/');
+        const response = await fetch(`${API_URL}/api/career/`);
         if (!response.ok) {
           throw new Error(`Failed to fetch: ${response.status}`);
         }
@@ -78,7 +79,7 @@ const CareerApplySection = () => {
         formDataToSend.append('resume', formData.resume);
       }
   
-      const response = await fetch("http://0.0.0.0:8002/api/career/form", {
+      const response = await fetch(`${API_URL}/api/career/form`, {
         method: "POST",
         body: formDataToSend,
         // Don't set Content-Type header - the browser will set it automatically

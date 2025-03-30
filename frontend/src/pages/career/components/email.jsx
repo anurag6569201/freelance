@@ -11,11 +11,11 @@ const CareerApplySection = () => {
     message: "",
   });
   const navigate = useNavigate();
-
+  const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch('http://0.0.0.0:8002/api/career/'); // Replace with actual API endpoint
+        const response = await fetch(`${API_URL}/api/career/`); // Replace with actual API endpoint
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -43,7 +43,7 @@ const CareerApplySection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://0.0.0.0:8002/api/career/form", {
+      const response = await fetch(`${API_URL}/api/career/form`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

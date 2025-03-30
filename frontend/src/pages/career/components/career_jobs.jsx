@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 const CareerJobOpenings = () => {
   const [jobs, setJobs] = useState([]);
   const [error, setError] = useState(null);
-
+  const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch('http://0.0.0.0:8002/api/career/'); // Replace with actual API endpoint
+        const response = await fetch(`${API_URL}/api/career/`); // Replace with actual API endpoint
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

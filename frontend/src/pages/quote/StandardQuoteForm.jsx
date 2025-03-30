@@ -15,7 +15,7 @@ const StandardQuoteForm = () => {
     dates: "",
     boothRequirements: "",
   });
-
+  const API_URL = process.env.REACT_APP_API_URL;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState(null);
@@ -44,7 +44,7 @@ const StandardQuoteForm = () => {
       };
 
       const response = await axios.post(
-        'http://0.0.0.0:8002/api/exhibition-quote/', 
+        `${API_URL}/api/exhibition-quote/`, 
         submissionData
       );
 

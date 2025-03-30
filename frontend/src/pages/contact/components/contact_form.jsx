@@ -16,7 +16,7 @@ const ContactFormSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
-
+  const API_URL = process.env.REACT_APP_API_URL;
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -27,7 +27,7 @@ const ContactFormSection = () => {
     setError(null);
     
     try {
-      const response = await axios.post('http://0.0.0.0:8002/api/contact/', formData);
+      const response = await axios.post(`${API_URL}/api/contact/`, formData);
       
       if (response.data.success) {
         setIsSubmitted(true);
