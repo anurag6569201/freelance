@@ -162,6 +162,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5174",
     "http://localhost:5173",
     "http://0.0.0.0:8002",
+    "https://asian-adept.vercel.app/",
     "https://asian-adept.onrender.com"
 ]
 
