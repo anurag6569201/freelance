@@ -13,89 +13,59 @@ import CorpServScroller from './corp_serv_scroller';
 const CorporateEvents = () => {
     const subservices = [
         {
-            name: 'Conferences',
-            description: 'Organize large-scale conferences with expert planning, venue selection, and attendee management. We handle everything from keynote arrangements to breakout sessions.',
-            image: 'https://picsum.photos/seed/conference/800/500'
+            name: 'Office/Store/Factory Inauguration',
+            description: 'Grand openings with ribbon-cutting ceremonies, VIP invitations, media coverage, and facility tours.',
+            image: 'https://picsum.photos/seed/inauguration/800/500'
         },
         {
-            name: 'Seminars',
-            description: 'Host impactful seminars with professional speaker coordination, content development, and audience engagement strategies.',
-            image: 'https://picsum.photos/seed/seminar/800/500'
+            name: 'Annual Corporate Events',
+            description: 'Company-wide annual events featuring keynote speeches, employee recognitions, and team-building activities.',
+            image: 'https://picsum.photos/seed/annualevent/800/500'
         },
         {
-            name: 'Workshops',
-            description: 'Interactive workshops featuring hands-on learning experiences, expert facilitators, and customized training materials.',
-            image: 'https://picsum.photos/seed/workshop/800/500'
+            name: 'Conferences & Seminars',
+            description: 'Large-scale industry conferences and knowledge-sharing seminars with expert speakers and panel discussions.',
+            image: 'https://picsum.photos/seed/conferences/800/500'
         },
         {
-            name: 'Product Launches',
-            description: 'Create buzzworthy product launches with immersive experiences, media coordination, and influencer engagements.',
-            image: 'https://picsum.photos/seed/productlaunch/800/500'
-        },
-        {
-            name: 'Trade Shows',
-            description: 'End-to-end trade show management including booth design, logistics, and lead generation strategies.',
-            image: 'https://picsum.photos/seed/tradeshow/800/500'
-        },
-        {
-            name: 'Expo and Exhibitions',
-            description: 'Large-scale expo management with thematic zoning, vendor coordination, and visitor flow optimization.',
-            image: 'https://picsum.photos/seed/expo/800/500'
-        },
-        {
-            name: 'Networking Events',
-            description: 'Curated networking events with matchmaking algorithms, ice-breaking activities, and relationship-building sessions.',
-            image: 'https://picsum.photos/seed/networking/800/500'
-        },
-        {
-            name: 'Team-Building Events',
-            description: 'Custom team-building programs featuring adventure activities, problem-solving challenges, and leadership exercises.',
-            image: 'https://picsum.photos/seed/teambuilding/800/500'
-        },
-        {
-            name: 'Corporate Retreats',
-            description: 'Destination retreats combining strategic planning sessions with recreational activities in inspiring locations.',
-            image: 'https://picsum.photos/seed/retreat/800/500'
-        },
-        {
-            name: 'Award Ceremonies',
-            description: 'Prestigious award ceremonies with stage design, nominee management, and live streaming capabilities.',
-            image: 'https://picsum.photos/seed/awards/800/500'
-        },
-        {
-            name: 'Corporate Galas',
-            description: 'Elegant gala dinners featuring entertainment programming, themed décor, and luxury catering services.',
-            image: 'https://picsum.photos/seed/gala/800/500'
-        },
-        {
-            name: 'Board Meetings',
-            description: 'Executive-level meeting planning with confidential document handling and high-security arrangements.',
-            image: 'https://picsum.photos/seed/boardmeeting/800/500'
-        },
-        {
-            name: 'Milestone Celebrations',
-            description: 'Anniversary and milestone events celebrating corporate achievements with historical timelines and legacy showcases.',
-            image: 'https://picsum.photos/seed/milestone/800/500'
-        },
-        {
-            name: 'Fundraisers',
-            description: 'Charity events with donor management systems, auction coordination, and impact storytelling.',
-            image: 'https://picsum.photos/seed/fundraiser/800/500'
-        },
-        {
-            name: 'Press Conferences',
-            description: 'Media events with press kit preparation, journalist coordination, and live broadcasting setups.',
-            image: 'https://picsum.photos/seed/pressconference/800/500'
-        },
-        {
-            name: 'Incentive Trips',
-            description: 'Motivational travel programs with unique experiences, recognition ceremonies, and luxury accommodations.',
-            image: 'https://picsum.photos/seed/incentive/800/500'
+            name: 'Corporate Social Responsibility (CSR) Events',
+            description: 'Community outreach programs, sustainability initiatives, and corporate charity drives.',
+            image: 'https://picsum.photos/seed/csr/800/500'
         },
         {
             name: 'MICE Events',
-            description: 'Full-service MICE (Meetings, Incentives, Conferences, Exhibitions) management for global corporate needs.',
+            description: 'Comprehensive planning of Meetings, Incentives, Conferences, and Exhibitions for global corporate needs.',
             image: 'https://picsum.photos/seed/mice/800/500'
+        },
+        {
+            name: 'Product Launches',
+            description: 'High-impact product unveiling events with media coordination, influencer marketing, and interactive experiences.',
+            image: 'https://picsum.photos/seed/productlaunch/800/500'
+        },
+        {
+            name: 'Corporate Retreats & Team Building',
+            description: 'Engaging retreats and team-building activities to foster leadership, collaboration, and employee morale.',
+            image: 'https://picsum.photos/seed/retreat/800/500'
+        },
+        {
+            name: 'Board Meetings & Shareholder Gatherings',
+            description: 'Confidential and high-security executive meetings with premium venues and secure document handling.',
+            image: 'https://picsum.photos/seed/boardmeeting/800/500'
+        },
+        {
+            name: 'Corporate Milestone Celebrations & Anniversaries',
+            description: 'Exclusive events celebrating company anniversaries and key achievements with legacy showcases.',
+            image: 'https://picsum.photos/seed/milestone/800/500'
+        },
+        {
+            name: 'Networking Events',
+            description: 'Professionally curated networking sessions with matchmaking tools and industry-specific gatherings.',
+            image: 'https://picsum.photos/seed/networking/800/500'
+        },
+        {
+            name: 'Sales, Dealers, and Suppliers Conference',
+            description: 'Strategic conferences to align sales teams, engage dealers, and strengthen supplier relationships.',
+            image: 'https://picsum.photos/seed/salesconference/800/500'
         }
     ];
 

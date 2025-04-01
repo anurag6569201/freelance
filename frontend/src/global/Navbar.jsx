@@ -129,19 +129,19 @@ function NavigationBar() {
                                                     </ul>
                                                 </li>
                                                 <li className="menu-item-has-children">
-                                                        <Link >What We Do</Link>
+                                                    <Link >What We Do</Link>
                                                     <ul className="sub-menu">
                                                         <li><HashLink smooth to="/services#corporate">Corporate Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services#wedding">Wedding Planning</HashLink></li>
                                                         <li><HashLink smooth to="/services#social">Social Events</HashLink></li>
-                                                        <li><HashLink smooth to="/services#exhibition">Exhibitions</HashLink></li>
-                                                        <li><HashLink smooth to="/services#event">Event Services</HashLink></li>
+                                                        <li><HashLink smooth to="/services#exhibitions">Exhibitions</HashLink></li>
+                                                        <li><HashLink smooth to="/services#sports">Sports Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services#government">Government Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services#entertainment">Entertainment Events</HashLink></li>
                                                     </ul>
                                                 </li>
                                                 <li>
                                                     <Link to="/gallery">gallery</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="/career">Careers</Link>
                                                 </li>
                                                 <li className="menu-item-has-children">
                                                     <a href="#!">Quote</a>
@@ -149,6 +149,9 @@ function NavigationBar() {
                                                         <li><Link to="/quote/standard">Stand Quotation</Link></li>
                                                         <li><Link to="/quote/event">Event Quotation</Link></li>
                                                     </ul>
+                                                </li>
+                                                <li>
+                                                    <Link to="/career">Careers</Link>
                                                 </li>
                                             </ul>
                                         </div>

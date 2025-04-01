@@ -11,91 +11,81 @@ import CorpServScroller from './corp_serv_scroller';
 const EventsEvents = () => {
     const subservices = [
         {
-            name: 'Event Planning and Coordination',
-            description: 'Comprehensive event planning services, from concept development to flawless execution, ensuring a seamless experience.',
-            image: 'https://picsum.photos/seed/eventplanning/800/500'
+            name: 'Concert and Live Show Management',
+            description: 'Full-scale planning and execution of concerts, music festivals, and live performances with top-tier production quality.',
+            image: 'https://picsum.photos/seed/concert/800/500'
         },
         {
-            name: 'Venue Selection and Setup',
-            description: 'Find and prepare the perfect venue with layout planning, seating arrangements, and ambiance creation.',
-            image: 'https://picsum.photos/seed/venue/800/500'
+            name: 'Stage Design and Setup',
+            description: 'Innovative stage designs, custom setups, and immersive backdrops to enhance the visual impact of performances.',
+            image: 'https://picsum.photos/seed/stage/800/500'
         },
         {
-            name: 'Catering and Hospitality',
-            description: 'Delight your guests with exquisite catering options and seamless hospitality services.',
-            image: 'https://picsum.photos/seed/catering/800/500'
+            name: 'Lighting and Special Effects',
+            description: 'Dynamic lighting setups, laser shows, pyrotechnics, and special effects to create unforgettable experiences.',
+            image: 'https://picsum.photos/seed/lighting/800/500'
         },
         {
-            name: 'Entertainment and Activities',
-            description: 'Engaging entertainment options including live performances, interactive activities, and unique experiences.',
-            image: 'https://picsum.photos/seed/entertainment/800/500'
+            name: 'Celebrity and Artist Booking',
+            description: 'Seamless coordination for booking celebrities, musicians, DJs, and performers for your entertainment events.',
+            image: 'https://picsum.photos/seed/celebrity/800/500'
         },
         {
-            name: 'Decor and Theme Design',
-            description: 'Bespoke event decor and theme designs to create immersive and visually stunning experiences.',
-            image: 'https://picsum.photos/seed/decor/800/500'
+            name: 'Sound and Audio Engineering',
+            description: 'State-of-the-art audio systems, live sound mixing, and technical support for clear, immersive sound quality.',
+            image: 'https://picsum.photos/seed/audio/800/500'
         },
         {
-            name: 'Audio-Visual and Technical Support',
-            description: 'State-of-the-art AV equipment, lighting, and technical support for flawless event execution.',
-            image: 'https://picsum.photos/seed/avsupport/800/500'
-        },
-        {
-            name: 'Guest Management and Invitations',
-            description: 'Streamlined guest management solutions including invitations, RSVPs, and on-site coordination.',
-            image: 'https://picsum.photos/seed/guestmanagement/800/500'
-        },
-        {
-            name: 'Transportation and Logistics',
-            description: 'Efficient transport and logistics coordination for seamless guest and vendor movement.',
-            image: 'https://picsum.photos/seed/transport/800/500'
-        },
-        {
-            name: 'Photography and Videography',
-            description: 'Professional photography and videography to capture unforgettable moments.',
-            image: 'https://picsum.photos/seed/photography/800/500'
-        },
-        {
-            name: 'Event Staffing',
-            description: 'Trained event staff, including hosts, coordinators, and service personnel to manage all aspects of the event.',
-            image: 'https://picsum.photos/seed/eventstaff/800/500'
-        },
-        {
-            name: 'Security and Crowd Management',
-            description: 'Comprehensive security services to ensure a safe and well-managed event.',
-            image: 'https://picsum.photos/seed/security/800/500'
-        },
-        {
-            name: 'Event Marketing and Promotion',
-            description: 'Strategic marketing and promotional campaigns to maximize event reach and engagement.',
+            name: 'Event Promotion and Marketing',
+            description: 'Targeted digital and offline marketing campaigns to maximize audience engagement and event turnout.',
             image: 'https://picsum.photos/seed/marketing/800/500'
         },
         {
-            name: 'Custom Invitations and Printed Materials',
-            description: 'Beautifully designed invitations, brochures, and event materials tailored to your theme.',
-            image: 'https://picsum.photos/seed/invitations/800/500'
+            name: 'Video Production and Live Streaming',
+            description: 'High-quality video production, multi-camera live streaming, and post-event video editing services.',
+            image: 'https://picsum.photos/seed/videoproduction/800/500'
         },
         {
-            name: 'Party Favours and Gifts',
-            description: 'Curated party favors and gifts to leave a lasting impression on your guests.',
-            image: 'https://picsum.photos/seed/gifts/800/500'
+            name: 'VIP and Backstage Management',
+            description: 'Exclusive VIP area management, artist hospitality, and backstage coordination for high-profile events.',
+            image: 'https://picsum.photos/seed/vip/800/500'
         },
         {
-            name: 'Lighting and Stage Design',
-            description: 'Expert lighting and stage design to enhance the visual appeal and atmosphere of your event.',
-            image: 'https://picsum.photos/seed/stagedesign/800/500'
+            name: 'Festival and Carnival Organization',
+            description: 'Comprehensive planning for large-scale festivals, carnivals, and themed entertainment events.',
+            image: 'https://picsum.photos/seed/festival/800/500'
         },
         {
-            name: 'Budget Management',
-            description: 'Smart financial planning and budget management to optimize event expenses.',
-            image: 'https://picsum.photos/seed/budget/800/500'
+            name: 'Interactive and Immersive Experiences',
+            description: 'Virtual reality zones, interactive booths, and gamified experiences to engage audiences dynamically.',
+            image: 'https://picsum.photos/seed/interactive/800/500'
         },
         {
-            name: 'Post-Event Clean Up and Restoration',
-            description: 'Efficient clean-up and venue restoration services for a hassle-free post-event experience.',
-            image: 'https://picsum.photos/seed/cleanup/800/500'
+            name: 'Security and Crowd Control',
+            description: 'Professional security services, crowd management, and risk assessment for large-scale events.',
+            image: 'https://picsum.photos/seed/security/800/500'
+        },
+        {
+            name: 'Merchandising and Brand Partnerships',
+            description: 'Custom merchandise production and brand collaborations to enhance event branding and revenue.',
+            image: 'https://picsum.photos/seed/merchandise/800/500'
+        },
+        {
+            name: 'Red Carpet and Award Show Planning',
+            description: 'Elegant red carpet setups, award ceremonies, and gala events designed with precision and style.',
+            image: 'https://picsum.photos/seed/redcarpet/800/500'
+        },
+        {
+            name: 'Film Screening and Premiere Events',
+            description: 'Exclusive film screenings, premieres, and press events with high-end execution and publicity.',
+            image: 'https://picsum.photos/seed/filmscreening/800/500'
+        },
+        {
+            name: 'Post-Event Analysis and Reporting',
+            description: 'Data-driven analysis and reporting to measure event success and improve future entertainment experiences.',
+            image: 'https://picsum.photos/seed/reporting/800/500'
         }
-    ];
+    ];    
 
     return (
         <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
@@ -105,7 +95,7 @@ const EventsEvents = () => {
                         <div className="service-title mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                             <p className='lead text-center fs-6'>SERVICES</p>
                             <h1 className="text-uppercase font-weight-bold text-center">
-                                Events
+                            Entertainment
                             </h1>
                             <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
@@ -122,7 +112,7 @@ const EventsEvents = () => {
                 </div>
 
                 <WhyChooseAsianAdept />
-                <CorpServScroller subservices={subservices} maintitle={"Events Service"}/>
+                <CorpServScroller subservices={subservices} maintitle={"Entertainment Service"}/>
 
                 <div className="container mt-4">
                     <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">Our Services</h2>

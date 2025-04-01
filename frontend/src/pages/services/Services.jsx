@@ -4,6 +4,9 @@ import image1 from '../../assets/images/services/corpevents1.png'
 import image2 from '../../assets/images/services/social1.jpg'
 import image3 from '../../assets/images/services/exe1.png'
 import image4 from '../../assets/images/services/party.jpg'
+import image5 from '../../assets/images/services/party.jpg'
+import image6 from '../../assets/images/services/party.jpg'
+import image7 from '../../assets/images/services/party.jpg'
 
 import { Link } from "react-router-dom";
 function Services() {
@@ -11,32 +14,54 @@ function Services() {
         {
             id: 'corporate',
             title: 'Corporate Services',
-            description: 'We specialize in crafting exceptional corporate events, from impactful conferences and seminars to engaging team-building activities and elegant gala dinners. Let Asian Adept elevate your brand presence and foster meaningful connections.',
-            link: '/services/corporate', // Example link to a detailed page
+            description: 'We excel in organizing high-impact corporate events, including conferences, seminars, product launches, and team-building activities. Let us enhance your brand presence and create professional, engaging experiences.',
+            link: '/services/corporate',
             imgSrc: image1
+        },
+        {
+            id: 'wedding',
+            title: 'Wedding Planning',
+            description: 'Make your dream wedding a reality with our bespoke planning services. From venue selection to decor, catering, and entertainment, we ensure every detail is perfect for your big day.',
+            link: '/services/wedding',
+            imgSrc: image2
         },
         {
             id: 'social',
             title: 'Social Events',
-            description: 'Celebrate life\'s special moments in style. Asian Adept designs and manages unforgettable social gatherings, including weddings, anniversaries, birthdays, and private parties, tailored precisely to your vision and preferences.',
+            description: 'Celebrate life’s special moments with our expertly crafted social events, including birthdays, anniversaries, private parties, and cultural gatherings tailored to your vision.',
             link: '/services/social',
-            imgSrc: image2
-        },
-        {
-            id: 'exhibition',
-            title: 'Exhibition Services',
-            description: 'Make a lasting impression at trade shows and exhibitions. We offer comprehensive solutions, from innovative booth design and fabrication to seamless logistics and engaging attendee experiences, ensuring your brand stands out.',
-            link: '/services/exhibition',
             imgSrc: image3
         },
         {
-            id: 'event',
-            title: 'End-to-End Event Management',
-            description: 'Entrust your event entirely to us. Asian Adept provides complete event management services, handling every detail from initial concept and planning through flawless execution and post-event analysis for any type of event.',
-            link: '/services/event-management',
+            id: 'exhibitions',
+            title: 'Exhibition Services',
+            description: 'Stand out at trade shows and exhibitions with our end-to-end solutions, including innovative booth designs, logistics management, and engaging attendee experiences.',
+            link: '/services/exhibitions',
             imgSrc: image4
+        },
+        {
+            id: 'sports',
+            title: 'Sports Event Management',
+            description: 'From local tournaments to large-scale sports championships, we handle all aspects of sports event planning, ensuring smooth operations and an electrifying experience for participants and spectators.',
+            link: '/services/sports',
+            imgSrc: image5
+        },
+        {
+            id: 'government',
+            title: 'Government Events',
+            description: 'We specialize in organizing official government events, including summits, public conferences, cultural programs, and diplomatic gatherings with precision and professionalism.',
+            link: '/services/government',
+            imgSrc: image6
+        },
+        {
+            id: 'entertainment',
+            title: 'Entertainment Events',
+            description: 'Bring entertainment to life with our expert planning of concerts, live performances, award shows, and festivals, ensuring a seamless and unforgettable experience for audiences.',
+            link: '/services/entertainment',
+            imgSrc: image7
         }
     ];
+
 
     return (
         <div style={styles.servicesPage} className='mt-5'>

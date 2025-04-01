@@ -29,7 +29,12 @@ import ServicesCorporate from "./pages/services/Corporate";
 import SubCategory from "./pages/services/components/serv_subcategory";
 import SocialEvents from "./pages/services/components/social_serv";
 import ExhibitionEvents from "./pages/services/components/exhibition_serv";
-import EventsSocial from "./pages/services/Events";
+import EventsSocial from "./pages/services/EEvents";
+import WeddingEvents from "./pages/services/WeddingEvents";
+import GovEventsEvents from "./pages/services/components/gov_event_serv";
+import SportsEventsSocial from "./pages/services/SportsEvents";
+import ExhibitionSocial from "./pages/services/Exhibition";
+import GovEventsSocial from "./pages/services/GovEvents";
 
 function App() {
   return (
@@ -41,8 +46,11 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/corporate" element={<ServicesCorporate />} />
         <Route path="/services/social" element={<SocialEvents />} />
-        <Route path="/services/exhibition" element={<ExhibitionEvents />} />
-        <Route path="/services/event-management" element={<EventsSocial />} />
+        <Route path="/services/exhibitions" element={<ExhibitionSocial />} />
+        <Route path="/services/wedding" element={<WeddingEvents />} />
+        <Route path="/services/sports" element={<SportsEventsSocial />} />
+        <Route path="/services/government" element={<GovEventsSocial />} />
+        <Route path="/services/entertainment" element={<EventsSocial />} />
         <Route path="/services/sub-category/:id" element={<SubCategory />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/career" element={<Career />} />
