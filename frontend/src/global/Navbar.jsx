@@ -26,13 +26,16 @@ function NavigationBar() {
             <div className="header-bottom" style={{ padding: '0' }}>
                 <nav className="small_device_navbar navbar navbar-expand-lg bg-body-tertiary">
                     <div className="container-fluid">
-                        <div className="col-md-4 logo_wrapper_header_top col-4" style={{ display: "flex", justifyContent: "center" }}>
+                        <div className="logo_wrapper_header_top p-2" style={{ display: "flex", justifyContent: "left" }}>
                             <Link to="/">
-                                <img style={{ width: "100px", height: "100px", borderRadius: "50%", border: "4px solid #fff" }}
+                                <img style={{ width: "50px", height: "50px", borderRadius: "50%", border: "4px solid #fff" }}
                                     src={logo} alt="" />
+                                <span style={{ fontSize: '20px', fontWeight: '800', color: '#333333', marginLeft: '10px', fontFamily: 'cursive' }}>
+                                    Asian Adept
+                                </span>
+
                             </Link>
                         </div>
-                        <Link className="navbar-brand" to="/">ASIAN ADEPT</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
@@ -50,29 +53,37 @@ function NavigationBar() {
                                                         <Link to="/">home</Link>
                                                     </li>
                                                     <li className="menu-item-has-children">
-                                                        <a href="#!">about</a>
+                                                        <Link >about</Link>
                                                         <ul className="sub-menu">
-                                                            <li><Link to="/about">Who We Are</Link></li>
-                                                            <li><Link to="/team">Our Team</Link></li>
+                                                            <li><HashLink smooth to="/about#WhoWe">Who We Are</HashLink></li>
+                                                            <li><HashLink smooth to="/about#WhyUs">Why Us</HashLink></li>
+                                                            <li><HashLink smooth to="/about#team">Our Team</HashLink></li>
                                                         </ul>
                                                     </li>
                                                     <li className="menu-item-has-children">
-                                                        <a href="#!">What We Do</a>
+                                                        <Link >What We Do</Link>
                                                         <ul className="sub-menu">
-                                                            <li><Link to="/corp_service">Corporate Events</Link></li>
-                                                            <li><Link to="/corp_social">Social Events</Link></li>
-                                                            <li><Link to="/corp_exhibition">Exhibitions</Link></li>
-                                                            <li><Link to="/corp_event">Event Services</Link></li>
+                                                            <li><HashLink smooth to="/services#corporate">Corporate Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#wedding">Wedding Planning</HashLink></li>
+                                                            <li><HashLink smooth to="/services#social">Social Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#exhibitions">Exhibitions</HashLink></li>
+                                                            <li><HashLink smooth to="/services#sports">Sports Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#government">Government Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#entertainment">Entertainment Events</HashLink></li>
                                                         </ul>
                                                     </li>
                                                     <li>
                                                         <Link to="/gallery">gallery</Link>
                                                     </li>
+                                                    <li className="menu-item-has-children">
+                                                        <a href="#!">Quote</a>
+                                                        <ul className="sub-menu">
+                                                            <li><Link to="/quote/standard">Stand Quotation</Link></li>
+                                                            <li><Link to="/quote/event">Event Quotation</Link></li>
+                                                        </ul>
+                                                    </li>
                                                     <li>
                                                         <Link to="/career">Careers</Link>
-                                                    </li>
-                                                    <li className="menu-item-has-children">
-                                                        <Link to="/contact">contact</Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -80,14 +91,14 @@ function NavigationBar() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-2">
-                                <div className="user-search-btn-group ul-li clearfix">
-                                    <ul style={{ display: "flex", gap: "20px" }}>
+                            <div className="col-lg-2 p-0 m-0" style={{ display: 'flex', alignItems: 'center', justifyContent: 'left' }}>
+                                <div className="user-search-btn-group ul-li clearfix p-0 m-0">
+                                    <ul style={{ display: "flex", gap: "20px", alignItems: 'center' }}>
                                         <a href="https://web.whatsapp.com/"
-                                            style={{ display: "flex", gap: "10px", alignItems: "center", justifyContent: "center" }}>
+                                            style={{ display: "flex", gap: "10px", alignItems: "center", justifyContent: "center", color: isScrolled ? 'black' : 'white' }}>
                                             <i className="fas fa-user"></i> 8329969729
                                         </a>
-                                        <Link to="/contact">Contact</Link>
+                                        <Link to="/contact" style={{ background: isScrolled ? '#333333' : 'transparent', height: '66px', padding: '0 20px', display: 'flex', alignItems: 'center', borderLeft: '1px solid white' }}><b className="text-white">Contact</b></Link>
                                     </ul>
                                 </div>
                             </div>

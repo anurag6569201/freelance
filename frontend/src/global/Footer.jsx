@@ -32,7 +32,7 @@ function Footer() {
                         </div>
 
                         {/* Insights Section (Placeholder) */}
-                        <div className="col-3 text-center">
+                        <div className="col-md-3 text-center">
                             <h5 className="text-secondary">GET OUR LATEST INSIGHTS</h5>
                             <div className="d-flex mt-3">
                                 <a href="#" className="me-3 text-light" style={iconStyle}><FaInstagram /></a>

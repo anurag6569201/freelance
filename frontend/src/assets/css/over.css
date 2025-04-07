@@ -329,3 +329,33 @@ body{
 #header-section.scrolled ul li a {
     color: black;
 }
+
+@media (max-width:450px){
+    .sub-menu{
+        background-color: white;
+    }
+    .event-expertise-section .event-expertise-carousel .item{
+        padding-left: 0px !important;
+    }
+    .card-team-details{
+        flex-direction: column !important;
+    }
+    .card-team-details img{
+        width: auto !important;
+    }
+    .card-team-details .card-body{
+        padding: 0px !important;
+        padding-top: 10px !important;
+    }
+    .main-page-of-services{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .main-heading-subservices{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .service-subservices-head1{
+        padding-top: 10px !important;
+    }
+}

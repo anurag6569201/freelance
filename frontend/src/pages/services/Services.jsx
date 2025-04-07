@@ -64,7 +64,7 @@ function Services() {
 
 
     return (
-        <div style={styles.servicesPage} className='mt-5'>
+        <div style={styles.servicesPage} className='mt-5 main-page-of-services'>
             <div style={styles.header}>
                 <h1 style={styles.mainTitle}><span style={{ fontWeight: '1000' }}>Our</span> <span style={{ fontWeight: '400' }}>Services</span></h1>
                 <div style={styles.titleUnderline}></div>

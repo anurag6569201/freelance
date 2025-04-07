@@ -92,7 +92,7 @@ const EventExpertise = () => {
               <div key={index} className="item">
                 <div className="expertise-item">
                   <div className="image image-wrapper">
-                    <img src={item.image} alt={item.title} style={{height:'200px',objectFit:'contain'}}/>
+                    <img src={item.image} alt={item.title} style={{height:'200px',objectFit:'cover'}}/>
                     <a href="#!" className="plus-effect"></a>
                   </div>
                   <div className="content">

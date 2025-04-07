@@ -39,7 +39,7 @@ const TeamMembers = () => {
             <Row className="justify-content-center mb-4">
                 {mainTeam.map((member, index) => (
                     <Col key={index} md={12} className="mb-4">
-                        <Card className="h-100 border-0 d-flex flex-row align-items-center">
+                        <Card className="card-team-details h-100 border-0 d-flex flex-row align-items-center">
                             <Card.Img variant="left" src={member.img} className="rounded-start" style={{ width: '40%', height: '100%', objectFit: 'cover' }} />
                             <Card.Body className="p-5">
                                 <Card.Title className="fw-bold fs-2">{member.name}</Card.Title>

@@ -22,7 +22,7 @@ const SubCategory = () => {
     return (
         <div className="row p-0 m-0 py-5 mt-4">
             <div className="container">
-            <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">{maintitle}</h2>
+            <h2 className="main-heading-subservices text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">{maintitle}</h2>
                 {subservices.map((service, index) => (
                     <div 
                         key={index} 
@@ -43,7 +43,7 @@ const SubCategory = () => {
                             />
                         </div>
                         <div className="col-lg-6">
-                            <h3 className="fw-bold">{service.name}</h3>
+                            <h3 className="fw-bold service-subservices-head1">{service.name}</h3>
                             <p className="text-muted">{service.description}</p>
                         </div>
                     </div>
