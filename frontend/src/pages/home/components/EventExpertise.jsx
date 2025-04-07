@@ -3,10 +3,13 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import '../../../assets/css/colors/crousalstyle.css'
-import image1 from '../../../assets/images/services/wed.jpg'
-import image2 from '../../../assets/images/services/mus.jpg'
-import image3 from '../../../assets/images/services/party.jpg'
-import image4 from '../../../assets/images/services/team.jpg'
+import image1 from '../../../assets/images/services/social2.jpg'
+import image2 from '../../../assets/images/services/exe2.jpg'
+import image3 from '../../../assets/images/services/wed.jpg'
+import image4 from '../../../assets/images/services/corp/corp10.jpg'
+import image5 from '../../../assets/images/services/sport.jpeg'
+import image6 from '../../../assets/images/services/gov.jpeg'
+import image7 from '../../../assets/images/services/party.jpg'
 import { Link } from "react-router-dom";
 
 const expertiseData = [
@@ -20,19 +23,37 @@ const expertiseData = [
     title: "Exhibitions",
     image: image2,
     price: "50,000 - 80,000",
-    link: "/services/exhibition",
+    link: "/services/exhibitions",
   },
   {
-    title: "Events Services",
+    title: "Wedding Events",
     image: image3,
     price: "30,000 - 50,000",
-    link: "/services/event-management",
+    link: "/services/wedding",
   },
   {
     title: "Corporate Events",
     image: image4,
     price: "10,000 - 20,000",
     link: "/services/corporate",
+  },
+  {
+    title: "Sport Events",
+    image: image5,
+    price: "10,000 - 20,000",
+    link: "/services/sports",
+  },
+  {
+    title: "Government Events",
+    image: image6,
+    price: "10,000 - 20,000",
+    link: "/services/government",
+  },
+  {
+    title: "Entertainment Events",
+    image: image7,
+    price: "10,000 - 20,000",
+    link: "/services/entertainment",
   },
 ];
 
@@ -71,7 +92,7 @@ const EventExpertise = () => {
               <div key={index} className="item">
                 <div className="expertise-item">
                   <div className="image image-wrapper">
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt={item.title} style={{height:'200px',objectFit:'contain'}}/>
                     <a href="#!" className="plus-effect"></a>
                   </div>
                   <div className="content">

@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import image from '../../../assets/images/services/corp/corp3.png'
+import image from '../../../assets/images/services/corp/corp10.jpg'
 import { Image } from "react-bootstrap";
 import WhyChooseAsianAdept from './whychoose';
 
 import image1 from "../../../assets/images/services/corp/corp1.png";
-import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a second image for variation
-import image3 from "../../../assets/images/services/corp/corp3.png"; // Add a second image for variation
+import image2 from "../../../assets/images/services/corp/corp2.png";
+import image3 from "../../../assets/images/services/corp/corp3.png";
 import ContactForm from './corp_serv_form';
 import CorpSubCategory from './serv_subcategory';
 import CorpServScroller from './corp_serv_scroller';
@@ -14,57 +14,57 @@ const CorporateEvents = () => {
     const subservices = [
         {
             name: 'Office/Store/Factory Inauguration',
-            description: 'Grand openings with ribbon-cutting ceremonies, VIP invitations, media coverage, and facility tours.',
+            description: "Opening a new office, store, or factory is a moment of pride and it deserves to be celebrated with style. We specialize in organizing impactful inauguration events that blend tradition with innovation. From setting up the perfect stage to managing VIP guests, catering, and branding elements, we ensure everything runs flawlessly. Our focus is on creating a memorable first impression that boosts your brand visibility and connects with your audience. Whether it's a corporate launch or a community celebration, we craft experiences that resonate.",
             image: 'https://picsum.photos/seed/inauguration/800/500'
         },
         {
             name: 'Annual Corporate Events',
-            description: 'Company-wide annual events featuring keynote speeches, employee recognitions, and team-building activities.',
+            description: 'Make your annual corporate event more than just a date on the calendar make it an experience to remember. We specialize in end-to-end planning for corporate gatherings that reflect your company’s values and celebrate its achievements. From award nights and annual meets to gala dinners and team-building retreats, we craft every detail with precision. Our goal is to impress your stakeholders, engage your teams, and deliver a seamless, stress-free execution. Let your brand shine with an event that inspires and connects.',
             image: 'https://picsum.photos/seed/annualevent/800/500'
         },
         {
             name: 'Conferences & Seminars',
-            description: 'Large-scale industry conferences and knowledge-sharing seminars with expert speakers and panel discussions.',
+            description: 'Conferences and seminars are more than just gatherings they’re platforms for knowledge, networking, and growth. We design and manage events that spark ideas, drive engagement, and create impact. From academic forums to corporate leadership panels, our expert team handles everything from logistics and audio-visuals to delegate management and branding. Whether it’s a small workshop or a large-scale seminar, we ensure your message is heard loud and clear. Deliver professionalism at every step and make your event stand out.',
             image: 'https://picsum.photos/seed/conferences/800/500'
         },
         {
             name: 'Corporate Social Responsibility (CSR) Events',
-            description: 'Community outreach programs, sustainability initiatives, and corporate charity drives.',
+            description: 'CSR events are more than goodwill they’re a reflection of your brand’s values. We help you plan and execute meaningful Corporate Social Responsibility events that create real impact. Whether it’s a community drive, sustainability initiative, health camp, or educational outreach, our team ensures smooth coordination, impactful storytelling, and responsible branding. We align your mission with memorable experiences that build stronger community ties and brand reputation. Let us help you turn purpose into action with an event that truly matters.',
             image: 'https://picsum.photos/seed/csr/800/500'
         },
         {
             name: 'MICE Events',
-            description: 'Comprehensive planning of Meetings, Incentives, Conferences, and Exhibitions for global corporate needs.',
+            description: 'MICE events are the heartbeat of professional engagement and we’re here to make them unforgettable. We specialize in curating powerful meetings, inspiring incentive programs, strategic conferences, and immersive exhibitions. With meticulous planning, creative direction, and flawless execution, we bring together people, ideas, and impact under one roof. Whether you’re building brand authority or fostering global connections, we ensure every detail reflects your vision and professionalism. Experience the difference of working with a team that understands both precision and passion.',
             image: 'https://picsum.photos/seed/mice/800/500'
         },
         {
             name: 'Product Launches',
-            description: 'High-impact product unveiling events with media coordination, influencer marketing, and interactive experiences.',
+            description: "Your product deserves more than a reveal it deserves a grand entrance. We craft impactful product launch events that create buzz, build anticipation, and drive engagement from the very first moment. From concept to execution, we handle venue setup, AV, media coverage, branding, and audience interaction ensuring your launch tells a compelling story. Whether it's a tech innovation, fashion line, or new service, we align every detail with your brand's identity and business goals. Let your product shine in the spotlight it deserves.",
             image: 'https://picsum.photos/seed/productlaunch/800/500'
         },
         {
             name: 'Corporate Retreats & Team Building',
-            description: 'Engaging retreats and team-building activities to foster leadership, collaboration, and employee morale.',
+            description: "Strong teams don’t happen by chance they're built through shared experiences and meaningful moments. Our corporate retreats and team-building activities are designed to inspire collaboration, ignite creativity, and foster trust among your workforce. From adventure-based outings to goal-oriented workshops, we tailor each retreat to reflect your company’s culture and objectives. Whether it's a weekend getaway or a one-day immersive event, we manage everything to perfection. Give your team the motivation they need to perform at their best. Let’s create an experience they’ll never forget.",
             image: 'https://picsum.photos/seed/retreat/800/500'
         },
         {
             name: 'Board Meetings & Shareholder Gatherings',
-            description: 'Confidential and high-security executive meetings with premium venues and secure document handling.',
+            description: 'Board meetings and shareholder gatherings demand a setting that speaks of class, clarity, and control. We ensure every aspect of your high-stakes meetings is handled with the utmost professionalism. Whether it’s an annual general meeting or a closed-door boardroom session, we provide secure, well-equipped venues, timely coordination, and discreet service. Our goal is to help you create a productive atmosphere where decisions are made and confidence is built. Elevate the way you host critical gatherings',
             image: 'https://picsum.photos/seed/boardmeeting/800/500'
         },
         {
             name: 'Corporate Milestone Celebrations & Anniversaries',
-            description: 'Exclusive events celebrating company anniversaries and key achievements with legacy showcases.',
+            description: 'Your company’s milestones deserve more than recognition they deserve celebration. We craft corporate anniversary and milestone events that reflect your brand’s journey, achievements, and values. From concept creation to flawless execution, we handle everything venue, themes, guest experience, presentations, and more. Whether it’s a silver jubilee, product success, or leadership recognition, we ensure the occasion leaves a lasting mark on everyone present. Inspire pride among employees, appreciation among clients, and confidence among stakeholders. Let’s celebrate your success story in a way that builds lasting connections.',
             image: 'https://picsum.photos/seed/milestone/800/500'
         },
         {
             name: 'Networking Events',
-            description: 'Professionally curated networking sessions with matchmaking tools and industry-specific gatherings.',
+            description: "Networking is the heartbeat of growth and we know how to make every interaction count. We plan and execute networking events that are professional, engaging, and result-driven. Whether it's an exclusive corporate mixer, an industry meet-up, or a business brunch, we tailor every detail to foster real conversations and strategic connections. From stylish venues to smooth coordination, we ensure your guests experience comfort, clarity, and class. Make your brand the bridge to powerful partnerships. Let’s create a networking event that delivers value beyond the room.",
             image: 'https://picsum.photos/seed/networking/800/500'
         },
         {
             name: 'Sales, Dealers, and Suppliers Conference',
-            description: 'Strategic conferences to align sales teams, engage dealers, and strengthen supplier relationships.',
+            description: "Your sales teams, dealers, and suppliers are the backbone of your business and they deserve an event that energizes, informs, and inspires. Our expertly curated conferences bring together your key players in a setting that encourages alignment, motivation, and mutual growth. We manage everything from conceptual planning and branding to logistics, tech, and engagement activities. Whether it’s an annual dealers' meet or a strategic supplier gathering, we ensure your event runs flawlessly and delivers real value. Celebrate partnerships, boost performance, and set the tone for future success.",
             image: 'https://picsum.photos/seed/salesconference/800/500'
         }
     ];
@@ -79,16 +79,28 @@ const CorporateEvents = () => {
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Corporate
                             </h1>
-                            <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px', objectFit: 'cover' }} />
                         </div>
                         <p className="text-muted mb-4">
-                            Elevate your corporate gatherings with <strong>Asian Adept</strong>, your trusted partner in
-                            premium event planning. We understand that corporate events are more than just meetings—they are
-                            an opportunity to showcase your brand, strengthen professional relationships, and create memorable experiences.
-                            With our expertise, we craft seamless, high-impact events that leave a lasting impression on your guests.
+                            In today’s dynamic business world, corporate events are more than just meetings, they are
+                            opportunities to build relationships, strengthen brands, and drive business success. Whether
+                            it’s an annual conference, product launch, award ceremony, or executive retreat, every
+                            corporate event must be meticulously planned and flawlessly executed to leave a lasting
+                            impression. With over 10 years of industry experience, our expert team at Asian Adept
+                            specializes in crafting events that inspire, engage, and deliver measurable impact.
                             <br /><br />
-                            Let us handle the complexities while you focus on what matters most—engaging with your audience and
-                            building stronger business connections.
+                            We understand that corporate events are a direct reflection of your brand’s values and
+                            reputation. That’s why we take a strategic and detail-oriented approach to event planning,
+                            ensuring that everything from venue selection and stage design to technology integration and
+                            guest experience is executed with precision. Our customized solutions cater to businesses of
+                            all sizes, helping them achieve their goals while providing a seamless and stress-free event
+                            experience <br /><br />Our expertise spans a wide range of corporate events, including high-profile conferences,
+                            leadership summits, investor meetings, networking events, brand activations, and team-
+                            building retreats. We leverage cutting-edge technology, innovative design, and industry best
+                            practices to make every event stand out. Whether you need a formal setting with a sophisticated
+                            ambiance or an interactive experience that fosters engagement, we ensure a flawless execution
+                            that exceeds expectations. <br /><br />At Asian Adept, we don’t just plan events we create powerful experiences that drive results.
+                            Let us take your corporate event to the next level.
                         </p>
                         <div className="text-left mb-5">
                             <a href="/contact" className="btn custom-btn btn-lg rounded-pill px-4 py-2">Make an Event</a>
@@ -97,7 +109,7 @@ const CorporateEvents = () => {
                 </div>
 
                 <WhyChooseAsianAdept />
-                <CorpServScroller subservices={subservices} maintitle={"Corporate Service"}/>
+                <CorpServScroller subservices={subservices} maintitle={"Corporate Service"} />
 
                 <div className="container mt-4">
                     <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">Our Services</h2>
@@ -193,8 +205,8 @@ const CorporateEvents = () => {
                         </div>
                     </div>
 
-                    <ContactForm/>
-                    
+                    <ContactForm />
+
                 </div>
 
             </div>

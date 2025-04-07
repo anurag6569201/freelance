@@ -11,55 +11,30 @@ import CorpServScroller from './corp_serv_scroller';
 const ExhibitionEvents = () => {
     const subservices = [
         {
-            name: 'Art Exhibitions',
-            description: 'Showcase artistic talent with curated exhibitions, gallery partnerships, and immersive experiences.',
+            name: 'Industry Trade Shows & Expos',
+            description: "Make your brand the showstopper at the next industry expo. We specialize in curating impactful trade show experiences that attract attention, engage audiences, and create lasting impressions. From concept to execution, our expert team handles every detail booth design, branding, tech integration, and logistics to ensure your presence is bold and unforgettable. Whether you're launching a product or building industry connections, we make it seamless and successful.",
             image: 'https://picsum.photos/seed/artexhibition/800/500'
         },
         {
-            name: 'Trade Exhibitions',
-            description: 'Comprehensive trade exhibition planning with industry-specific zoning, vendor coordination, and visitor engagement.',
+            name: 'Art & Cultural Exhibitions',
+            description: "Bring stories to life through unforgettable art and cultural exhibitions. We specialize in designing and managing events that celebrate diversity, creativity, and tradition creating an emotional connection between your audience and the artwork. From intricate detailing to flawless coordination, we handle everything with professionalism and passion. Whether it’s a solo exhibition or a multi-artist cultural fest, our team ensures your message resonates deeply and your event runs effortlessly. Let’s build a platform that honors talent and touches lives.",
             image: 'https://picsum.photos/seed/tradeexhibition/800/500'
         },
         {
-            name: 'Science and Technology Exhibitions',
-            description: 'Innovative science and tech exhibitions featuring groundbreaking research, product showcases, and interactive experiences.',
+            name: 'Automobile & Technology Expos',
+            description: "Accelerate your brand presence at the forefront of innovation with our expertly managed automobile and technology expos. We bring your vision to life with immersive layouts, interactive showcases, and state-of-the-art execution. Whether you're an auto brand, tech startup, or industry leader, we ensure your expo delivers impact, sparks engagement, and attracts the right audience. From concept planning to live demonstrations, we handle it all with professionalism and a passion for perfection. Let’s create an experience that puts your brand in the driver’s seat.",
             image: 'https://picsum.photos/seed/sciencetech/800/500'
         },
         {
-            name: 'Fashion and Jewellery Exhibitions',
-            description: 'Runway shows, jewellery displays, and exclusive fashion events featuring top designers and brands.',
+            name: 'Education & Career Fairs',
+            description: "Shape futures and build opportunities with expertly managed education and career fairs. We bring institutions, recruiters, and aspiring minds together in professionally organized events that foster meaningful connections. From student-friendly layouts to seamless coordination, every detail is designed to inspire, inform, and engage. Whether it’s a university showcase or a multi-industry career expo, we ensure your event is impactful, well-branded, and efficiently executed. Let us help you create a platform where knowledge meets opportunity.",
             image: 'https://picsum.photos/seed/fashionjewellery/800/500'
         },
         {
-            name: 'Automobile Exhibitions',
-            description: 'Showcase the latest automobiles with test drives, industry speakers, and interactive product demonstrations.',
+            name: 'Fashion & Lifestyle Exhibitions',
+            description: "Step into the spotlight with fashion and lifestyle exhibitions that dazzle, inspire, and sell. We craft visually stunning, trend-driven events that bring together designers, influencers, and shoppers under one roof. From elegant layouts to interactive brand showcases, every detail is carefully designed to elevate your brand and create unforgettable experiences. Whether launching a new collection or hosting a lifestyle pop-up, we ensure your event draws the right audience and delivers real impact. Let’s turn your vision into a fashion-forward experience that commands attention",
             image: 'https://picsum.photos/seed/automobile/800/500'
         },
-        {
-            name: 'Photography Exhibitions',
-            description: 'Curate stunning photography exhibitions highlighting creative talent and visual storytelling.',
-            image: 'https://picsum.photos/seed/photography/800/500'
-        },
-        {
-            name: 'Food and Beverage Exhibitions',
-            description: 'Culinary showcases with gourmet tastings, chef demonstrations, and food industry networking.',
-            image: 'https://picsum.photos/seed/foodbeverage/800/500'
-        },
-        {
-            name: 'Craft and Handmade Goods Exhibitions',
-            description: 'Celebrate craftsmanship with unique handmade goods, artisan vendors, and live demonstrations.',
-            image: 'https://picsum.photos/seed/craft/800/500'
-        },
-        {
-            name: 'Real Estate Exhibitions',
-            description: 'Premium real estate expos connecting developers, investors, and property seekers.',
-            image: 'https://picsum.photos/seed/realestate/800/500'
-        },
-        {
-            name: 'Sports and Fitness Exhibitions',
-            description: 'Showcasing the latest in sports equipment, fitness trends, and athlete meet-and-greets.',
-            image: 'https://picsum.photos/seed/sportsfitness/800/500'
-        }
     ];
 
     return (
@@ -75,11 +50,21 @@ const ExhibitionEvents = () => {
                             <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
-                        Step into a world of innovation and discovery with <strong>Asian Adept</strong>, your premier partner for unforgettable exhibition events. Whether you're showcasing groundbreaking products, fostering industry connections, or unveiling the latest trends, we bring creativity and precision to every event. Our team excels in curating exhibitions that not only highlight your vision but also engage and inspire attendees, creating a dynamic platform for success.
-                    
-                        <br/><br/>
-                        Let us handle the logistics, from booth design to event management, ensuring a seamless experience. With Asian Adept, your exhibition will be a captivating fusion of creativity, professionalism, and impact, leaving a lasting impression on all your visitors.
-                    </p>
+                        Exhibitions are not just about displays, they are dynamic experiences that connect businesses,
+artists, innovators, and audiences in meaningful ways. At Asian Adept, we specialize in
+curating engaging, impactful, and seamlessly executed exhibitions that elevate brands, spark
+conversations, and drive real engagement. Whether it’s an industry trade show, art & cultural
+exhibition, automobile & technology expo, education & career fair, or fashion & lifestyle event,
+we bring your vision to life with precision and creativity <br /><br />Our expertise covers strategic planning, space management, exhibitor coordination, branding,
+audience engagement, and on-site execution ensuring that every event is meticulously crafted
+for success. We create an immersive atmosphere where exhibitors connect with the right
+audience, fostering opportunities for business growth, artistic recognition, and valuable
+networking. From grand industry expos to exclusive boutique showcases, we tailor each
+exhibition to surpass expectations and deliver a high-impact experience. <br /><br />At Asian Adept, we don’t just organize exhibitions we transform them into extraordinary
+experiences that captivate, inspire, and leave a lasting impression. Whether you’re launching a
+ground-breaking product, unveiling artistic masterpieces, or fostering industry connections, we
+ensure your exhibition stands out in every way.
+                        </p>
                         <div className="text-left mb-5">
                             <a href="/contact" className="btn custom-btn btn-lg rounded-pill px-4 py-2">Make an Event</a>
                         </div>

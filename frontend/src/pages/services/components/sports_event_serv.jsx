@@ -11,87 +11,22 @@ import CorpServScroller from './corp_serv_scroller';
 const SportsEventsEvents = () => {
     const subservices = [
         {
-            name: 'Sports Event Planning and Management',
-            description: 'Comprehensive planning and management for tournaments, marathons, leagues, and sports festivals.',
+            name: 'Adventure & Endurance Sports',
+            description: "Push limits, build communities, and inspire action through powerful adventure and endurance events. We expertly manage marathons, off-road rallies, cycling tours, and outdoor challenges with seamless logistics and bold creativity. From securing sponsors to managing safety protocols and high-impact branding, our team ensures your event delivers thrill and professionalism in equal measure. Whether you're hosting for a cause, a brand, or pure excitement—we make it impactful and unforgettable. Let’s create a high-energy experience that drives results.",
             image: 'https://picsum.photos/seed/sportsevent/800/500'
         },
         {
-            name: 'Venue Selection and Setup',
-            description: 'Assistance in selecting the ideal sports venue and setting up facilities for optimal performance and experience.',
+            name: 'Corporate Tournaments',
+            description: "Unite teams, boost morale, and foster healthy competition with professionally managed corporate tournaments. Whether it’s cricket, football, or badminton, we bring your employees together through sports that energize, engage, and inspire. From venue booking and equipment to scheduling, branding, and hospitality we handle every detail with precision and care. Our events are designed not just for fun, but to build stronger teams and lasting memories. Whether it’s a one-day knockout or a multi-day league, we deliver experiences that score big.",
             image: 'https://picsum.photos/seed/venue/800/500'
         },
         {
-            name: 'Athlete and Team Management',
-            description: 'Coordinated services for athlete registrations, team allocations, and professional handling of participants.',
+            name: 'School & College Sports Meets',
+            description: 'Celebrate sportsmanship, talent, and youthful energy with vibrant and well-coordinated school and college sports meets. From interschool rivalry to intercollegiate pride, we plan and manage competitions that are safe, engaging, and flawlessly executed. We handle venue setup, scheduling, registrations, audio-visuals, guest management, and more bringing professionalism and excitement to every corner of your event. Whether it’s a day-long competition or a multi- day tournament, we create experiences that motivate students and strengthen community bonds',
             image: 'https://picsum.photos/seed/athletes/800/500'
         },
-        {
-            name: 'Live Streaming and Media Coverage',
-            description: 'High-quality live streaming, media partnerships, and real-time updates to reach a global audience.',
-            image: 'https://picsum.photos/seed/media/800/500'
-        },
-        {
-            name: 'Sponsorship and Brand Partnerships',
-            description: 'Strategic sponsorship acquisition and brand collaborations to enhance the event’s reach and financial backing.',
-            image: 'https://picsum.photos/seed/sponsorship/800/500'
-        },
-        {
-            name: 'Ticketing and Audience Management',
-            description: 'Seamless ticketing solutions, audience engagement strategies, and on-ground event coordination.',
-            image: 'https://picsum.photos/seed/tickets/800/500'
-        },
-        {
-            name: 'Equipment and Logistics',
-            description: 'Procurement and setup of sports equipment, team gear, and logistical support for smooth operations.',
-            image: 'https://picsum.photos/seed/equipment/800/500'
-        },
-        {
-            name: 'On-Field Technical Support',
-            description: 'Providing referees, coaches, and technical support staff to ensure fair and smooth gameplay.',
-            image: 'https://picsum.photos/seed/technical/800/500'
-        },
-        {
-            name: 'Medical and Emergency Services',
-            description: 'On-site medical support, ambulance services, and emergency response planning for athlete safety.',
-            image: 'https://picsum.photos/seed/medical/800/500'
-        },
-        {
-            name: 'Security and Crowd Management',
-            description: 'Ensuring safety through professional security personnel, crowd control, and access management.',
-            image: 'https://picsum.photos/seed/security/800/500'
-        },
-        {
-            name: 'Event Marketing and Promotions',
-            description: 'Customized marketing campaigns, social media promotions, and influencer collaborations for event publicity.',
-            image: 'https://picsum.photos/seed/marketing/800/500'
-        },
-        {
-            name: 'Award Ceremonies and Trophies',
-            description: 'Planning grand award ceremonies, trophy presentations, and celebration events for winners and participants.',
-            image: 'https://picsum.photos/seed/awards/800/500'
-        },
-        {
-            name: 'LED Screens and Scoreboards',
-            description: 'Installation of LED screens, real-time scoreboards, and digital displays for an immersive audience experience.',
-            image: 'https://picsum.photos/seed/screens/800/500'
-        },
-        {
-            name: 'Post-Event Analysis and Reporting',
-            description: 'Detailed analytics, player performance reports, and event insights for future improvements.',
-            image: 'https://picsum.photos/seed/analysis/800/500'
-        },
-        {
-            name: 'Community Engagement and CSR Initiatives',
-            description: 'Organizing outreach programs, charity matches, and community-building initiatives through sports.',
-            image: 'https://picsum.photos/seed/community/800/500'
-        },
-        {
-            name: 'Post-Event Clean-Up and Restoration',
-            description: 'Efficient venue clean-up and restoration services for a hassle-free post-event experience.',
-            image: 'https://picsum.photos/seed/cleanup/800/500'
-        }
     ];
-       
+
 
     return (
         <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
@@ -101,16 +36,25 @@ const SportsEventsEvents = () => {
                         <div className="service-title mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                             <p className='lead text-center fs-6'>SERVICES</p>
                             <h1 className="text-uppercase font-weight-bold text-center">
-                            Sports
+                                Sports
                             </h1>
                             <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
-                        Step into a world of innovation and discovery with <strong>Asian Adept</strong>, your premier partner for unforgettable exhibition events. Whether you're showcasing groundbreaking products, fostering industry connections, or unveiling the latest trends, we bring creativity and precision to every event. Our team excels in curating exhibitions that not only highlight your vision but also engage and inspire attendees, creating a dynamic platform for success.
-                    
-                        <br/><br/>
-                        Let us handle the logistics, from booth design to event management, ensuring a seamless experience. With Asian Adept, your exhibition will be a captivating fusion of creativity, professionalism, and impact, leaving a lasting impression on all your visitors.
-                    </p>
+                            The thrill of competition, the rush of adrenaline, and the spirit of teamwork sports events bring out the best in every participant. At Asian Adept, we specialize in organizing exceptional sports events that capture the energy, excitement, and essence of athletic excellence. With over a decade of experience, we design seamless, well-coordinated sports experiences that leave a lasting impact.
+                            <br /><br />From adventure marathons, endurance races, and outdoor sports challenges to corporate
+                            tournaments and school sports meets, we ensure every event is executed perfectly. Whether it's
+                            a high-profile cycling challenge, an intense cricket match, or a college-level football
+                            championship, we handle logistics, event branding, venue management, and sponsorship
+                            coordination to create an unforgettable experience.
+                            <br /><br />Our expertise extends to corporate sports leagues, offering businesses an engaging way to boost
+                            team spirit and networking. For schools and colleges, we craft competitive sports meets that
+                            encourage young talent and celebrate athleticism. Our professional planning ensures that
+                            everything from referees and equipment to audience engagement and digital coverage is
+                            managed with precision. <br /><br />
+                            At Asian Adept, we go beyond organizing sports events we build platforms for passion,
+                            competition, and triumph. Let’s turn your sports event into an electrifying experience.
+                        </p>
                         <div className="text-left mb-5">
                             <a href="/contact" className="btn custom-btn btn-lg rounded-pill px-4 py-2">Make an Event</a>
                         </div>
@@ -118,7 +62,7 @@ const SportsEventsEvents = () => {
                 </div>
 
                 <WhyChooseAsianAdept />
-                <CorpServScroller subservices={subservices} maintitle={"Sports Service"}/>
+                <CorpServScroller subservices={subservices} maintitle={"Sports Service"} />
 
                 <div className="container mt-4">
                     <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">Our Services</h2>
@@ -214,8 +158,8 @@ const SportsEventsEvents = () => {
                         </div>
                     </div>
 
-                    <ContactForm/>
-                    
+                    <ContactForm />
+
                 </div>
 
             </div>

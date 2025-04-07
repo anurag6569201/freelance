@@ -11,85 +11,30 @@ import CorpServScroller from './corp_serv_scroller';
 const GovEventsEvents = () => {
     const subservices = [
         {
-            name: 'Official Ceremonies and Protocol Management',
-            description: 'Planning and execution of state functions, inaugurations, and official ceremonies following strict protocols.',
+            name: 'Public Awareness Campaigns',
+            description: "Looking to raise awareness and create meaningful impact? Our Public Awareness Campaigns are designed to do just that. With years of experience managing events for government bodies, corporates, and NGOs, we deliver campaigns that spark conversations and spread the message loud and clear. From roadshows to exhibitions, flash mobs to digital activations we use every platform to amplify your cause. Trust us to plan, promote, and execute a campaign that turns awareness into action. Let’s work together to make a difference.",
             image: 'https://picsum.photos/seed/ceremony/800/500'
         },
         {
-            name: 'Public Awareness Campaigns',
-            description: 'Organizing large-scale awareness campaigns on government initiatives, health, education, and social causes.',
+            name: 'Political Rallies & Conferences',
+            description: "Political events require trust, clarity, and flawless execution and that's exactly what we bring to every rally and conference we manage. We specialize in end-to-end planning that ensures your message reaches every corner of the audience, both on-ground and online. From stage design to security, from sound systems to audience engagement we cover every detail with professionalism and care. Whether it’s a large-scale rally or an exclusive political forum, we help you create the right impression, every time. Make your next political gathering a benchmark in communication and outreach.",
             image: 'https://picsum.photos/seed/awareness/800/500'
         },
         {
-            name: 'Conferences and Summits',
-            description: 'End-to-end management of government summits, policy discussions, and international conferences.',
+            name: 'National & Cultural Celebrations',
+            description:"National and Cultural Celebrations deserve more than just planning they deserve passion, precision, and purpose. We specialize in curating events that honor traditions while engaging audiences through captivating experiences. From grand stage setups to folk performances, traditional cuisines, and immersive storytelling we create unforgettable moments that resonate with every age group. Trusted by corporates, schools, and government bodies alike, our events bring people together in celebration of identity and heritage. Let us help you craft a cultural experience that connects, inspires, and leaves a lasting impact.",
             image: 'https://picsum.photos/seed/conference/800/500'
         },
         {
-            name: 'Election Events and Political Rallies',
-            description: 'Logistics, security, and crowd management for election campaigns, rallies, and political gatherings.',
+            name: 'Educational & Welfare Programs',
+            description: "Empower, educate, and uplift our Educational and Welfare Programs are crafted to bring knowledge and support where it's needed most. Whether it's literacy drives, health awareness, career guidance, or social welfare campaigns, we bring together planning, logistics, and community engagement under one roof. We collaborate with corporates, schools, NGOs, and government departments to create events that are informative, impactful, and well-received. Every detail is handled with heart and precision, ensuring your initiative leaves a lasting footprint. Let’s create programs that don’t just speak but spark change.",
             image: 'https://picsum.photos/seed/election/800/500'
         },
         {
-            name: 'Press Conferences and Media Coordination',
-            description: 'Managing media relations, press releases, and live coverage for government announcements.',
+            name: 'Official Summits & Diplomatic Meetings',
+            description: "Precision, protocol, and professionalism our expertise in managing Official Summits and Diplomatic Meetings ensures every detail is flawlessly executed. From high-level security arrangements to world-class hospitality, seamless logistics, and discreet coordination, we deliver an event experience that reflects credibility and class. Trusted by government bodies and global organizations, we understand the gravity of diplomacy and the importance of flawless planning. Whether it’s bilateral talks or multi-nation summits, we maintain the highest standards of excellence. Let’s create a dignified setting where decisions are made and alliances are built.",
             image: 'https://picsum.photos/seed/press/800/500'
         },
-        {
-            name: 'Security and VIP Management',
-            description: 'High-level security planning, VIP escort services, and access control for government officials and dignitaries.',
-            image: 'https://picsum.photos/seed/security/800/500'
-        },
-        {
-            name: 'Infrastructure Setup and Logistics',
-            description: 'Setting up temporary structures, podiums, and seating arrangements for large-scale public events.',
-            image: 'https://picsum.photos/seed/infrastructure/800/500'
-        },
-        {
-            name: 'Cultural and National Festivals',
-            description: 'Coordinating national celebrations, parades, and cultural events to promote heritage and unity.',
-            image: 'https://picsum.photos/seed/festival/800/500'
-        },
-        {
-            name: 'Workshops and Training Programs',
-            description: 'Organizing skill development workshops, training sessions, and capacity-building programs for government employees and citizens.',
-            image: 'https://picsum.photos/seed/training/800/500'
-        },
-        {
-            name: 'Environmental and CSR Initiatives',
-            description: 'Event planning for tree plantation drives, sustainability programs, and community development projects.',
-            image: 'https://picsum.photos/seed/environment/800/500'
-        },
-        {
-            name: 'Disaster Relief Coordination',
-            description: 'Logistical support for emergency response, relief distribution, and public safety awareness during disasters.',
-            image: 'https://picsum.photos/seed/disaster/800/500'
-        },
-        {
-            name: 'Technology and Digital Governance Expos',
-            description: 'Hosting expos and forums on smart cities, e-governance, and emerging technologies in governance.',
-            image: 'https://picsum.photos/seed/technology/800/500'
-        },
-        {
-            name: 'Event Marketing and Public Engagement',
-            description: 'Strategic promotions, digital outreach, and citizen engagement initiatives for government programs.',
-            image: 'https://picsum.photos/seed/marketing/800/500'
-        },
-        {
-            name: 'Transportation and Crowd Control',
-            description: 'Managing public transport arrangements, traffic diversions, and pedestrian flow for large-scale government events.',
-            image: 'https://picsum.photos/seed/transport/800/500'
-        },
-        {
-            name: 'Post-Event Analysis and Reporting',
-            description: 'Detailed documentation, performance analysis, and reporting for transparency and future improvements.',
-            image: 'https://picsum.photos/seed/reporting/800/500'
-        },
-        {
-            name: 'Post-Event Cleanup and Waste Management',
-            description: 'Eco-friendly waste management solutions and site restoration after large gatherings.',
-            image: 'https://picsum.photos/seed/cleanup/800/500'
-        }
     ];
        
 
@@ -106,10 +51,21 @@ const GovEventsEvents = () => {
                             <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
-                        Step into a world of innovation and discovery with <strong>Asian Adept</strong>, your premier partner for unforgettable exhibition events. Whether you're showcasing groundbreaking products, fostering industry connections, or unveiling the latest trends, we bring creativity and precision to every event. Our team excels in curating exhibitions that not only highlight your vision but also engage and inspire attendees, creating a dynamic platform for success.
-                    
-                        <br/><br/>
-                        Let us handle the logistics, from booth design to event management, ensuring a seamless experience. With Asian Adept, your exhibition will be a captivating fusion of creativity, professionalism, and impact, leaving a lasting impression on all your visitors.
+                        Government events hold the power to inform, engage, and unite citizens toward a common
+cause. At Asian Adept, we specialize in seamlessly executing large-scale government events
+with precision, professionalism, and impact. Whether it’s a public awareness campaign,
+political rally, national celebration, educational initiative, or high-level diplomatic meeting, our
+experienced team ensures every event is meticulously planned and flawlessly executed. <br /><br />With over a decade of expertise, we understand the protocols, security measures, and logistical
+intricacies that come with organizing government events. Our comprehensive approach
+includes venue selection, crowd management, media coordination, branding, and technology
+integration, ensuring a smooth and effective execution. We work closely with government
+bodies, public organizations, and agencies to deliver events that are not only well-organized
+but also resonate with the intended audience. <br /><br /> From empowering awareness programs to grand cultural celebrations and official diplomatic
+summits, we tailor our strategies to maximize outreach and engagement. Our ability to blend
+innovative solutions, structured planning, and strict compliance with government regulations
+makes us a trusted partner for organizing impactful events that make a difference. <br /><br /> At Asian Adept, we don’t just organize government events we create platforms that shape
+narratives, drive change, and strengthen communities. Let’s collaborate to make your next
+event a resounding success.
                     </p>
                         <div className="text-left mb-5">
                             <a href="/contact" className="btn custom-btn btn-lg rounded-pill px-4 py-2">Make an Event</a>

@@ -20,14 +20,14 @@ const SubCategory = () => {
     }, [id]);
 
     return (
-        <div className="row g-5 py-5 mt-4">
+        <div className="row p-0 m-0 py-5 mt-4">
             <div className="container">
             <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">{maintitle}</h2>
                 {subservices.map((service, index) => (
                     <div 
                         key={index} 
                         id={`${index}`} 
-                        className={`row g-5 mt-2 justify-content-center align-items-center ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`}
+                        className={`row  mt-2 justify-content-center align-items-center ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`}
                     >
                         <div className="col-lg-5">
                             <img

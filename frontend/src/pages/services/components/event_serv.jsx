@@ -11,81 +11,41 @@ import CorpServScroller from './corp_serv_scroller';
 const EventsEvents = () => {
     const subservices = [
         {
-            name: 'Concert and Live Show Management',
-            description: 'Full-scale planning and execution of concerts, music festivals, and live performances with top-tier production quality.',
+            name: 'Live Concerts & Music Festivals',
+            description: "Where sound meets spectacle. Our expert team crafts live concerts and music festivals that thrill audiences and elevate brands. From indie vibes to large-scale music fests, we manage it all artist coordination, AV production, logistics, and safety ensuring a seamless, high-energy experience. Whether you're a corporate sponsor or an independent organizer, we tailor each event to captivate and connect. Let the crowd sing, dance, and remember your event for years.",
             image: 'https://picsum.photos/seed/concert/800/500'
         },
         {
-            name: 'Stage Design and Setup',
-            description: 'Innovative stage designs, custom setups, and immersive backdrops to enhance the visual impact of performances.',
+            name: 'Award Shows & Film Premieres',
+            description: "Lights. Camera. Perfection. We craft breath-taking award shows and film premieres that celebrate achievements with elegance and style. From celebrity coordination and redcarpet setups to lighting, sound, and audience experience we manage every detail with finesse. Whether it’s a corporate recognition event or a glamorous movie launch, our team ensures it shines at every angle. Let your stars and stories take center stage while we handle the magic behind the scenes",
             image: 'https://picsum.photos/seed/stage/800/500'
         },
         {
-            name: 'Lighting and Special Effects',
-            description: 'Dynamic lighting setups, laser shows, pyrotechnics, and special effects to create unforgettable experiences.',
+            name: 'Comedy & Stand-Up Shows',
+            description: "Laughter is the loudest applause and we know how to deliver it. Our team curates unforgettable comedy and stand-up shows that turn ordinary evenings into extraordinary experiences. From corporate laughter nights and college gigs to public shows and private parties, we handle artist bookings, stage setup, lighting, and crowd engagement with seamless professionalism. Whether you want clean corporate humor or bold, high-energy acts, we tailor each show to your audience.",
             image: 'https://picsum.photos/seed/lighting/800/500'
         },
         {
-            name: 'Celebrity and Artist Booking',
-            description: 'Seamless coordination for booking celebrities, musicians, DJs, and performers for your entertainment events.',
+            name: 'Celebrity & Influencer Meetups',
+            description: "Give your event the spotlight it deserves with celebrity and influencer meetups that captivate, engage, and elevate your brand. We specialize in organizing seamless interactions between audiences and renowned personalities be it for corporate branding, entertainment nights, product endorsements, or fan events. Our team handles everything from celebrity liaison to event logistics, ensuring a high-profile experience that feels personal and polished. In today’s digital world, influencer presence can make or break momentum let us make it memorable.",
             image: 'https://picsum.photos/seed/celebrity/800/500'
         },
         {
-            name: 'Sound and Audio Engineering',
-            description: 'State-of-the-art audio systems, live sound mixing, and technical support for clear, immersive sound quality.',
+            name: 'Club & Nightlife Events',
+            description: "When the sun goes down, we bring the city to life. Our club and nightlife events are all about high energy, stylish vibes, and unforgettable memories. From exclusive VIP parties and brand activations to DJ nights and themed experiences, we handle every element venue selection, artist bookings, lighting, sound, and crowd engagement. Whether you're a brand aiming to create buzz or a host planning a packed house, we tailor every detail to perfection. Let’s set the night on fire",
             image: 'https://picsum.photos/seed/audio/800/500'
         },
         {
-            name: 'Event Promotion and Marketing',
-            description: 'Targeted digital and offline marketing campaigns to maximize audience engagement and event turnout.',
+            name: 'Reality Shows & Talent Hunts',
+            description: "We specialize in creating buzzworthy reality shows and talent hunts that blend entertainment with opportunity. From scouting raw talent to managing grand finales, our team delivers complete end-to-end production with creativity, professionalism, and precision. Whether it’s a school talent search, corporate-themed contest, or nationwide reality series, we handle everything — casting, scripting, production, and promotions. Our shows don’t just entertain; they inspire, engage, and leave a mark. Let’s build a platform where stories unfold, talents shine, and memories are made.",
             image: 'https://picsum.photos/seed/marketing/800/500'
         },
         {
-            name: 'Video Production and Live Streaming',
-            description: 'High-quality video production, multi-camera live streaming, and post-event video editing services.',
+            name: 'Movie Promotions & OTT Launches',
+            description: "Create buzz before the first frame rolls. We specialize in high-impact movie promotions and OTT launches that capture attention and spark conversations. From star-studded media events and influencer tie-ups to press meets, fan engagement, and immersive experiences we execute every detail with cinematic flair. Whether it’s a theatrical blockbuster or an OTT original, we ensure your launch goes viral and stays memorable. Let us craft your premiere moment where the screen meets the spotlight.",
             image: 'https://picsum.photos/seed/videoproduction/800/500'
         },
-        {
-            name: 'VIP and Backstage Management',
-            description: 'Exclusive VIP area management, artist hospitality, and backstage coordination for high-profile events.',
-            image: 'https://picsum.photos/seed/vip/800/500'
-        },
-        {
-            name: 'Festival and Carnival Organization',
-            description: 'Comprehensive planning for large-scale festivals, carnivals, and themed entertainment events.',
-            image: 'https://picsum.photos/seed/festival/800/500'
-        },
-        {
-            name: 'Interactive and Immersive Experiences',
-            description: 'Virtual reality zones, interactive booths, and gamified experiences to engage audiences dynamically.',
-            image: 'https://picsum.photos/seed/interactive/800/500'
-        },
-        {
-            name: 'Security and Crowd Control',
-            description: 'Professional security services, crowd management, and risk assessment for large-scale events.',
-            image: 'https://picsum.photos/seed/security/800/500'
-        },
-        {
-            name: 'Merchandising and Brand Partnerships',
-            description: 'Custom merchandise production and brand collaborations to enhance event branding and revenue.',
-            image: 'https://picsum.photos/seed/merchandise/800/500'
-        },
-        {
-            name: 'Red Carpet and Award Show Planning',
-            description: 'Elegant red carpet setups, award ceremonies, and gala events designed with precision and style.',
-            image: 'https://picsum.photos/seed/redcarpet/800/500'
-        },
-        {
-            name: 'Film Screening and Premiere Events',
-            description: 'Exclusive film screenings, premieres, and press events with high-end execution and publicity.',
-            image: 'https://picsum.photos/seed/filmscreening/800/500'
-        },
-        {
-            name: 'Post-Event Analysis and Reporting',
-            description: 'Data-driven analysis and reporting to measure event success and improve future entertainment experiences.',
-            image: 'https://picsum.photos/seed/reporting/800/500'
-        }
-    ];    
+    ];
 
     return (
         <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
@@ -95,16 +55,30 @@ const EventsEvents = () => {
                         <div className="service-title mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                             <p className='lead text-center fs-6'>SERVICES</p>
                             <h1 className="text-uppercase font-weight-bold text-center">
-                            Entertainment
+                                Entertainment
                             </h1>
                             <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
-                        Step into a world of innovation and discovery with <strong>Asian Adept</strong>, your premier partner for unforgettable exhibition events. Whether you're showcasing groundbreaking products, fostering industry connections, or unveiling the latest trends, we bring creativity and precision to every event. Our team excels in curating exhibitions that not only highlight your vision but also engage and inspire attendees, creating a dynamic platform for success.
-                    
-                        <br/><br/>
-                        Let us handle the logistics, from booth design to event management, ensuring a seamless experience. With Asian Adept, your exhibition will be a captivating fusion of creativity, professionalism, and impact, leaving a lasting impression on all your visitors.
-                    </p>
+                            Entertainment events aren’t just about performances they’re about unforgettable experiences
+                            that ignite emotions, captivate audiences, and leave an indelible mark. At Asian Adept, we
+                            master the art of crafting high-energy, visually stunning, and seamlessly executed
+                            entertainment experiences. Whether it’s electrifying live concerts, grand music festivals,
+                            prestigious award shows, star-studded film premieres, or OTT launches, we deliver moments
+                            that resonate beyond the stage. <br /><br /> With over a decade of expertise, we understand that entertainment events demand flawless
+                            execution, strategic planning, and immersive engagement. From breath taking stage designs
+                            and cutting-edge audio-visual setups to seamless artist coordination and crowd engagement,
+                            we ensure every aspect is curated to perfection. Whether it’s an exclusive nightclub event, a
+                            power-packed reality show, a high-profile celebrity meetup, or an influencer-driven
+                            experience, we create an atmosphere where excitement thrives and memories are made. <br /><br />Our expertise spans event ideation, talent and artist management, venue selection, security
+                            protocols, media collaborations, and viral digital promotions guaranteeing maximum visibility
+                            and audience impact. We collaborate with leading brands, production houses, and
+                            entertainment moguls to craft world-class spectacles that don’t just entertain but elevate
+                            experiences. <br /><br />At Asian Adept, we don’t just organize events we engineer entertainment that captivates,
+                            excites, and inspires. Whether you’re envisioning a thrilling live concert, a red-carpet award
+                            night, or an immersive influencer extravaganza, we bring your vision to life. Let’s set the stage
+                            for something legendary.
+                        </p>
                         <div className="text-left mb-5">
                             <a href="/contact" className="btn custom-btn btn-lg rounded-pill px-4 py-2">Make an Event</a>
                         </div>
@@ -112,7 +86,7 @@ const EventsEvents = () => {
                 </div>
 
                 <WhyChooseAsianAdept />
-                <CorpServScroller subservices={subservices} maintitle={"Entertainment Service"}/>
+                <CorpServScroller subservices={subservices} maintitle={"Entertainment Service"} />
 
                 <div className="container mt-4">
                     <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">Our Services</h2>
@@ -208,8 +182,8 @@ const EventsEvents = () => {
                         </div>
                     </div>
 
-                    <ContactForm/>
-                    
+                    <ContactForm />
+
                 </div>
 
             </div>
