@@ -35,6 +35,7 @@ import GovEventsEvents from "./pages/services/components/gov_event_serv";
 import SportsEventsSocial from "./pages/services/SportsEvents";
 import ExhibitionSocial from "./pages/services/Exhibition";
 import GovEventsSocial from "./pages/services/GovEvents";
+import WhatsappBtn from "./global/whatsapp_button";
 
 function App() {
   return (
@@ -60,6 +61,8 @@ function App() {
         <Route path="/quote/event" element={<EventQuoteForm />} />
       </Routes>
       <Footer/>
+      <WhatsappBtn/>
+
     </Router>
   );
 }

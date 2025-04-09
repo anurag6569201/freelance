@@ -11,62 +11,66 @@ import image5 from '../../../assets/images/services/sport.jpeg'
 import image6 from '../../../assets/images/services/gov.jpeg'
 import image7 from '../../../assets/images/services/party.jpg'
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const expertiseData = [
   {
     title: "Social Events",
     image: image1,
     price: "30,000 - 50,000",
-    link: "/services/social",
+    link: "/services#social",
   },
   {
     title: "Exhibitions",
     image: image2,
     price: "50,000 - 80,000",
-    link: "/services/exhibitions",
+    link: "/services#exhibitions",
   },
   {
     title: "Wedding Events",
     image: image3,
     price: "30,000 - 50,000",
-    link: "/services/wedding",
+    link: "/services#wedding",
   },
   {
     title: "Corporate Events",
     image: image4,
     price: "10,000 - 20,000",
-    link: "/services/corporate",
+    link: "/services#corporate",
   },
   {
     title: "Sport Events",
     image: image5,
     price: "10,000 - 20,000",
-    link: "/services/sports",
+    link: "/services#sports",
   },
   {
     title: "Government Events",
     image: image6,
     price: "10,000 - 20,000",
-    link: "/services/government",
+    link: "/services#government",
   },
   {
     title: "Entertainment Events",
     image: image7,
     price: "10,000 - 20,000",
-    link: "/services/entertainment",
+    link: "/services#entertainment",
   },
 ];
 
 const EventExpertise = () => {
   return (
     <>
-      <section id="Services" className="event-expertise-section bg-gray-light sec-ptb-100 clearfix" style={{position:'relative'}}>
+      <section id="Services" className="event-expertise-section bg-gray-light sec-ptb-100 clearfix" style={{ position: 'relative' }}>
         <div className="container">
           <div className="section-title text-center mb-50">
             <small className="sub-title">our services</small>
             <h2 className="big-title">
               Asian Adept <strong>Expertise</strong>
             </h2>
+            <Link to='/services' className="custom-btn mt-2 p-1 px-3">
+                What We Do
+            </Link>
           </div>
 
           <OwlCarousel
@@ -92,14 +96,14 @@ const EventExpertise = () => {
               <div key={index} className="item">
                 <div className="expertise-item">
                   <div className="image image-wrapper">
-                    <img src={item.image} alt={item.title} style={{height:'200px',objectFit:'cover'}}/>
+                    <img src={item.image} alt={item.title} style={{ height: '200px', objectFit: 'cover' }} />
                     <a href="#!" className="plus-effect"></a>
                   </div>
                   <div className="content">
                     <h3 className="title">{item.title}</h3>
-                    <Link to={item.link} className="custom-btn">
+                    <HashLink to={item.link} className="custom-btn">
                       Know More
-                    </Link>
+                    </HashLink>
                   </div>
                 </div>
               </div>

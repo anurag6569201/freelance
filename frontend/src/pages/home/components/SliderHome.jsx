@@ -5,6 +5,8 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import image1 from "../../../assets/images/slider/slider1.jpeg";
 import image2 from "../../../assets/images/slider/slider2.jpeg";
 import image3 from "../../../assets/images/slider/slider3.jpeg";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const sliderImages = [image1, image2, image3];
 
@@ -31,8 +33,8 @@ const SliderHome = () => {
                                     <h1 className="big-text">Event Planner</h1>
                                     <small className="small-text">every event should be perfect</small>
                                     <div className="link-groups">
-                                        <a href="/about" className="about-btn custom-btn">about us</a>
-                                        <a href="#Services" className="start-btn">get started!</a>
+                                        <Link to="/about" className="about-btn custom-btn">about us</Link>
+                                        <HashLink to="#Services" className="start-btn">get started!</HashLink>
                                     </div>
                                 </div>
                             </div>

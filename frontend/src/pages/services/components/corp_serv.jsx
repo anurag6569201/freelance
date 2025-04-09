@@ -71,8 +71,8 @@ const CorporateEvents = () => {
 
     return (
         <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
-            <div className="container">
-                <div className="service-item row align-items-center">
+            <div className="container-fluid">
+                <div className="container service-item row align-items-center">
                     <div className="col-md-12">
                         <div className="service-title mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                             <p className='lead text-center fs-6'>SERVICES</p>
@@ -160,7 +160,7 @@ const CorporateEvents = () => {
                                 src={image1}
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "300px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
@@ -168,7 +168,7 @@ const CorporateEvents = () => {
                                 src={image2}
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "300px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
@@ -176,7 +176,7 @@ const CorporateEvents = () => {
                                 src={image2}
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "300px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
@@ -184,7 +184,7 @@ const CorporateEvents = () => {
                                 src={image1}
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "300px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
@@ -192,7 +192,7 @@ const CorporateEvents = () => {
                                 src={image2}
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "300px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
@@ -200,7 +200,7 @@ const CorporateEvents = () => {
                                 src={image2}
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "300px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
                             />
                         </div>
                     </div>
