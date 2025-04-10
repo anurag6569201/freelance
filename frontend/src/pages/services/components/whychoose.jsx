@@ -4,7 +4,7 @@ import { Image } from "react-bootstrap";
 import image1 from "../../../assets/images/services/corp/corp1.png";
 import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a second image for variation
 
-const WhyChooseAsianAdept = () => {
+const WhyChooseAsianAdept = ({img1,img2}) => {
   return (
     <>
 
@@ -36,18 +36,18 @@ const WhyChooseAsianAdept = () => {
         <div className="row my-5 text-center">
           <div className="col-md-6 d-flex justify-content-center">
             <Image
-              src={image1}
+              src={img1}
               alt="Corporate Event 1"
               className="img-fluid rounded shadow"
-              style={{ objectFit: "cover", height: "300px", width: "100%" }}
+              style={{ objectFit: "cover", height: "400px", width: "100%" }}
             />
           </div>
           <div className="col-md-6 d-flex justify-content-center">
             <Image
-              src={image2}
+              src={img2}
               alt="Corporate Event 2"
               className="img-fluid rounded shadow"
-              style={{ objectFit: "cover", height: "300px", width: "100%" }}
+              style={{ objectFit: "cover", height: "400px", width: "100%" }}
             />
           </div>
         </div>

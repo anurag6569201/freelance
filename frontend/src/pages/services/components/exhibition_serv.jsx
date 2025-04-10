@@ -8,7 +8,32 @@ import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a se
 import ContactForm from './corp_serv_form';
 import CorpServScroller from './corp_serv_scroller';
 
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const ExhibitionEvents = () => {
+    const location = useLocation();
+    const { pathname, hash } = location;
+    useEffect(() => {
+        if (hash) {
+            const elementId = hash.slice(1);
+            const element = document.getElementById(elementId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }, [hash]);
+
+    useEffect(() => {
+        if (!hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        }
+    }, [pathname, hash]);
+
     const subservices = [
         {
             name: 'Industry Trade Shows & Expos',
@@ -36,6 +61,9 @@ const ExhibitionEvents = () => {
             image: 'https://picsum.photos/seed/automobile/800/500'
         },
     ];
+    const imgdata1 = "https://img.freepik.com/free-photo/group-people-city-composition_23-2148993228.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+    const imgdata2 = "https://img.freepik.com/free-vector/exhibition-announcement-advertising-invitation_98292-4487.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+
 
     return (
         <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
@@ -47,7 +75,7 @@ const ExhibitionEvents = () => {
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Exhibition
                             </h1>
-                            <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src="https://img.freepik.com/free-photo/beautiful-pier-view_1417-1690.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
                         Exhibitions are not just about displays, they are dynamic experiences that connect businesses,
@@ -71,7 +99,8 @@ ensure your exhibition stands out in every way.
                     </div>
                 </div>
 
-                <WhyChooseAsianAdept />
+                <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
+
                 <CorpServScroller subservices={subservices} maintitle={"Exhibition Service"}/>
 
                 <div className="container mt-4">
@@ -116,54 +145,54 @@ ensure your exhibition stands out in every way.
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/navratri-highly-detailed-interior-decoration_23-2151193716.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/tanned-caucasian-female-wearing-floral-mask-amusement-park_181624-33782.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-vector/pictures-exhibition-illustration_1284-12853.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/people-enjoying-art-exhibition_53876-139909.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-vector/art-gallery-exhibition-hall-empty-interior-vector_1441-3868.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/young-man-going-art-gallery_23-2149709119.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                     </div>

@@ -8,7 +8,32 @@ import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a se
 import ContactForm from './corp_serv_form';
 import CorpServScroller from './corp_serv_scroller';
 
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const SocialEvents = () => {
+    const location = useLocation();
+    const { pathname, hash } = location;
+    useEffect(() => {
+        if (hash) {
+            const elementId = hash.slice(1);
+            const element = document.getElementById(elementId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }, [hash]);
+
+    useEffect(() => {
+        if (!hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        }
+    }, [pathname, hash]);
+
     const subservices = [
         {
             name: 'Birthday Parties',
@@ -72,6 +97,9 @@ const SocialEvents = () => {
         // }
     ];
 
+    const imgdata1 = "https://img.freepik.com/free-photo/family-having-indian-food_53876-40943.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+    const imgdata2 = "https://img.freepik.com/free-photo/typical-indian-family-eating-together_123827-29560.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+
 
     return (
         <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
@@ -83,7 +111,7 @@ const SocialEvents = () => {
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Social
                             </h1>
-                            <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src="https://img.freepik.com/free-photo/vibrant-summer-soiree-scene-with-guests-adorned-punchy-fuchsia-mingling-around-table-laden-with-gourmet-dishes_73899-27524.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
                             Every celebration tells a story, and we make sure it’s one to remember. At Asian Adept, we
@@ -106,7 +134,7 @@ const SocialEvents = () => {
                     </div>
                 </div>
 
-                <WhyChooseAsianAdept />
+                <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
                 <CorpServScroller subservices={subservices} maintitle={"Social Service"} />
 
                 <div className="container mt-4">
@@ -151,54 +179,54 @@ const SocialEvents = () => {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/good-friends-celebrating-new-year-that-s-coming_23-2149144076.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/adults-enjoying-mexican-food_23-2149663877.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/front-view-smiley-groom-bride_23-2149956455.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/medium-shot-smiley-women-with-smartphone_23-2149461763.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/lovely-family-enjoying-new-year-party_23-2149173252.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/side-view-people-celebrating-tamil-new-year_23-2151210764.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                     </div>

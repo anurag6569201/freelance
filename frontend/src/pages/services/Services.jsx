@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 // Assuming the structure is src/pages/Services/Services.jsx
 // and images are in src/assets/images/services/
 import image1 from '../../assets/images/services/corpevents1.png'; // Corporate
-import image2 from '../../assets/images/services/social1.jpg';    // Wedding (using social1.jpg as per original code)
-import image3 from '../../assets/images/services/exe1.png';       // Social (using exe1.png as per original code)
-import image4 from '../../assets/images/services/party.jpg';      // Exhibition (using party.jpg as placeholder)
-import image5 from '../../assets/images/services/party.jpg';      // Sports (using party.jpg as placeholder)
-import image6 from '../../assets/images/services/party.jpg';      // Government (using party.jpg as placeholder)
+import image2 from '../../assets/images/services/wed.jpg';    // Wedding (using social1.jpg as per original code)
+import image3 from '../../assets/images/services/social1.jpg';       // Social (using exe1.png as per original code)
+import image4 from '../../assets/images/services/exe2.jpg';      // Exhibition (using party.jpg as placeholder)
+import image5 from '../../assets/images/services/sport.jpeg';      // Sports (using party.jpg as placeholder)
+import image6 from '../../assets/images/services/gov.jpeg';      // Government (using party.jpg as placeholder)
 import image7 from '../../assets/images/services/party.jpg';      // Entertainment (using party.jpg as placeholder)
 // Please update image4 to image7 imports if you have specific images for them
 // --- --- ---

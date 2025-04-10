@@ -142,13 +142,13 @@ function NavigationBar() {
                                                 <li className="menu-item-has-children">
                                                     <Link >What We Do</Link>
                                                     <ul className="sub-menu">
-                                                        <li><HashLink smooth to="/services#corporate">Corporate Events</HashLink></li>
-                                                        <li><HashLink smooth to="/services#wedding">Wedding Planning</HashLink></li>
-                                                        <li><HashLink smooth to="/services#social">Social Events</HashLink></li>
-                                                        <li><HashLink smooth to="/services#exhibitions">Exhibitions</HashLink></li>
-                                                        <li><HashLink smooth to="/services#sports">Sports Events</HashLink></li>
-                                                        <li><HashLink smooth to="/services#government">Government Events</HashLink></li>
-                                                        <li><HashLink smooth to="/services#entertainment">Entertainment Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services/corporate">Corporate Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services/wedding">Wedding Planning</HashLink></li>
+                                                        <li><HashLink smooth to="/services/social">Social Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services/exhibitions">Exhibitions</HashLink></li>
+                                                        <li><HashLink smooth to="/services/sports">Sports Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services/government">Government Events</HashLink></li>
+                                                        <li><HashLink smooth to="/services/entertainment">Entertainment Events</HashLink></li>
                                                     </ul>
                                                 </li>
                                                 <li>

@@ -8,7 +8,35 @@ import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a se
 import ContactForm from './corp_serv_form';
 import CorpServScroller from './corp_serv_scroller';
 
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const WeddingEventsEvents = () => {
+    const location = useLocation();
+    const { pathname, hash } = location;
+    useEffect(() => {
+        if (hash) {
+            const elementId = hash.slice(1);
+            const element = document.getElementById(elementId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }, [hash]);
+
+    useEffect(() => {
+        if (!hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        }
+    }, [pathname, hash]);
+
+    const imgdata1="https://img.freepik.com/free-photo/affectionate-indian-couple-celebrating-propose-day-together_23-2151111017.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+    const imgdata2="https://img.freepik.com/free-photo/front-view-smiley-couple-wedding_23-2149956435.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+
     const subservices = [
         {
             name: 'Pre-Wedding Shoots & Parties',
@@ -58,7 +86,7 @@ const WeddingEventsEvents = () => {
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Wedding
                             </h1>
-                            <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src="https://img.freepik.com/free-photo/hands-indian-bride-groom-intertwined-together-making-authentic-wedding-ritual_8353-10047.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
                             A wedding is one of the most cherished milestones in life, and every moment deserves to be
@@ -81,8 +109,8 @@ const WeddingEventsEvents = () => {
                         </div>
                     </div>
                 </div>
-
-                <WhyChooseAsianAdept />
+                
+                <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
                 <CorpServScroller subservices={subservices} maintitle={"Wedding Service"} />
 
                 <div className="container mt-4">
@@ -127,54 +155,54 @@ const WeddingEventsEvents = () => {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/navratri-decoration-with-candles_23-2151193769.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/full-shot-people-posing-wedding_23-2149956421.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/photorealistic-wedding-venue-with-intricate-decor-ornaments_23-2151481476.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/ritual-with-coconut-leaves-traditional-hindu-wedding-ceremony_8353-8911.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/close-up-hindu-bride-s-hands-covered-with-henna-tattoos_8353-8856.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/navratri-highly-detailed-door-decoration_23-2151193774.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                     </div>

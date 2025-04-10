@@ -8,7 +8,32 @@ import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a se
 import ContactForm from './corp_serv_form';
 import CorpServScroller from './corp_serv_scroller';
 
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const SportsEventsEvents = () => {
+    const location = useLocation();
+    const { pathname, hash } = location;
+    useEffect(() => {
+        if (hash) {
+            const elementId = hash.slice(1);
+            const element = document.getElementById(elementId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }, [hash]);
+
+    useEffect(() => {
+        if (!hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        }
+    }, [pathname, hash]);
+
     const subservices = [
         {
             name: 'Adventure & Endurance Sports',
@@ -26,6 +51,8 @@ const SportsEventsEvents = () => {
             image: 'https://picsum.photos/seed/athletes/800/500'
         },
     ];
+    const imgdata1 = "https://img.freepik.com/free-photo/two-beautiful-twin-girls-play-table-football-have-fun_146671-19786.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+    const imgdata2 = "https://img.freepik.com/free-photo/group-friends-watching-football-home_329181-19086.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
 
 
     return (
@@ -38,7 +65,7 @@ const SportsEventsEvents = () => {
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Sports
                             </h1>
-                            <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src="https://img.freepik.com/free-photo/friends-together-play-board-games-table-football_146671-15397.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
                             The thrill of competition, the rush of adrenaline, and the spirit of teamwork sports events bring out the best in every participant. At Asian Adept, we specialize in organizing exceptional sports events that capture the energy, excitement, and essence of athletic excellence. With over a decade of experience, we design seamless, well-coordinated sports experiences that leave a lasting impact.
@@ -61,7 +88,7 @@ const SportsEventsEvents = () => {
                     </div>
                 </div>
 
-                <WhyChooseAsianAdept />
+                <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
                 <CorpServScroller subservices={subservices} maintitle={"Sports Service"} />
 
                 <div className="container mt-4">
@@ -106,54 +133,54 @@ const SportsEventsEvents = () => {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/people-having-fun-their-break-time_23-2149272038.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/you-can-made-strike-young-cheerful-friends-have-fun-bowling-club-their-weekends_146671-16971.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/man-woman-throwing-bowling-balls-alley_23-2148344456.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/fit-women-running-starting-line-full-shot_23-2149386041.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/field-hockey-players-tournament-game_23-2149668613.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/close-up-person-playing-game_23-2148287868.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                     </div>

@@ -22,7 +22,7 @@ function ContactForm() {
 
     return (
         <>
-            <div className="container mt-4 p-0 border serviceform">
+            <div className="container-fluid mt-4 p-0 border serviceform">
                 <form
                     onSubmit={handleSubmit}
                     style={{

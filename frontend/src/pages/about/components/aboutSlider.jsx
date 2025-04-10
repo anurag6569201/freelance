@@ -6,7 +6,7 @@ function AboutSlider() {
             <section id="breadcrumb-section" className="breadcrumb-section clearfix">
                 <div 
                     className="jarallax" 
-                    style={{ backgroundImage: `url(${backgroundImage})` }}
+                    style={{ backgroundImage: `url(${backgroundImage})`,backgroundSize:'cover',backgroundRepeat:'no-repeat' }}
                 >
                     <div className="overlay-black">
                         <div className="container">

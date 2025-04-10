@@ -9,8 +9,34 @@ import image3 from "../../../assets/images/services/corp/corp3.png";
 import ContactForm from './corp_serv_form';
 import CorpSubCategory from './serv_subcategory';
 import CorpServScroller from './corp_serv_scroller';
-
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 const CorporateEvents = () => {
+    const location = useLocation();
+    const { pathname, hash } = location;
+    useEffect(() => {
+        if (hash) {
+            const elementId = hash.slice(1);
+            const element = document.getElementById(elementId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }, [hash]);
+
+    useEffect(() => {
+        if (!hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        }
+    }, [pathname, hash]);
+
+    const imgdata1 = "https://img.freepik.com/free-photo/banquet-manager-setting-table-event_23-2148085306.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+    const imgdata2 = "https://img.freepik.com/free-photo/decorated-banquet-hall-with-served-round-table-with-hydrangea-centerpiece-chiavari-chairs_8353-10059.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+
     const subservices = [
         {
             name: 'Office/Store/Factory Inauguration',
@@ -108,7 +134,7 @@ const CorporateEvents = () => {
                     </div>
                 </div>
 
-                <WhyChooseAsianAdept />
+                <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
                 <CorpServScroller subservices={subservices} maintitle={"Corporate Service"} />
 
                 <div className="container mt-4">
@@ -153,54 +179,54 @@ const CorporateEvents = () => {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15773.jpg?t=st=1744281598~exp=1744285198~hmac=b552f527ec940eb000fd1235f9655fb8b35bde268a52dc7c8a8852e8cc21fe50&w=2000"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/business-people-shaking-hands-together_53876-13391.jpg?semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/celebration-hall-with-full-guests_8353-10399.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/prepared-wedding-hall_8353-9873.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/group-indian-business-man-suits-sitting-office-cafe-with-laptop-texting-phones-making-photo-coffee_627829-1491.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/business-people-choosing-snacks-buffet-table_1262-1693.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                     </div>

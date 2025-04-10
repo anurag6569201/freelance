@@ -8,7 +8,32 @@ import image2 from "../../../assets/images/services/corp/corp2.png"; // Add a se
 import ContactForm from './corp_serv_form';
 import CorpServScroller from './corp_serv_scroller';
 
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const EventsEvents = () => {
+    const location = useLocation();
+    const { pathname, hash } = location;
+    useEffect(() => {
+        if (hash) {
+            const elementId = hash.slice(1);
+            const element = document.getElementById(elementId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }, [hash]);
+
+    useEffect(() => {
+        if (!hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        }
+    }, [pathname, hash]);
+
     const subservices = [
         {
             name: 'Live Concerts & Music Festivals',
@@ -46,6 +71,8 @@ const EventsEvents = () => {
             image: 'https://picsum.photos/seed/videoproduction/800/500'
         },
     ];
+    const imgdata1 = "https://img.freepik.com/free-photo/boy-with-vr-glasses-cinema_23-2148115861.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+    const imgdata2 = "https://img.freepik.com/free-photo/musician-playing-electronic-music-live-performance-nightclub-dj-headphones-mixing-sound-controller-panel-stage-while-crowd-partying-discotheque-club_482257-67146.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
 
     return (
         <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
@@ -57,7 +84,7 @@ const EventsEvents = () => {
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Entertainment
                             </h1>
-                            <img src={image} alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src="https://img.freepik.com/free-photo/back-view-crowd-fans-watching-live-performance-music-concert-night-copy-space_637285-544.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '70vh', borderRadius: '20px' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
                             Entertainment events aren’t just about performances they’re about unforgettable experiences
@@ -85,7 +112,7 @@ const EventsEvents = () => {
                     </div>
                 </div>
 
-                <WhyChooseAsianAdept />
+                <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
                 <CorpServScroller subservices={subservices} maintitle={"Entertainment Service"} />
 
                 <div className="container mt-4">
@@ -130,54 +157,54 @@ const EventsEvents = () => {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/close-up-recording-video-with-smartphone-concert_1153-7310.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/professional-tv-camera-set-up-concert-venue_91128-3567.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/back-view-excited-audience-with-arms-raised-cheering-front-stage-music-concert-copy-space_637285-538.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image1}
+                                src="https://img.freepik.com/free-photo/people-festival_1160-736.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 1"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/multiethnic-team-people-meeting-broadcast-internet-podcast-recording-video-discussion-camera-influencer-guest-talking-online-livestream-create-social-media-channel-content_482257-45714.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image
-                                src={image2}
+                                src="https://img.freepik.com/free-photo/medium-shot-smiley-people-playing-videogame_23-2149350011.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
                                 alt="Corporate Event 2"
                                 className="img-fluid rounded shadow"
-                                style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                style={{ objectFit: "cover", height: "260px", width: "100%" }}
                             />
                         </div>
                     </div>
