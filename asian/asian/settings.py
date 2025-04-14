@@ -158,13 +158,7 @@ REST_FRAMEWORK = {
 
 
 # Allow requests from your frontend URL
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5174",
-    "http://localhost:5173",
-    "http://0.0.0.0:8002",
-    "https://asian-adept.vercel.app/",
-    "https://asian-adept.onrender.com"
-]
+CORS_ALLOW_ALL_ORIGINS = True  # Allows all origins
 
 # Allow all methods (GET, POST, PUT, DELETE, etc.)
 CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]

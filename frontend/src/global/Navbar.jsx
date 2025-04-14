@@ -19,6 +19,14 @@ function NavigationBar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const handleNavClick = () => {
+        if (collapseDivRef.current && collapseDivRef.current.classList.contains('show')) {
+            if (navTogglerRef.current) {
+                navTogglerRef.current.click();
+            }
+        }
+    };
+
     return (
         <header id="header-section"
             className={`header-section sticky-header-section not-stuck clearfix ${isScrolled ? 'scrolled' : 'scrolled'}`}
@@ -27,7 +35,7 @@ function NavigationBar() {
                 <nav className="small_device_navbar navbar navbar-expand-lg bg-body-tertiary">
                     <div className="container-fluid">
                         <div className="logo_wrapper_header_top p-2" style={{ display: "flex", justifyContent: "left" }}>
-                            <Link to="/">
+                            <Link to="/" onClick={handleNavClick}>
                                 <img style={{ width: "50px", height: "50px", borderRadius: "50%", border: "4px solid #fff" }}
                                     src={logo} alt="" />
                                 <span style={{ fontSize: '20px', fontWeight: '800', color: '#333333', marginLeft: '10px', fontFamily: 'cursive' }}>
@@ -50,40 +58,40 @@ function NavigationBar() {
                                                 style={{ display: "flex", justifyContent: "center" }}>
                                                 <ul>
                                                     <li className="menu-item-has-children">
-                                                        <Link to="/">home</Link>
+                                                        <Link onClick={handleNavClick} to="/">home</Link>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <Link >about</Link>
                                                         <ul className="sub-menu">
-                                                            <li><HashLink smooth to="/about#WhoWe">Who We Are</HashLink></li>
-                                                            <li><HashLink smooth to="/about#WhyUs">Why Us</HashLink></li>
-                                                            <li><HashLink smooth to="/about#team">Our Team</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/about#WhoWe">Who We Are</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/about#WhyUs">Why Us</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/about#team">Our Team</HashLink></li>
                                                         </ul>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <Link >What We Do</Link>
                                                         <ul className="sub-menu">
-                                                            <li><HashLink smooth to="/services#corporate">Corporate Events</HashLink></li>
-                                                            <li><HashLink smooth to="/services#wedding">Wedding Planning</HashLink></li>
-                                                            <li><HashLink smooth to="/services#social">Social Events</HashLink></li>
-                                                            <li><HashLink smooth to="/services#exhibitions">Exhibitions</HashLink></li>
-                                                            <li><HashLink smooth to="/services#sports">Sports Events</HashLink></li>
-                                                            <li><HashLink smooth to="/services#government">Government Events</HashLink></li>
-                                                            <li><HashLink smooth to="/services#entertainment">Entertainment Events</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#corporate">Corporate Events</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#wedding">Wedding Planning</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#social">Social Events</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#exhibitions">Exhibitions</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#sports">Sports Events</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#government">Government Events</HashLink></li>
+                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#entertainment">Entertainment Events</HashLink></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <Link to="/gallery">gallery</Link>
+                                                        <Link onClick={handleNavClick} to="/gallery">gallery</Link>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <a href="#!">Quote</a>
                                                         <ul className="sub-menu">
-                                                            <li><Link to="/quote/standard">Stand Quotation</Link></li>
-                                                            <li><Link to="/quote/event">Event Quotation</Link></li>
+                                                            <li><Link onClick={handleNavClick} to="/quote/standard">Stand Quotation</Link></li>
+                                                            <li><Link onClick={handleNavClick} to="/quote/event">Event Quotation</Link></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <Link to="/career">Careers</Link>
+                                                        <Link onClick={handleNavClick} to="/career">Careers</Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -98,7 +106,7 @@ function NavigationBar() {
                                             style={{ display: "flex", gap: "10px", alignItems: "center", justifyContent: "center", color: isScrolled ? 'black' : 'white' }}>
                                             <i className="fas fa-phone"></i> 8329969729
                                         </a>
-                                        <Link to="/contact" style={{ background: isScrolled ? '#333333' : 'transparent', height: '66px', padding: '0 20px', display: 'flex', alignItems: 'center', borderLeft: '1px solid white' }}><b className="text-white">Contact</b></Link>
+                                        <Link onClick={handleNavClick} to="/contact" style={{ background: isScrolled ? '#333333' : 'transparent', height: '66px', padding: '0 20px', display: 'flex', alignItems: 'center', borderLeft: '1px solid white' }}><b className="text-white">Contact</b></Link>
                                     </ul>
                                 </div>
                             </div>

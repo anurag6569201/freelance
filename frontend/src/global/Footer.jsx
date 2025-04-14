@@ -1,8 +1,9 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook, FaPhone, FaVoicemail, FaAt } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook, FaPhone, FaVoicemail, FaAt, FaYoutube } from "react-icons/fa";
 
 import logo from '../assets/images/home/logo.png'
 import '../assets/css/footer.css'
+import { Link } from "react-router-dom";
 function Footer() {
     return (
         <section className="footer" style={{ backgroundColor: "#010101", color: "white", zIndex: 100, position: "relative", padding: "40px 0" }}>
@@ -20,9 +21,10 @@ function Footer() {
                         <div className="col-md-2 mb-3">
                             <h5 className="text-secondary">EXPLORE</h5>
                             <ul className="list-unstyled">
-                                <li><a href="#" className="nav-link text-light mt-2">About</a></li>
-                                <li><a href="#" className="nav-link text-light mt-2">Gallery</a></li>
-                                <li><a href="#" className="nav-link text-light mt-2">Careers</a></li>
+                                <li><Link to="/about" className="nav-link text-light mt-2">About</Link></li>
+                                <li><Link to="/gallery" className="nav-link text-light mt-2">Gallery</Link></li>
+                                <li><Link to="/career" className="nav-link text-light mt-2">Careers</Link></li>
+                                <li><Link to="/quote/standard" className="nav-link text-light mt-2">Quote</Link></li>
                             </ul>
                         </div>
 
@@ -39,7 +41,7 @@ function Footer() {
                             <div className="d-flex mt-3">
                                 <a href="#" className="me-3 text-light" style={iconStyle}><FaInstagram /></a>
                                 <a href="#" className="me-3 text-light" style={iconStyle}><FaLinkedin /></a>
-                                <a href="#" className="me-3 text-light" style={iconStyle}><FaTwitter /></a>
+                                <a href="#" className="me-3 text-light" style={iconStyle}><FaYoutube/></a>
                                 <a href="#" className="me-3 text-light" style={iconStyle}><FaFacebook /></a>
                             </div>
                         </div>
