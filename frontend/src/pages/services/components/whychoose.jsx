@@ -8,11 +8,11 @@ const WhyChooseAsianAdept = ({img1,img2}) => {
   return (
     <>
 
-      <div className="container">
+      <div className="container-fluid">
         <h3 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark text-center">
           Why Choose Asian Adept?
         </h3>
-        <p className="text-muted text-center">
+        <p className="text-muted text-left">
           At <strong>Asian Adept</strong>, we don’t just organize events—we create immersive experiences that leave a
           lasting impact. Our approach to corporate event planning is built on precision, creativity, and seamless
           execution. Whether you are hosting an industry conference, a high-profile product launch, or an executive
@@ -33,7 +33,7 @@ const WhyChooseAsianAdept = ({img1,img2}) => {
       </div>
 
       <div className="container-fluid">
-        <div className="row my-5 text-center">
+        <div className="row my-5 text-left">
           <div className="col-md-6 d-flex justify-content-center">
             <Image
               src={img1}
@@ -53,7 +53,7 @@ const WhyChooseAsianAdept = ({img1,img2}) => {
         </div>
       </div>
       {/* Image Row */}
-      <div className="container">
+      <div className="container-fluid">
         <ul className="list-unstyled text-muted">
           <li className="mt-4">
             <strong className="text-dark">🔧 Cutting-Edge Technology</strong> – We leverage the latest event technology to enhance engagement and create a dynamic experience.
@@ -66,7 +66,7 @@ const WhyChooseAsianAdept = ({img1,img2}) => {
           </li>
         </ul>
 
-        <p className="text-muted mt-4 text-center">
+        <p className="text-muted mt-2 text-left">
           When you choose <strong>Asian Adept</strong>, you’re not just hiring an event planner—you’re gaining a strategic partner dedicated
           to making your corporate event extraordinary. Let us turn your vision into a memorable reality!
         </p>

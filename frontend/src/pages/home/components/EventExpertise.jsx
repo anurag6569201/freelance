@@ -77,7 +77,7 @@ const EventExpertise = () => {
             className="event-expertise-carousel owl-theme sr-fade2"
             items={3}
             loop
-            margin={30}
+            margin={0}
             autoplay
             smartSpeed={1000}
             autoplayTimeout={5000}

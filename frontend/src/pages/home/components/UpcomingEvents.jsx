@@ -1,4 +1,6 @@
 import image1 from '../../../assets/images/home/R.png'
+
+const image2 = "https://cdn.pixabay.com/photo/2014/04/21/20/09/pinky-swear-329329_1280.jpg"
 function UpcomingEvents() {
     return (
         <section id="upcoming-event-section" className="upcoming-event-section sec-ptb-100 clearfix" style={{backgroundColor:'#f7f7f7'}}>
@@ -9,7 +11,7 @@ function UpcomingEvents() {
 
                 <div className="row d-flex flex-wrap align-items-stretch" style={{flexDirection:'row-reverse'}}>
                     {/* Left Side - Content */}
-                    <div className="col-md-8 d-flex flex-column">
+                    <div className="col-md-7 d-flex flex-column">
                         <p className="lead p-0 m-0">
                             At Asian Adept Events, we craft experiences that reflect your unique story, blending creativity with cultural richness.
                         </p>
@@ -31,12 +33,11 @@ function UpcomingEvents() {
                     </div>
 
                     {/* Right Side - Image */}
-                    <div className="col-md-4 text-center" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+                    <div className="col-md-5 text-center" style={{display:'flex',alignItems:'baseline',justifyContent:'center'}}>
                         <img 
-                            src={image1}
+                            src={image2}
                             alt="Upcoming Event" 
                             className="img-fluid rounded"
-                            style={{maxWidth:'300px'}}
                         />
                     </div>
 

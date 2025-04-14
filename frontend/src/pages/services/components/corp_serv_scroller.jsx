@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 const CorpServScroller = ({ subservices,maintitle }) => {
     return (
         <section id="Services" className="event-expertise-section bg-gray-light sec-ptb-100 clearfix">
-            <div className="container">
+            <div className="container-fluid">
                 <OwlCarousel
                     className="event-expertise-carousel owl-theme"
                     items={3}
                     loop
-                    margin={30}
+                    margin={0}
                     autoplay
                     smartSpeed={1000}
                     autoplayTimeout={5000}
@@ -31,7 +31,7 @@ const CorpServScroller = ({ subservices,maintitle }) => {
                             <div className="expertise-item">
                                 <div className="image image-wrapper">
                                     <img src={item.image} alt={item.image} />
-                                    <a href="#!" className="plus-effect"></a>
+                                    <Link to={`/services/sub-category/${index}`} className="plus-effect" state={{ subservices,maintitle }}></Link>
                                 </div>
                                 <div className="content">
                                     <h3 className="title">{item.name}</h3>

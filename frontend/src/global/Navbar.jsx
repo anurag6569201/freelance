@@ -42,10 +42,10 @@ function NavigationBar() {
                             </svg>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                            <div className="col-lg-8">
+                            <div className="col-lg-8 col-md-8">
                                 <div className="mainmenu-wrapper">
                                     <div className="row">
-                                        <div className="col-lg-12">
+                                        <div className="col-lg-12 col-md-12">
                                             <div className="menu-item-list ul-li clearfix"
                                                 style={{ display: "flex", justifyContent: "center" }}>
                                                 <ul>
@@ -91,12 +91,12 @@ function NavigationBar() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-2 p-0 m-0" style={{ display: 'flex', alignItems: 'center', justifyContent: 'left' }}>
+                            <div className="col-lg-2 col-md-2 p-0 m-0" style={{ display: 'flex', alignItems: 'center', justifyContent: 'left' }}>
                                 <div className="user-search-btn-group ul-li clearfix p-0 m-0">
                                     <ul style={{ display: "flex", gap: "20px", alignItems: 'center' }}>
                                         <a href="https://web.whatsapp.com/"
                                             style={{ display: "flex", gap: "10px", alignItems: "center", justifyContent: "center", color: isScrolled ? 'black' : 'white' }}>
-                                            <i className="fas fa-user"></i> 8329969729
+                                            <i className="fas fa-phone"></i> 8329969729
                                         </a>
                                         <Link to="/contact" style={{ background: isScrolled ? '#333333' : 'transparent', height: '66px', padding: '0 20px', display: 'flex', alignItems: 'center', borderLeft: '1px solid white' }}><b className="text-white">Contact</b></Link>
                                     </ul>
@@ -107,7 +107,7 @@ function NavigationBar() {
                 </nav>
                 <div className="container-fluid smaller_navbar_container" style={{ height: '66px' }}>
                     <div className="row" style={{ justifyContent: "center" }}>
-                        <div className="col-lg-2 site-logo-wrapper-container">
+                        <div className="col-lg-3 col-md-2 site-logo-wrapper-container">
                             <div className="site-logo-wrapper">
                                 <div className="logo_wrapper_header_top p-2" style={{ display: "flex", justifyContent: "left" }}>
                                     <Link to="/">
@@ -121,10 +121,10 @@ function NavigationBar() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-8" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <div className="col-lg-6 col-md-8" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <div className="mainmenu-wrapper">
                                 <div className="row">
-                                    <div className="col-lg-12">
+                                    <div className="col-lg-12 col-md-12">
                                         <div className="menu-item-list ul-li clearfix"
                                             style={{ display: "flex", justifyContent: "center" }}>
                                             <ul>
@@ -170,12 +170,12 @@ function NavigationBar() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-2 p-0 m-0" style={{ display: 'flex', alignItems: 'center', justifyContent: 'right' }}>
+                        <div className="col-lg-3 col-md-2 p-0 m-0" style={{ display: 'flex', alignItems: 'center', justifyContent: 'right' }}>
                             <div className="user-search-btn-group ul-li clearfix p-0 m-0">
                                 <ul style={{ display: "flex", gap: "20px", alignItems: 'center' }}>
                                     <a href="https://web.whatsapp.com/"
                                         style={{ display: "flex", gap: "10px", alignItems: "center", justifyContent: "center", color: isScrolled ? 'black' : 'white' }}>
-                                        <i className="fas fa-user"></i> 8329969729
+                                        <i className="fas fa-phone"></i> 8329969729
                                     </a>
                                     <Link to="/contact" style={{ background: isScrolled ? '#333333' : 'transparent', height: '66px', padding: '0 20px', display: 'flex', alignItems: 'center', borderLeft: '1px solid white' }}><b className="text-white">Contact</b></Link>
                                 </ul>

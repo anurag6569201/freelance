@@ -75,16 +75,16 @@ const EventsEvents = () => {
     const imgdata2 = "https://img.freepik.com/free-photo/musician-playing-electronic-music-live-performance-nightclub-dj-headphones-mixing-sound-controller-panel-stage-while-crowd-partying-discotheque-club_482257-67146.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
 
     return (
-        <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
+        <section id="corporate-events" className="py-1 bg-light" style={{ marginTop: '10vh' }}>
             <div className="container-fluid">
-                <div className="container service-item row align-items-center">
+                <div className="px-2 service-item row align-items-center">
                     <div className="col-md-12">
                         <div className="service-title mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                             <p className='lead text-center fs-6'>SERVICES</p>
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Entertainment
                             </h1>
-                            <img src="https://img.freepik.com/free-photo/back-view-crowd-fans-watching-live-performance-music-concert-night-copy-space_637285-544.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src="https://img.freepik.com/free-photo/back-view-crowd-fans-watching-live-performance-music-concert-night-copy-space_637285-544.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '80vh', borderRadius: '20px',objectFit:'cover' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
                             Entertainment events aren’t just about performances they’re about unforgettable experiences
@@ -115,9 +115,9 @@ const EventsEvents = () => {
                 <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
                 <CorpServScroller subservices={subservices} maintitle={"Entertainment Service"} />
 
-                <div className="container mt-4">
-                    <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">Our Services</h2>
-                    <div className="row mt-4 justify-content-center">
+                <div className="container">
+                    <h2 className="text-uppercase fw-bold pt-3 display-5 text-dark px-5">Our Services</h2>
+                    <div className="row justify-content-center">
                         <div className="col-md-5">
                             <ul className="list-unstyled fs-5">
                                 <li>• Activities Coordination</li>
@@ -157,7 +157,7 @@ const EventsEvents = () => {
                     </div>
                 </div>
 
-                <div className="container-fluid">
+                <div className="container-fluid mb-3">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image

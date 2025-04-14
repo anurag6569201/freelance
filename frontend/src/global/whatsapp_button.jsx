@@ -28,7 +28,8 @@ const WhatsappBtn = () => {
       rel="noopener noreferrer"
       style={btnStyle}
     >
-      <i className="fas fa-phone"></i>
+      <i className="fab fa-whatsapp"></i>
+
     </a>
   );
 };

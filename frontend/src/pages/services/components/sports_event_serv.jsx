@@ -43,7 +43,22 @@ const SportsEventsEvents = () => {
         {
             name: 'Corporate Tournaments',
             description: "Unite teams, boost morale, and foster healthy competition with professionally managed corporate tournaments. Whether it’s cricket, football, or badminton, we bring your employees together through sports that energize, engage, and inspire. From venue booking and equipment to scheduling, branding, and hospitality we handle every detail with precision and care. Our events are designed not just for fun, but to build stronger teams and lasting memories. Whether it’s a one-day knockout or a multi-day league, we deliver experiences that score big.",
-            image: 'https://picsum.photos/seed/venue/800/500'
+            image: 'https://cdn.pixabay.com/photo/2021/07/26/19/43/football-6495096_1280.jpg'
+        },
+        {
+            name: 'School & College Sports Meets',
+            description: 'Celebrate sportsmanship, talent, and youthful energy with vibrant and well-coordinated school and college sports meets. From interschool rivalry to intercollegiate pride, we plan and manage competitions that are safe, engaging, and flawlessly executed. We handle venue setup, scheduling, registrations, audio-visuals, guest management, and more bringing professionalism and excitement to every corner of your event. Whether it’s a day-long competition or a multi- day tournament, we create experiences that motivate students and strengthen community bonds',
+            image: 'https://picsum.photos/seed/athletes/800/500'
+        },
+        {
+            name: 'Adventure & Endurance Sports',
+            description: "Push limits, build communities, and inspire action through powerful adventure and endurance events. We expertly manage marathons, off-road rallies, cycling tours, and outdoor challenges with seamless logistics and bold creativity. From securing sponsors to managing safety protocols and high-impact branding, our team ensures your event delivers thrill and professionalism in equal measure. Whether you're hosting for a cause, a brand, or pure excitement—we make it impactful and unforgettable. Let’s create a high-energy experience that drives results.",
+            image: 'https://picsum.photos/seed/sportsevent/800/500'
+        },
+        {
+            name: 'Corporate Tournaments',
+            description: "Unite teams, boost morale, and foster healthy competition with professionally managed corporate tournaments. Whether it’s cricket, football, or badminton, we bring your employees together through sports that energize, engage, and inspire. From venue booking and equipment to scheduling, branding, and hospitality we handle every detail with precision and care. Our events are designed not just for fun, but to build stronger teams and lasting memories. Whether it’s a one-day knockout or a multi-day league, we deliver experiences that score big.",
+            image: 'https://cdn.pixabay.com/photo/2021/07/26/19/43/football-6495096_1280.jpg'
         },
         {
             name: 'School & College Sports Meets',
@@ -56,16 +71,16 @@ const SportsEventsEvents = () => {
 
 
     return (
-        <section id="corporate-events" className="py-5 bg-light" style={{ marginTop: '10vh' }}>
+        <section id="corporate-events" className="py-1 bg-light" style={{ marginTop: '10vh' }}>
             <div className="container-fluid">
-                <div className="container service-item row align-items-center">
+                <div className="px-2 service-item row align-items-center">
                     <div className="col-md-12">
                         <div className="service-title mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                             <p className='lead text-center fs-6'>SERVICES</p>
                             <h1 className="text-uppercase font-weight-bold text-center">
                                 Sports
                             </h1>
-                            <img src="https://img.freepik.com/free-photo/friends-together-play-board-games-table-football_146671-15397.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '70vh', borderRadius: '20px' }} />
+                            <img src="https://img.freepik.com/free-photo/friends-together-play-board-games-table-football_146671-15397.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740" alt="" style={{ height: '80vh', borderRadius: '20px',objectFit:'cover' }} />
                         </div>
                         <p class="service-description text-muted mb-4">
                             The thrill of competition, the rush of adrenaline, and the spirit of teamwork sports events bring out the best in every participant. At Asian Adept, we specialize in organizing exceptional sports events that capture the energy, excitement, and essence of athletic excellence. With over a decade of experience, we design seamless, well-coordinated sports experiences that leave a lasting impact.
@@ -91,9 +106,9 @@ const SportsEventsEvents = () => {
                 <WhyChooseAsianAdept img1={imgdata1} img2={imgdata2} />
                 <CorpServScroller subservices={subservices} maintitle={"Sports Service"} />
 
-                <div className="container mt-4">
-                    <h2 className="text-uppercase fw-bold mt-4 pt-3 display-5 text-dark px-5">Our Services</h2>
-                    <div className="row mt-4 justify-content-center">
+                <div className="container">
+                    <h2 className="text-uppercase fw-bold pt-3 display-5 text-dark px-5">Our Services</h2>
+                    <div className="row justify-content-center">
                         <div className="col-md-5">
                             <ul className="list-unstyled fs-5">
                                 <li>• Activities Coordination</li>
@@ -133,7 +148,7 @@ const SportsEventsEvents = () => {
                     </div>
                 </div>
 
-                <div className="container-fluid">
+                <div className="container-fluid mb-3">
                     <div className="row my-5 text-center">
                         <div className="col-md-4 mb-4 d-flex justify-content-center">
                             <Image

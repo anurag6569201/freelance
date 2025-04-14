@@ -20,7 +20,7 @@ const SliderHome = () => {
                 loop
                 center
                 autoplay
-                smartSpeed={1000}
+                smartSpeed={1500}
                 autoplayTimeout={5000}
                 dots
             >

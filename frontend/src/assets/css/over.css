@@ -359,3 +359,9 @@ body{
         padding-top: 10px !important;
     }
 }
+
+@media (min-width:992px) and (max-width:1400px){
+    #header-section.scrolled ul li a{
+        font-size: 13px !important;
+    }
+}

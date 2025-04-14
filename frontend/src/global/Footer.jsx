@@ -1,12 +1,13 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook, FaPhone } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook, FaPhone, FaVoicemail, FaAt } from "react-icons/fa";
 
 import logo from '../assets/images/home/logo.png'
+import '../assets/css/footer.css'
 function Footer() {
     return (
-        <section className="footer mt-3" style={{ backgroundColor: "#010101", color: "white", zIndex: 100, position: "relative", padding: "40px 0" }}>
-            <div className="container">
-                <footer className="py-5 pb-0">
+        <section className="footer" style={{ backgroundColor: "#010101", color: "white", zIndex: 100, position: "relative", padding: "40px 0" }}>
+            <div className="container-fluid">
+                <footer className="py-3 pb-0 px-2">
                     <div className="row" style={{ justifyContent: "space-between" }}>
                         
                         {/* Brand and Social Links */}
@@ -19,9 +20,9 @@ function Footer() {
                         <div className="col-md-2 mb-3">
                             <h5 className="text-secondary">EXPLORE</h5>
                             <ul className="list-unstyled">
-                                <li><a href="#" className="nav-link text-light">About</a></li>
-                                <li><a href="#" className="nav-link text-light">Gallery</a></li>
-                                <li><a href="#" className="nav-link text-light">Careers</a></li>
+                                <li><a href="#" className="nav-link text-light mt-2">About</a></li>
+                                <li><a href="#" className="nav-link text-light mt-2">Gallery</a></li>
+                                <li><a href="#" className="nav-link text-light mt-2">Careers</a></li>
                             </ul>
                         </div>
 
@@ -29,10 +30,11 @@ function Footer() {
                         <div className="col-md-3 mb-3">
                             <h5 className="text-secondary">GET IN TOUCH</h5>
                             <p className="text-light mb-0"><FaPhone /> (888) 593-1220</p>
+                            <p className="text-light mb-0"><FaAt /> test@gmail.com</p>
                         </div>
 
                         {/* Insights Section (Placeholder) */}
-                        <div className="col-md-3 text-center">
+                        <div className="col-md-3 text-left">
                             <h5 className="text-secondary">GET OUR LATEST INSIGHTS</h5>
                             <div className="d-flex mt-3">
                                 <a href="#" className="me-3 text-light" style={iconStyle}><FaInstagram /></a>
