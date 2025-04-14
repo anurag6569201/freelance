@@ -109,7 +109,7 @@ function ContactForm() {
             <style jsx>{` 
                 .serviceform textarea,
                 .serviceform input{
-                    background-color:rgba(255,255,255,0.3) !important;
+                    background-color:rgba(255,255,255,0) !important;
                     color:white !important;
                 }
                 .serviceform textarea::placeholder,

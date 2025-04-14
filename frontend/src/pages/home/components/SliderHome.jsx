@@ -5,10 +5,18 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import image1 from "../../../assets/images/slider/slider1.jpeg";
 import image2 from "../../../assets/images/slider/slider2.jpeg";
 import image3 from "../../../assets/images/slider/slider3.jpeg";
+import image4 from "../../../assets/images/services/corp/corp10.jpg";
+
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-const sliderImages = [image1, image2, image3];
+const image5 ="https://img.freepik.com/free-photo/back-view-crowd-fans-watching-live-performance-music-concert-night-copy-space_637285-544.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740";
+const image6="https://img.freepik.com/free-photo/beautiful-pier-view_1417-1690.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740";
+const image7="https://img.freepik.com/free-photo/girl-library_1150-18018.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740";
+const image8="https://img.freepik.com/free-photo/vibrant-summer-soiree-scene-with-guests-adorned-punchy-fuchsia-mingling-around-table-laden-with-gourmet-dishes_73899-27524.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740"
+const image9="https://img.freepik.com/free-photo/hands-indian-bride-groom-intertwined-together-making-authentic-wedding-ritual_8353-10047.jpg?ga=GA1.1.1414907394.1744281754&semt=ais_hybrid&w=740";
+
+const sliderImages = [image1,image4,image5,image6,image7,image8,image9];
 
 const SliderHome = () => {
     return (
@@ -22,7 +30,6 @@ const SliderHome = () => {
                 autoplay
                 smartSpeed={1500}
                 autoplayTimeout={5000}
-                dots
             >
                 {sliderImages.map((image, index) => (
                     <div key={index} className="item" style={{ backgroundImage: `url(${image})` }}>
