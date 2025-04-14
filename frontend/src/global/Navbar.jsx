@@ -58,40 +58,40 @@ function NavigationBar() {
                                                 style={{ display: "flex", justifyContent: "center" }}>
                                                 <ul>
                                                     <li className="menu-item-has-children">
-                                                        <Link onClick={handleNavClick} to="/">home</Link>
+                                                        <Link to="/" onClick={handleNavClick}>home</Link>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <Link >about</Link>
                                                         <ul className="sub-menu">
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/about#WhoWe">Who We Are</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/about#WhyUs">Why Us</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/about#team">Our Team</HashLink></li>
+                                                            <li><HashLink smooth to="/about#WhoWe" onClick={handleNavClick}>Who We Are</HashLink></li>
+                                                            <li><HashLink smooth to="/about#WhyUs" onClick={handleNavClick}>Why Us</HashLink></li>
+                                                            <li><HashLink smooth to="/about#team" onClick={handleNavClick}>Our Team</HashLink></li>
                                                         </ul>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <Link >What We Do</Link>
                                                         <ul className="sub-menu">
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#corporate">Corporate Events</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#wedding">Wedding Planning</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#social">Social Events</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#exhibitions">Exhibitions</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#sports">Sports Events</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#government">Government Events</HashLink></li>
-                                                            <li><HashLink onClick={handleNavClick} smooth to="/services#entertainment">Entertainment Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#corporate" onClick={handleNavClick}>Corporate Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#wedding" onClick={handleNavClick}>Wedding Planning</HashLink></li>
+                                                            <li><HashLink smooth to="/services#social" onClick={handleNavClick}>Social Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#exhibitions" onClick={handleNavClick}>Exhibitions</HashLink></li>
+                                                            <li><HashLink smooth to="/services#sports" onClick={handleNavClick}>Sports Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#government" onClick={handleNavClick}>Government Events</HashLink></li>
+                                                            <li><HashLink smooth to="/services#entertainment" onClick={handleNavClick}>Entertainment Events</HashLink></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <Link onClick={handleNavClick} to="/gallery">gallery</Link>
+                                                        <Link to="/gallery" onClick={handleNavClick}>gallery</Link>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <a href="#!">Quote</a>
                                                         <ul className="sub-menu">
-                                                            <li><Link onClick={handleNavClick} to="/quote/standard">Stand Quotation</Link></li>
-                                                            <li><Link onClick={handleNavClick} to="/quote/event">Event Quotation</Link></li>
+                                                            <li><Link to="/quote/standard" onClick={handleNavClick}>Stand Quotation</Link></li>
+                                                            <li><Link to="/quote/event" onClick={handleNavClick}>Event Quotation</Link></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <Link onClick={handleNavClick} to="/career">Careers</Link>
+                                                        <Link to="/career" onClick={handleNavClick}>Careers</Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -106,7 +106,7 @@ function NavigationBar() {
                                             style={{ display: "flex", gap: "10px", alignItems: "center", justifyContent: "center", color: isScrolled ? 'black' : 'white' }}>
                                             <i className="fas fa-phone"></i> 8329969729
                                         </a>
-                                        <Link onClick={handleNavClick} to="/contact" style={{ background: isScrolled ? '#333333' : 'transparent', height: '66px', padding: '0 20px', display: 'flex', alignItems: 'center', borderLeft: '1px solid white' }}><b className="text-white">Contact</b></Link>
+                                        <Link to="/contact" onClick={handleNavClick} style={{ background: isScrolled ? '#333333' : 'transparent', height: '66px', padding: '0 20px', display: 'flex', alignItems: 'center', borderLeft: '1px solid white' }}><b className="text-white">Contact</b></Link>
                                     </ul>
                                 </div>
                             </div>
