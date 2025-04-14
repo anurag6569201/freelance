@@ -5,7 +5,9 @@ import logo from '../assets/images/home/logo.png'
 
 function NavigationBar() {
     const [isScrolled, setIsScrolled] = useState(true);
-
+    const collapseDivRef = useRef(null);
+    const navTogglerRef = useRef(null);
+    
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -44,12 +46,12 @@ function NavigationBar() {
 
                             </Link>
                         </div>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <button ref={navTogglerRef} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </button>
-                        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <div ref={collapseDivRef} className="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <div className="col-lg-8 col-md-8">
                                 <div className="mainmenu-wrapper">
                                     <div className="row">
