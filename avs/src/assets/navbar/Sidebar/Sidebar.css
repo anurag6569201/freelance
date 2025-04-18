@@ -1,0 +1,55 @@
+.sidebar {
+    background-color: #ffffff; /* Or your specific sidebar background */
+    /* If you want a fixed width */
+    /* width: 250px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .logo-section span {
+      color: #333; /* Adjust color as needed */
+  }
+  
+  .search-bar .form-control {
+      border-left: none; /* Remove border between icon and input */
+      box-shadow: none !important; /* Remove focus shadow if desired */
+      border: none;
+  }
+  .search-bar .input-group-text {
+      background-color: #fff;
+      border-right: none;
+      border: none;
+  }
+  
+  
+  .sidebar-nav .sidebar-link {
+    color: #555;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  .sidebar-nav .sidebar-link svg{
+    height: 28px;
+  }
+  
+  .sidebar-nav .sidebar-link:hover {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .sidebar-nav .sidebar-link.active {
+    background-color: #686DE2; 
+    color: #f9f9fa; 
+    font-weight: 500;
+  }
+  
+  .sidebar-nav .sidebar-link.active svg {
+      /* Optional: Change icon color too */
+       /* color: #3f51b5; */
+  }
+  #basic-addon1{
+    font-size: 20px;
+    padding: 5px;
+  }
+  .search-bar{
+    border-bottom: 1px solid #f0f0f0;
+  }
